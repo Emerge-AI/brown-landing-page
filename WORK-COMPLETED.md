@@ -69,11 +69,17 @@ Rebuilt to match the original site, ported from the design system's reference CS
 
 | Metric | Score |
 |---|---|
-| Performance | **98** |
+| Performance | **100** (median of 5 runs) |
 | Accessibility | **100** |
 | Best Practices | **100** |
 | SEO | **100** |
-| LCP / CLS | 1.5 s / 0.002 |
+| FCP / LCP / TBT / CLS | 1.2 s / 1.7 s / 0 ms / 0 |
+
+Getting Performance from 93 to 100 took three measured fixes, each isolated by A/B testing rather than guesswork:
+
+1. **Style & layout was 850ms.** The announcement ticker animated a ~10,000px strip continuously during page load, and `backdrop-filter` on the photo chips forced offscreen composites. The ticker now starts on an idle callback ~2.5s after load (identical to a viewer) and the blur became a more opaque background.
+2. **First paint waited 2.9s on fonts.** The metric-matched fallback faces had no `font-display`, so they inherited the default block behaviour and held text invisible; the webfonts also cost two third-party connections. Fonts are now self-hosted.
+3. **Font payload was 137KB.** Subset to the ~90 glyphs the site actually renders: 80KB total, and the two preloaded faces went from 88KB to 46KB. Filenames carry a content hash so immutable caching stays safe.
 
 ## 7. Domain, hosting & deployment
 
