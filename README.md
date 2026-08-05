@@ -21,15 +21,22 @@ docs/                    Build output = the domain root. Deploy this directory.
 
 `marshallbrowndds.com` is **primary/canonical**. `marshallhbrown.com` is the secondary and 301-redirects to it (rule already in `docs/_redirects`) so the two don't split search authority. The practice email stays `info@marshallhbrown.com` — email and website domains don't need to match.
 
-## Deploying to Netlify
+## Deploying
 
-The site is static with no dependencies. Either:
+Repo: **github.com/Emerge-AI/brown-landing-page** (private). Netlify is connected to it, so **every push to `main` redeploys automatically**. `netlify.toml` sets the publish directory (`docs`) and build command (`node tools/build.mjs`).
 
-- **Drag and drop** — go to app.netlify.com, drag the `docs/` folder onto the deploy area. Done.
-- **CLI** — `npm i -g netlify-cli`, then `netlify deploy --prod --dir docs`.
-- **Git** — push the repo and connect it; `netlify.toml` already sets publish dir and build command.
+Normal workflow:
 
-Then in Netlify: Domain settings → add `marshallbrowndds.com` and set it as **primary**, add `marshallhbrown.com` as a domain alias. Netlify issues the HTTPS certificate automatically once DNS resolves.
+```sh
+# edit tools/content.mjs or css/*.css
+npm run build          # regenerate docs/
+npm run preview        # check at localhost:8317/dental-implants/
+git commit -am "..." && git push    # deploys
+```
+
+In Netlify: Domain management → `marshallbrowndds.com` set as **primary**, `marshallhbrown.com` added as an alias. HTTPS is issued automatically once DNS resolves.
+
+`docs/` is committed intentionally — it holds the processed image renditions, which are generated from the ~432MB raw shoot that lives outside the repo. Netlify can't regenerate those at build time, so they're version-controlled. Only re-run `npm run images` when changing which photos are used.
 
 ## Build
 

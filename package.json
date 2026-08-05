@@ -1,0 +1,14 @@
+{
+  "name": "brown-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SEO-optimized dental implants landing page for Marshall H. Brown, DDS, Fort Worth TX",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "images": "./tools/process-images.sh",
+    "preview": "python3 -m http.server 8317 -d docs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
