@@ -98,6 +98,24 @@ export const IMAGES = {
     w: 800, h: 1000,
     alt: 'Portrait of Dr. Patrick Kamgang, DDS, implant dentist at Marshall H. Brown, DDS in Fort Worth',
   },
+  hallway: {
+    slug: 'dental-office-hallway-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'Hallway of the Marshall H. Brown, DDS dental office in Fort Worth with Texas longhorn decor',
+  },
+  operatory: {
+    slug: 'modern-dental-operatory-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'Modern dental treatment room with advanced equipment at Marshall H. Brown, DDS in Fort Worth',
+  },
+  teamSmall: {
+    slug: 'dental-team-members-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 799,
+    alt: 'Dental team members at Marshall H. Brown, DDS in Fort Worth, Texas',
+  },
 };
 
 export const STATS = [

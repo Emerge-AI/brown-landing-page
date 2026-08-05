@@ -1,21 +1,24 @@
-# Marshall H. Brown, DDS — Dental Implants Landing Page
+# Marshall H. Brown, DDS — Practice Website
 
-SEO-optimized static landing page for [marshallhbrowntx.instawp.xyz/dental-implants](https://marshallhbrowntx.instawp.xyz/dental-implants/), rebuilt with real team/office photography and the Ohio Endocrinology design system (whose palette was originally extracted from the Marshall H. Brown site — same navy/teal/gold, Inter + Playfair Display).
+Full static site (21 pages) for the Fort Worth dental practice, rebuilt from [marshallhbrowntx.instawp.xyz](https://marshallhbrowntx.instawp.xyz/) with real team/office photography and the Ohio Endocrinology design system (whose palette was originally extracted from the Marshall H. Brown site — same navy/teal/gold, Inter + Playfair Display).
+
+Pages: home, about, contact, patient info, privacy, two service hubs (general/cosmetic), the hand-crafted dental-implants landing page, and 12 treatment pages.
 
 ## Layout
 
 ```
-tools/content.mjs        All copy, practice NAP data, FAQs, testimonials, image alt text
-tools/build.mjs          Static generator: HTML, inline CSS, JSON-LD, sitemap, robots
-tools/process-images.sh  Photo pipeline: raw shoot → resized JPEG + WebP renditions
-css/                     Design-system tokens, landing.css, chrome.css (inlined at build)
+tools/content.mjs        Practice NAP data, doctors, implants-page copy, image registry
+tools/content/*.json     One file per content page (extracted from the live site)
+tools/build.mjs          Generator: templates, chrome, JSON-LD, sitemap, 404, robots
+tools/process-images.sh  Photo pipeline: raw shoot → resized JPEG + WebP in docs/assets/img
+css/                     Design-system tokens + landing/chrome/pages CSS (inlined at build)
 netlify.toml             Netlify build config
 docs/                    Build output = the domain root. Deploy this directory.
-  ├── dental-implants/   The page itself — path matches the canonical URL
-  ├── _redirects         / → /dental-implants/, plus secondary-domain 301s
-  ├── _headers           Cache-control for images, security headers
-  └── sitemap.xml robots.txt
 ```
+
+## Adding or editing a page
+
+Content pages are data: edit (or add) a JSON file in `tools/content/` — schema: `path`, `template` (`treatment` | `hub` | `home` | `about` | `contact` | `patient-info` | `privacy`), `metaTitle`, `metaDesc`, `breadcrumbs`, `eyebrow`, `h1`, `intro[]`, `chips[]`, `sections[{h2, body[], bullets[]}]`, `faqs[]`, `related[]`, `cta{}` — then `npm run build`. New pages are picked up automatically, including in the sitemap. The implants landing page is the one hand-crafted body (in `build.mjs`).
 
 ## Domains
 

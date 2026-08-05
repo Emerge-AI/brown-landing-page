@@ -1,0 +1,127 @@
+{
+  "path": "/treatments/extractions/",
+  "template": "treatment",
+  "navLabel": "Extractions",
+  "metaTitle": "Tooth Extractions Fort Worth TX | Marshall H. Brown, DDS",
+  "metaDesc": "Gentle tooth extractions in Fort Worth, TX. Dr. Marshall H. Brown performs simple and surgical extractions and wisdom tooth removal with your comfort first.",
+  "breadcrumbs": [["Home", "/"], ["General Dentistry", "/general-dentistry/"], ["Extractions", ""]],
+  "eyebrow": "Fort Worth, TX — Gentle Tooth Removal",
+  "h1": "Tooth Extractions — Gentle, Comfortable & Safe",
+  "intro": [
+    "When a tooth cannot be saved, Dr. Marshall H. Brown performs gentle, comfortable extractions that prioritise your wellbeing at every step. Alternatives are always explored first — and when removal is necessary, we ensure the process is as smooth and pain-free as possible, with clear aftercare guidance so you heal quickly and comfortably."
+  ],
+  "chips": [
+    "Local Anaesthesia",
+    "Simple & Surgical Extractions",
+    "Wisdom Tooth Removal",
+    "Replacement Options Discussed"
+  ],
+  "sections": [
+    {
+      "h2": "When Extraction Becomes Necessary",
+      "body": [
+        "You and Dr. Brown may determine that a tooth extraction is necessary for any number of reasons. Dr. Brown's priority is always to save your natural tooth wherever possible — alternatives to extraction are always explored and discussed before proceeding with removal."
+      ],
+      "bullets": [
+        "Severe decay",
+        "Advanced gum disease",
+        "Fracture beyond repair",
+        "Impacted teeth",
+        "Orthodontic preparation",
+        "Overcrowding"
+      ]
+    },
+    {
+      "h2": "Which Type Do You Need?",
+      "body": [
+        "Dr. Brown performs all types of tooth extraction. The appropriate procedure depends on the position, condition, and accessibility of the tooth being removed."
+      ],
+      "bullets": [
+        "Simple Extraction — the most common type (20–40 minutes), for fully visible, accessible teeth requiring no incision.",
+        "Surgical Extraction — for complex cases such as broken or impacted teeth; may involve sectioning, where the tooth is cut into sections for removal.",
+        "Wisdom Tooth Removal — for third molars that are impacted or partially erupted."
+      ]
+    },
+    {
+      "h2": "What to Expect",
+      "body": [
+        "Understanding exactly what happens during an extraction helps many patients feel far more relaxed. Here is a clear, honest account of what you will experience from the moment you sit in the chair. The extraction is performed under local anaesthesia, which numbs the tooth, jawbone, and surrounding gums completely — you will feel pressure from rocking the tooth to widen its socket, but you should not feel pain."
+      ],
+      "bullets": []
+    },
+    {
+      "h2": "Post-Extraction Care — Important",
+      "body": [
+        "Following these aftercare instructions carefully helps the blood clot form properly, prevents complications like dry socket, and ensures the fastest, most comfortable recovery possible."
+      ],
+      "bullets": [
+        "Apply ice for swelling",
+        "Eat soft, nutritious foods",
+        "Avoid straws, smoking, alcohol, and vigorous rinsing for 72 hours",
+        "Resume oral hygiene after 24 hours",
+        "Avoid brushing the extraction site directly for 72 hours",
+        "Avoid vigorous exercise for 24 hours"
+      ]
+    },
+    {
+      "h2": "Your Day-by-Day Recovery Timeline",
+      "body": [],
+      "bullets": [
+        "Day 1 — bite gauze for 30–45 minutes, rest, and apply ice",
+        "Days 2–3 — swelling peaks then subsides",
+        "Days 4–7 — resume normal activities",
+        "1–2 weeks — gum tissue closes over the socket"
+      ]
+    },
+    {
+      "h2": "Know the Warning Signs",
+      "body": [
+        "After tooth extraction, it is important for a blood clot to form in the socket to stop the bleeding and begin the healing process. Dry socket occurs when the blood clot is dislodged or dissolves before healing completes, typically causing severe pain 2–3 days after extraction. Call our office immediately if you experience any of the following:"
+      ],
+      "bullets": [
+        "Heavy or uncontrolled bleeding that doesn't stop with gauze",
+        "Severe pain — especially beginning 2–3 days after extraction",
+        "Continued swelling lasting more than 2–3 days",
+        "Fever or signs of spreading infection",
+        "An adverse reaction to prescribed medication",
+        "Persistent numbness"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does a tooth extraction hurt?",
+      "a": "No. The extraction procedure is performed under local anaesthesia, which numbs the tooth, jawbone, and surrounding gums completely. During the extraction you will feel pressure — this is from rocking the tooth to widen its socket — but you should not feel pain. If you feel any pain at any point, please tell Dr. Brown immediately so additional anaesthetic can be administered."
+    },
+    {
+      "q": "How long does a tooth extraction take?",
+      "a": "A simple extraction typically takes 20 to 40 minutes including anaesthesia time. Surgical extractions, impacted teeth, or wisdom teeth with curved roots may take longer depending on the complexity of the case. Dr. Brown will give you a realistic time estimate at your consultation appointment."
+    },
+    {
+      "q": "What is dry socket and how do I prevent it?",
+      "a": "Dry socket occurs when the blood clot that forms in the extraction socket is dislodged or dissolves before healing is complete, exposing the underlying bone and causing severe pain typically beginning 2–3 days after extraction. To prevent dry socket: do not use straws, smoke, drink alcohol, or rinse vigorously for 72 hours after extraction. Do not brush teeth directly next to the extraction site for 72 hours. Avoid vigorous exercise for 24 hours. Call our office immediately if you experience severe pain 2–3 days after extraction."
+    },
+    {
+      "q": "What can I eat after a tooth extraction?",
+      "a": "Drink plenty of fluids and eat soft, nutritious foods on the day of extraction — good options include yogurt, soup, scrambled eggs, mashed potatoes, smoothies (no straws), and applesauce. Avoid hard, crunchy, chewy, or spicy foods until the socket has healed. You can eat normally as soon as you are comfortable."
+    },
+    {
+      "q": "Do I need to replace an extracted tooth?",
+      "a": "In most cases, yes. The removal of a single tooth can lead to problems with chewing ability, jaw joint health, and shifting of surrounding teeth — all of which can have a major long-term impact on your dental health. Dr. Brown will always discuss tooth replacement options at the time of extraction. Options include: dental implants — the gold standard, preserves bone; dental bridges — fixed solution anchored to adjacent teeth; and partial dentures — removable option for multiple teeth."
+    },
+    {
+      "q": "When should I call the dentist after an extraction?",
+      "a": "Call our office at (817) 920-0882 immediately if you experience any of the following: heavy or uncontrolled bleeding that doesn't stop with gauze; severe pain — especially beginning 2–3 days after extraction; continued swelling lasting more than 2–3 days; fever or signs of spreading infection; or an adverse reaction to prescribed medication. We are available at all times to respond to post-extraction complications. Do not hesitate to call — early intervention always leads to the best outcomes."
+    }
+  ],
+  "related": [
+    {"label": "Dental Implants", "path": "/dental-implants/"},
+    {"label": "Dental Bridges", "path": "/treatments/bridges/"},
+    {"label": "Dentures", "path": "/treatments/dentures/"},
+    {"label": "All General Dentistry Services", "path": "/general-dentistry/"}
+  ],
+  "cta": {
+    "title": "Comfortable Extraction. A Clear Plan for What Comes Next.",
+    "body": "When a tooth needs to come out, Dr. Brown ensures the process is gentle, comfortable, and fully explained — and always discusses your replacement options so you leave with a clear plan. New patients always welcome. Most insurance accepted."
+  }
+}

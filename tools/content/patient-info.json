@@ -1,0 +1,175 @@
+{
+  "path": "/patient-info/",
+  "template": "patient-info",
+  "navLabel": "Patient Info",
+  "metaTitle": "Patient Info Fort Worth TX | Marshall H. Brown, DDS",
+  "metaDesc": "Patient information for Marshall H. Brown, DDS in Fort Worth, TX — first visit details, accepted insurance plans, CareCredit financing and HIPAA privacy.",
+  "breadcrumbs": [["Home", "/"], ["Patient Info", ""]],
+  "eyebrow": "Everything You Need to Know",
+  "h1": "Patient Information at Marshall H. Brown, DDS",
+  "intro": [
+    "Dr. Brown and our team are dedicated to making every patient interaction as simple, transparent, and stress-free as possible — from your first visit through insurance, financing, and beyond."
+  ],
+  "chips": ["Most PPO Insurance Accepted", "CareCredit 0% Financing", "Same-Week Appointments", "HIPAA-Compliant Practice"],
+  "sections": [
+    {
+      "h2": "Your First Visit",
+      "body": [
+        "Your initial appointment will consist of a comprehensive consultation where Dr. Brown explains your diagnosis and all available treatment options. In some cases, treatment can begin the same day — though complex medical histories or treatment plans may require a follow-up appointment.",
+        "Patients under 18 years of age must be accompanied by a parent or guardian for their first consultation appointment. Please also inform us prior to your visit of any medical conditions (diabetes, heart conditions, joint replacements, blood thinners, etc.) or medications that may affect your treatment."
+      ],
+      "bullets": [
+        "Valid photo ID — a government-issued photo ID such as a driver's license or passport",
+        "Dental insurance card & forms — bring your insurance card and any completed patient registration forms to speed up processing and help us maximize your benefits",
+        "Current medication list — a complete list of all medications, supplements, and vitamins you currently take, including dosages; this is essential for your safety",
+        "Recent dental X-rays (if available) — if your previous dentist has taken X-rays within the last 6 months, request they be forwarded to our office or bring them with you",
+        "Referral slip (if applicable) — if you were referred by another provider, please bring the referral slip or documentation"
+      ]
+    },
+    {
+      "h2": "What Happens at Your First Visit",
+      "body": [
+        "Your first visit includes a comprehensive exam, digital X-rays, gum assessment, and oral cancer screening. Dr. Brown will discuss your dental history, concerns, and goals — then create a personalised treatment plan."
+      ],
+      "bullets": [
+        "Comprehensive oral health examination",
+        "Digital X-rays (if needed)",
+        "Periodontal (gum) health assessment",
+        "Oral cancer screening",
+        "Diagnosis discussion & treatment options",
+        "Personalised treatment plan with cost estimate"
+      ]
+    },
+    {
+      "h2": "Scheduling an Appointment",
+      "body": [
+        "Scheduling is easy — call us, use our online form, or email us directly. We offer flexible appointment times Monday through Friday and often have same-week availability for new patients and urgent concerns. We'll confirm your appointment and verify your insurance before you arrive — no surprises.",
+        "For your privacy and security, please do not include any personal health information (PHI), medical details, or treatment questions in email communications. Use our secure online appointment form or call us directly for all health-related inquiries."
+      ],
+      "bullets": [
+        "Call us: (817) 920-0882 — fastest way to book, often same-week availability",
+        "Request online: use our online form — confirmed within one business day",
+        "Email us: info@marshallhbrown.com — general inquiries only, no PHI by email",
+        "Walk in: 1818 8th Avenue, Fort Worth, TX 76110 — subject to same-day availability",
+        "Office hours: Monday–Thursday 8:00 AM – 4:00 PM, Friday 8:00 AM – 12:00 PM, closed Saturday & Sunday"
+      ]
+    },
+    {
+      "h2": "Insurance",
+      "body": [
+        "We work hard to maximise your insurance benefits and minimise your out-of-pocket costs. Our experienced team handles the paperwork so you don't have to.",
+        "Before your appointment, our team contacts your insurance provider to verify your exact coverage, annual maximums, deductibles, and benefit details — so you know what to expect with no surprises. We submit claims directly to your insurance carrier on your behalf, and before any treatment begins we provide a clear written estimate of your anticipated out-of-pocket costs — broken down by procedure, coverage, and patient responsibility. No hidden fees. Please bring your dental insurance card, group number, and member ID to your first visit.",
+        "We accept most PPO dental insurance plans. Please call us to confirm your specific plan is accepted. We are not currently a Medicaid or HMO provider. Don't see your plan listed? Call us at (817) 920-0882 — we likely accept it."
+      ],
+      "bullets": [
+        "Delta Dental",
+        "Cigna",
+        "Aetna",
+        "MetLife",
+        "Humana",
+        "United Concordia",
+        "BlueCross BlueShield",
+        "Guardian",
+        "Ameritas",
+        "Anthem",
+        "Principal",
+        "CareCredit (financing)"
+      ]
+    },
+    {
+      "h2": "Financing Options",
+      "body": [
+        "We firmly believe that cost should never be the reason someone avoids necessary dental care. That's why we offer flexible financing through CareCredit — a leading healthcare financing provider that allows you to pay for treatment over time with convenient monthly instalments.",
+        "We also accept cash, personal check, Visa, Mastercard, Discover, and Amex."
+      ],
+      "bullets": [
+        "0% interest promotional financing options available",
+        "Flexible repayment terms from 6 to 60 months",
+        "Quick and easy online application process",
+        "No annual fee on the CareCredit credit card",
+        "Use for any dental treatment — including cosmetic procedures",
+        "Our team can assist you with the application in-office"
+      ]
+    },
+    {
+      "h2": "Our Financial Policy",
+      "body": [
+        "We believe in complete transparency regarding costs. Here is a clear summary of our financial policy so you always know what to expect."
+      ],
+      "bullets": [
+        "Payment at time of service — payment for services not covered by your insurance plan is due at the time of service; we provide a clear estimate of your out-of-pocket responsibility before treatment begins",
+        "Insurance co-payments — co-payments and deductibles are collected at the time of each visit; we file your insurance claims and any reimbursement is applied to your account balance",
+        "Written treatment estimates — we always provide a written estimate of expected costs, including insurance coverage and anticipated patient responsibility, before any procedure begins; we never start treatment without your informed consent",
+        "Cancellation policy — please provide at least 24 hours notice to cancel or reschedule; repeated no-shows without notice may result in a cancellation fee",
+        "Questions about your bill — our administrative team is always happy to help; call (817) 920-0882 and we will gladly walk you through the details"
+      ]
+    },
+    {
+      "h2": "Infection Control & Patient Safety",
+      "body": [
+        "The safety of our patients and team is our highest priority. Marshall H. Brown, DDS & Associates adheres to and exceeds the infection control guidelines established by the American Dental Association (ADA), the Centers for Disease Control and Prevention (CDC), and the Occupational Safety and Health Administration (OSHA).",
+        "Your safety is guaranteed. You can visit our office with complete confidence that every precaution has been taken to protect your health and wellbeing at every appointment."
+      ],
+      "bullets": [
+        "All instruments sterilized in autoclave after every use",
+        "Single-use disposable items used wherever possible",
+        "All clinical staff wear full PPE including gloves, masks, and eyewear",
+        "Treatment rooms thoroughly disinfected between every patient",
+        "Sterilization monitoring and documentation maintained",
+        "Waiting area and high-touch surfaces regularly sanitized",
+        "Staff complete ongoing infection control training and certification"
+      ]
+    },
+    {
+      "h2": "Your Privacy Rights & HIPAA Protection",
+      "body": [
+        "Marshall H. Brown, DDS & Associates is fully compliant with the Health Insurance Portability and Accountability Act (HIPAA). We are committed to protecting the privacy and security of your protected health information (PHI) at every level of our practice.",
+        "Your health information will never be disclosed to third parties without your explicit written authorization — except as required by law or necessary to provide your care. All staff receive regular HIPAA training and our systems use encryption and access controls to safeguard your data.",
+        "To exercise any of your HIPAA rights, contact our Privacy Officer by calling (817) 920-0882 or visiting our office at 1818 8th Avenue, Fort Worth, TX 76110. Complaints may also be filed directly with the U.S. Department of Health & Human Services at hhs.gov."
+      ],
+      "bullets": [
+        "Right to access your own health records and request copies",
+        "Right to correct inaccurate or incomplete information in your records",
+        "Right to restrict certain uses of your health information",
+        "Right to confidential communication through your preferred contact method",
+        "Right to know how your information is used and shared",
+        "Right to file a complaint if you believe your rights have been violated"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What should I bring to my first appointment?",
+      "a": "For your first visit please bring: a valid photo ID, your dental insurance card and completed forms, a current list of all medications and supplements, and any recent dental X-rays from your previous dentist (taken within 6 months). Patients under 18 must be accompanied by a parent or guardian."
+    },
+    {
+      "q": "Do you accept my dental insurance?",
+      "a": "We accept most major PPO dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, BlueCross BlueShield, Guardian, Ameritas, Anthem, Principal, and many more. We are not currently a Medicaid or HMO provider. The best way to confirm your specific plan is accepted is to call us at (817) 920-0882. Our team can verify your coverage before your appointment at no charge."
+    },
+    {
+      "q": "How do I schedule an appointment?",
+      "a": "You can schedule an appointment in three ways. Call us at (817) 920-0882 — this is the fastest option and we often have same-week availability. Request online using our online appointment request form — we confirm within one business day. Or email info@marshallhbrown.com — for general inquiries only (please do not send PHI by email)."
+    },
+    {
+      "q": "Do you offer payment plans or financing?",
+      "a": "Yes. We offer flexible financing through CareCredit — a leading healthcare financing provider. CareCredit offers 0% interest promotional periods and extended payment plans ranging from 6 to 60 months. Our team can assist you with the CareCredit application during your visit. We also accept cash, personal checks, Visa, Mastercard, Discover, and American Express."
+    },
+    {
+      "q": "How does the practice protect my health information under HIPAA?",
+      "a": "Marshall H. Brown, DDS & Associates is fully HIPAA compliant. We protect your health information through encrypted electronic health records and communication systems, strict staff training in HIPAA privacy and security requirements, access controls limiting who can view your records to those involved in your care, written authorization required before sharing your information with any third party, and secure disposal of all paper and electronic records containing PHI."
+    },
+    {
+      "q": "What is your cancellation policy?",
+      "a": "We kindly ask for a minimum of 24 hours notice if you need to cancel or reschedule your appointment. This allows us to offer your appointment time to another patient in need of care. Repeated last-minute cancellations or no-shows without notice may result in a cancellation fee. If you have an emergency or unforeseen circumstance, please call us as soon as possible at (817) 920-0882 and we will do our best to accommodate you."
+    }
+  ],
+  "related": [
+    {"label": "Cosmetic Dentistry", "path": "/cosmetic-dentistry/"},
+    {"label": "Dental Implants", "path": "/dental-implants/"},
+    {"label": "Teeth Whitening", "path": "/teeth-whitening/"}
+  ],
+  "cta": {
+    "title": "Ready to Book or Have a Question?",
+    "body": "Call us at (817) 920-0882, request an appointment online, or email info@marshallhbrown.com — we respond within one business day. New patients always welcome."
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "path": "/about/",
+  "template": "about",
+  "navLabel": "About",
+  "metaTitle": "About Dr. Marshall H. Brown, DDS | Fort Worth Cosmetic Dentist",
+  "metaDesc": "Meet Dr. Marshall H. Brown, DDS — Fort Worth's trusted cosmetic and general dentist for 30+ years. Compassionate, patient-first care at 1818 8th Avenue. 4.7★ on Google.",
+  "breadcrumbs": [["Home", "/"], ["About", ""]],
+  "eyebrow": "Serving Fort Worth Since 1990",
+  "h1": "Meet Your Dentist — Dr. Marshall H. Brown, DDS & Associates",
+  "intro": [
+    "For over 30 years, Dr. Brown has been Fort Worth's trusted cosmetic and general dentist — combining artistry, advanced technology, and genuine patient care to create smiles that change lives."
+  ],
+  "chips": [
+    "Doctor of Dental Surgery (DDS)",
+    "30+ Years Fort Worth Experience",
+    "4.7★ Google Rated (269+ Reviews)",
+    "Accepting New Patients"
+  ],
+  "sections": [
+    {
+      "h2": "A Dentist Who Genuinely Cares About Your Smile",
+      "body": [
+        "Throughout a career spanning more than 30 years, Dr. Brown has been guided by a simple belief: every patient deserves a smile they're proud to show the world.",
+        "His expertise spans porcelain veneers, dental implants, and complete smile makeovers — combining the precision of advanced dental technology with an artistic eye for natural, harmonious results. Dr. Patrick Kamgang, DDS also practices alongside Dr. Brown, extending the same standard of care to every patient."
+      ],
+      "bullets": []
+    },
+    {
+      "h2": "Education & Credentials",
+      "body": [],
+      "bullets": [
+        "Doctor of Dental Surgery (DDS)",
+        "American Dental Association (ADA) Member",
+        "Texas Dental Association Member",
+        "Fort Worth District Dental Society Member",
+        "Ongoing advanced education in cosmetic dentistry & implantology",
+        "Certified Zoom® and LaserSmile teeth whitening provider"
+      ]
+    },
+    {
+      "h2": "Our Patient Care Philosophy",
+      "body": [],
+      "bullets": [
+        "Listen First — Every treatment begins with a thorough conversation. We listen carefully to your concerns, goals, and questions — taking the time to truly understand what matters most to you.",
+        "Personalize Always — No two smiles are the same. We create individualized treatment plans tailored to your unique dental anatomy, aesthetic goals, health needs, and budget.",
+        "Deliver Excellence — From the quality of materials we use to the precision of every procedure, we hold ourselves to the highest clinical standards."
+      ]
+    },
+    {
+      "h2": "The Values Behind Every Smile We Create",
+      "body": [],
+      "bullets": [
+        "Compassionate Care — We treat every patient with the empathy and respect they deserve — especially those with dental anxiety.",
+        "Patient Privacy — Full HIPAA compliance and rigorous data protection practices keep your health information always secure, confidential, and handled with complete integrity.",
+        "Transparent Pricing — Clear, upfront treatment plans with no hidden fees. We explain all options and associated costs before any work begins.",
+        "Continued Education — Dr. Brown invests in ongoing professional training so you always benefit from the latest, safest, and most effective techniques.",
+        "Community Rooted — Born and built in Fort Worth — we're proud to serve our neighbors and give back.",
+        "Infection Control — Rigorous sterilization and infection control protocols ensure the cleanest, safest possible environment."
+      ]
+    },
+    {
+      "h2": "Meet Our Caring Team",
+      "body": [
+        "Dr. Marshall H. Brown, Doctor of Dental Surgery — with 30+ years of experience, Dr. Brown leads our practice with expertise in cosmetic and general dentistry, including implants, veneers, and complete smile makeovers. Dr. Patrick Kamgang, DDS also practices at the office."
+      ],
+      "bullets": [
+        "Hygiene Team — Registered Dental Hygienists providing thorough, gentle cleanings and preventive care.",
+        "Dental Assistants — Certified professionals ensuring every procedure runs smoothly.",
+        "Front Office Team — Patient Care Coordinators handling scheduling, insurance, and billing."
+      ]
+    },
+    {
+      "h2": "Proudly Serving Fort Worth & Surrounding Communities",
+      "body": [
+        "Our office is located at 1818 8th Avenue in Fort Worth, welcoming patients from across the area."
+      ],
+      "bullets": [
+        "Fort Worth",
+        "Arlington",
+        "Benbrook",
+        "Crowley",
+        "Burleson",
+        "White Settlement"
+      ]
+    },
+    {
+      "h2": "What Patients Say About Dr. Brown",
+      "body": [
+        "\"Dr. Brown has been my dentist for over 15 years. He's thorough, knowledgeable, and has such a gentle approach. I've never felt rushed. He truly cares about his patients as people.\" — James W., Fort Worth",
+        "\"The entire team is exceptional. From the moment you walk in, the front office makes you feel welcome. Dr. Brown took his time explaining my treatment options.\" — Maria G., Arlington",
+        "\"I had severe dental phobia before coming to Dr. Brown's office. His calm, reassuring manner completely changed my experience of dentistry. I actually look forward to my appointments now!\" — David P., Benbrook"
+      ],
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long has Dr. Brown been practicing in Fort Worth?",
+      "a": "Dr. Marshall H. Brown has been serving the Fort Worth, Texas community for over 30 years. Since establishing his practice at 1818 8th Avenue in 1990, he has built a reputation for exceptional cosmetic and general dental care."
+    },
+    {
+      "q": "What makes Dr. Brown different from other Fort Worth dentists?",
+      "a": "Dr. Brown's approach combines deep clinical expertise with a genuine, patient-first philosophy. He takes the time to listen, explains treatment options clearly, and designs individualized plans for every patient."
+    },
+    {
+      "q": "Does the practice treat children as well as adults?",
+      "a": "Yes! Marshall H. Brown, DDS & Associates is a true family dental practice. We welcome patients of all ages — from young children experiencing their first dental visit to seniors. Patients under 18 must be accompanied by a parent or guardian."
+    },
+    {
+      "q": "Is Dr. Brown's office HIPAA compliant?",
+      "a": "Absolutely. Marshall H. Brown, DDS & Associates fully complies with the Health Insurance Portability and Accountability Act (HIPAA). We maintain strict privacy policies and security protocols to keep your health information safe."
+    },
+    {
+      "q": "How do I get started as a new patient?",
+      "a": "Getting started is easy! Simply request an appointment online or call us at (817) 920-0882. For your first appointment, please bring a valid photo ID, your dental insurance card, a list of current medications, and any recent X-rays."
+    }
+  ],
+  "related": [
+    {"label": "General Dentistry", "path": "/general-dentistry/"},
+    {"label": "Cosmetic Dentistry", "path": "/cosmetic-dentistry/"},
+    {"label": "Patient Info", "path": "/patient-info/"},
+    {"label": "Contact & Appointments", "path": "/contact/"}
+  ],
+  "cta": {
+    "title": "Schedule With Dr. Brown",
+    "body": "Experience the difference 30+ years of patient-first dentistry makes. Request an appointment online or call (817) 920-0882 — same-week appointments are often available."
+  }
+}

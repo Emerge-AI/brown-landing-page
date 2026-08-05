@@ -1,6 +1,27 @@
 /* Marshall H. Brown, DDS — Webfonts
    Serif display: Playfair Display (600–800 + italic)
    Body / UI:     Inter (300–800)
-   Fonts are loaded via <link> tags in the page <head> (preconnect +
+   The families are loaded via <link> tags in the page <head> (preconnect +
    stylesheet with display=swap) instead of a render-blocking @import.
-   If self-hosting is required, add local @font-face rules here. */
+
+   The metric-matched fallback faces below occupy the same space as the
+   webfonts (size-adjust + ascent/descent overrides), so the font swap
+   causes no layout shift. */
+
+@font-face {
+  font-family: 'Playfair Fallback';
+  src: local('Times New Roman');
+  size-adjust: 115%;
+  ascent-override: 94%;
+  descent-override: 25.2%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 108%;
+  ascent-override: 89.5%;
+  descent-override: 22.3%;
+  line-gap-override: 0%;
+}

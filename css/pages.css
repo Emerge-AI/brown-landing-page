@@ -1,0 +1,64 @@
+/* ============================================================
+   INNER-PAGE COMPONENTS — compact page hero, prose sections,
+   card links, contact grid. Used by the JSON-driven templates.
+   ============================================================ */
+
+.mhb-page-hero {
+  background: linear-gradient(135deg, var(--oe-navy) 0%, #1a3d6b 55%, var(--oe-blue) 100%);
+  color: #fff;
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(2.5rem, 6vw, 4rem);
+  position: relative;
+  overflow: hidden;
+}
+.mhb-page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.018'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.mhb-page-hero .mhb-container { position: relative; z-index: 2; }
+.mhb-page-hero h1 {
+  font-family: var(--oe-font-display);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: var(--oe-fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  max-width: 860px;
+}
+.mhb-page-hero__lede {
+  max-width: 740px;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
+  line-height: 1.75;
+  margin-bottom: 1.1rem;
+}
+.mhb-page-hero .mhb-hero__chips { margin: 0.6rem 0 1.9rem; }
+
+/* Narrow prose sections */
+.mhb-narrow { max-width: 860px; }
+.mhb-h2 {
+  font-family: var(--oe-font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: var(--oe-fw-extrabold);
+  color: var(--oe-navy);
+  letter-spacing: var(--oe-ls-heading);
+  line-height: 1.25;
+  margin-bottom: 1.1rem;
+}
+.mhb-prose-p { color: var(--oe-text); line-height: var(--oe-lh-body); margin-bottom: 1rem; max-width: 75ch; }
+.mhb-narrow .mhb-checklist { margin-top: 1.25rem; }
+
+/* Whole-card links (service cards, related services, contact cards) */
+.mhb-card-link { display: block; text-decoration: none; color: inherit; }
+.mhb-card-link:hover { text-decoration: none; }
+
+/* Contact info cards */
+.mhb-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) { .mhb-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .mhb-grid-4 { grid-template-columns: 1fr; } }
+
+/* Anchored sections land below the sticky header */
+main section[id] { scroll-margin-top: 130px; }

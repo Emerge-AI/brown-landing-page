@@ -1,0 +1,101 @@
+{
+  "path": "/contact/",
+  "template": "contact",
+  "navLabel": "Contact",
+  "metaTitle": "Contact & Appointments | Marshall H. Brown, DDS | Fort Worth TX",
+  "metaDesc": "Contact Marshall H. Brown, DDS & Associates in Fort Worth, TX. Request an appointment online or call (817) 920-0882. 1818 8th Avenue — free on-site parking.",
+  "breadcrumbs": [["Home", "/"], ["Contact", ""]],
+  "eyebrow": "We'd Love to Hear From You",
+  "h1": "Contact Us & Request an Appointment",
+  "intro": [
+    "Ready to schedule your visit? Request an appointment online or call us at (817) 920-0882 — we'll contact you within one business day to confirm your appointment time.",
+    "For general inquiries you can also email info@marshallhbrown.com. Please do not send health information by email — for sensitive health communications, call us directly."
+  ],
+  "chips": [
+    "4.7★ on Google — 269+ Reviews",
+    "30+ Years Serving Fort Worth",
+    "Most Insurance Accepted",
+    "HIPAA-Compliant Practice"
+  ],
+  "sections": [
+    {
+      "h2": "Request an Appointment",
+      "body": [
+        "Fill out our appointment request form and our front office team will reach out to confirm a time that works for you. Please do not include detailed medical history or Protected Health Information (diagnoses, SSN, etc.) in the form — we'll gather everything we need at your visit.",
+        "By submitting the form, you consent to Marshall H. Brown, DDS & Associates contacting you by phone or email to schedule your appointment."
+      ],
+      "bullets": [
+        "First and last name",
+        "Email address and phone number",
+        "Preferred date and time",
+        "Insurance provider",
+        "Service of interest",
+        "Whether you are a new patient",
+        "Your message (optional)"
+      ]
+    },
+    {
+      "h2": "Office Information",
+      "body": [
+        "Marshall H. Brown, DDS & Associates is located at 1818 8th Avenue, Fort Worth, TX 76110, with free parking available on site."
+      ],
+      "bullets": [
+        "Address: 1818 8th Avenue, Fort Worth, TX 76110",
+        "Phone: (817) 920-0882",
+        "Fax: (817) 920-0709",
+        "Email: info@marshallhbrown.com (general inquiries only — do not send health information by email)"
+      ]
+    },
+    {
+      "h2": "Office Hours",
+      "body": [],
+      "bullets": [
+        "Monday–Thursday: 8:00 AM – 4:00 PM",
+        "Friday: 8:00 AM – 12:00 PM",
+        "Saturday–Sunday: Closed"
+      ]
+    },
+    {
+      "h2": "Serving Fort Worth & Surrounding Communities",
+      "body": [
+        "We welcome patients from Fort Worth, Arlington, Benbrook, Crowley, Burleson, White Settlement, and all surrounding communities. Free parking is available on site."
+      ],
+      "bullets": []
+    },
+    {
+      "h2": "Your Privacy Is Protected",
+      "body": [
+        "Marshall H. Brown, DDS & Associates is a HIPAA-compliant practice. Contact forms and email are for scheduling and general inquiries only — please do not include Protected Health Information such as diagnoses or Social Security numbers. For sensitive health communications, please call us directly at (817) 920-0882."
+      ],
+      "bullets": []
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How quickly will you respond to my appointment request?",
+      "a": "We'll contact you within one business day to confirm your appointment time. Same-week appointments are often available for new and existing patients."
+    },
+    {
+      "q": "Is there parking at your office?",
+      "a": "Yes — free parking is available on site at 1818 8th Avenue, Fort Worth, TX 76110."
+    },
+    {
+      "q": "Can I email you my health information?",
+      "a": "Please don't send health information by email or through our contact forms. Email and forms are for general inquiries and scheduling only. For sensitive health communications, call us directly at (817) 920-0882."
+    },
+    {
+      "q": "Do you accept my dental insurance?",
+      "a": "We accept most major dental insurance plans, including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, and BlueCross BlueShield, plus CareCredit financing. Call us and we'll verify your coverage before your first visit."
+    }
+  ],
+  "related": [
+    {"label": "About Dr. Brown", "path": "/about/"},
+    {"label": "Patient Info", "path": "/patient-info/"},
+    {"label": "General Dentistry", "path": "/general-dentistry/"},
+    {"label": "Privacy Policy", "path": "/privacy-policy/"}
+  ],
+  "cta": {
+    "title": "Call (817) 920-0882 Today",
+    "body": "Speak with our friendly front office team Monday–Thursday 8am–4pm or Friday 8am–12pm, or request an appointment online any time — we'll respond within one business day."
+  }
+}

@@ -1,4 +1,4 @@
-/dental-implants/img/*
+/assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
 /*

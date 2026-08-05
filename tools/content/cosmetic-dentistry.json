@@ -1,0 +1,122 @@
+{
+  "path": "/cosmetic-dentistry/",
+  "template": "hub",
+  "navLabel": "Cosmetic Dentistry",
+  "metaTitle": "Cosmetic Dentistry Fort Worth TX | Marshall H. Brown, DDS",
+  "metaDesc": "Transform your smile with expert cosmetic dentistry in Fort Worth, TX. Dr. Brown offers porcelain veneers, teeth whitening, bonding, clear braces & inlays.",
+  "breadcrumbs": [["Home", "/"], ["Cosmetic Dentistry", ""]],
+  "eyebrow": "Fort Worth Cosmetic Dentistry",
+  "h1": "Cosmetic Dentistry That Transforms Your Smile",
+  "intro": [
+    "A beautiful smile changes everything — your confidence, your first impressions, and your quality of life. Dr. Marshall H. Brown, DDS combines 30+ years of cosmetic expertise with an artistic eye to create smiles that look completely natural and last for decades."
+  ],
+  "chips": [
+    "30+ Years of Cosmetic Experience",
+    "4.7★ — 269+ Verified Patient Reviews",
+    "Up to 8 Shades Whiter in One Session",
+    "5+ Cosmetic Services Offered"
+  ],
+  "sections": [
+    {
+      "h2": "Porcelain Veneers",
+      "servicePath": "/cosmetic-treatments/veneers/",
+      "body": [
+        "Corrects stains, chips, gaps & misalignment simultaneously — the most transformative option for a complete smile makeover."
+      ],
+      "bullets": [
+        "Corrects stains, chips, gaps & misalignment simultaneously",
+        "Stain-resistant porcelain that stays brilliantly white",
+        "Completed in just 2–3 appointments",
+        "Lasts 10–20 years with proper care"
+      ]
+    },
+    {
+      "h2": "Professional Teeth Whitening",
+      "servicePath": "/teeth-whitening/",
+      "body": [
+        "Zoom® and LaserSmile in-office systems available, with results visible in as little as one hour."
+      ],
+      "bullets": [
+        "Zoom® and LaserSmile in-office systems available",
+        "Results visible in as little as one hour",
+        "Up to 8 shades whiter in a single session",
+        "Custom take-home tray option also available"
+      ]
+    },
+    {
+      "h2": "Dental Bonding",
+      "servicePath": "/cosmetic-treatments/bonding/",
+      "body": [
+        "A quick, cost-effective fix for minor chips, cracks, and gaps — usually completed in a single appointment."
+      ],
+      "bullets": [
+        "Usually completed in a single appointment",
+        "No anaesthesia typically required",
+        "Minimal tooth structure removal required",
+        "Most affordable cosmetic treatment option"
+      ]
+    },
+    {
+      "h2": "Clear Braces",
+      "servicePath": "/cosmetic-treatments/clear-braces/",
+      "body": [
+        "Straighten crooked, crowded, or gapped teeth discreetly — virtually invisible, so nobody needs to know."
+      ],
+      "bullets": [
+        "Virtually invisible — nobody needs to know",
+        "Removable — eat and drink whatever you like",
+        "Brush and floss normally — no special tools needed",
+        "Typically 6–18 months treatment duration"
+      ]
+    },
+    {
+      "h2": "Inlays & Onlays",
+      "servicePath": "/cosmetic-treatments/inlays-onlays/",
+      "body": [
+        "Custom porcelain restorations for damaged back teeth — more conservative than a crown, stronger than a filling."
+      ],
+      "bullets": [
+        "More conservative than a crown — preserves more tooth",
+        "Stronger and more durable than a direct filling",
+        "Custom porcelain perfectly matches surrounding teeth",
+        "Can last 20+ years with good oral hygiene"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is the best cosmetic dental treatment for a complete smile makeover?",
+      "a": "Porcelain veneers are the most transformative option — they can address staining, chipping, gaps, and misalignment all at once in 2–3 appointments. For discoloration alone, professional whitening delivers remarkable results more affordably. For minor chips or cracks, dental bonding is a quick and cost-effective fix. Dr. Brown will assess your smile during a consultation and recommend the most conservative, effective plan to achieve your goals."
+    },
+    {
+      "q": "How long do porcelain veneers last?",
+      "a": "With proper care, porcelain veneers typically last 10–20 years. They are highly durable and stain-resistant. To maximise their lifespan: maintain good oral hygiene, attend your 6-monthly dental checkups, avoid biting hard objects like ice or pens, and wear a night guard if you grind your teeth. When veneers do eventually need replacement, the process is straightforward."
+    },
+    {
+      "q": "Is cosmetic dentistry covered by insurance?",
+      "a": "Most purely cosmetic procedures — including porcelain veneers, teeth whitening, and bonding for aesthetic purposes — are not covered by standard dental insurance. However, some procedures that have both cosmetic and functional components may qualify for partial coverage. Our administrative team will thoroughly verify your insurance benefits before treatment begins and clearly explain your out-of-pocket costs. We also offer flexible financing options to make cosmetic dentistry accessible for every budget."
+    },
+    {
+      "q": "Does teeth whitening damage tooth enamel?",
+      "a": "Professional teeth whitening performed under dental supervision is safe and does not damage tooth enamel when used as directed. Dr. Brown uses clinically proven Zoom® and LaserSmile systems specifically formulated to be effective while protecting tooth structure. Some patients experience mild, temporary tooth sensitivity following treatment — this typically resolves within 24–48 hours and is completely normal. Over-the-counter whitening products, when used excessively, can cause enamel erosion — which is another reason professional whitening administered by a dentist is always the safer, more effective choice."
+    },
+    {
+      "q": "Are veneers reversible?",
+      "a": "Traditional porcelain veneers are considered a permanent cosmetic treatment. A very thin layer of enamel (approximately 0.5mm) is removed from the tooth surface to create space for the veneer — meaning the tooth will always require a veneer or crown going forward. However, there are minimal-prep and no-prep veneer options that remove little to no enamel, making the procedure more conservative. Dr. Brown will discuss all available options during your consultation and ensure you fully understand the process before proceeding."
+    },
+    {
+      "q": "How do I maintain my cosmetic dental results?",
+      "a": "Protecting your cosmetic investment is straightforward with good habits: Brush twice daily with a non-abrasive toothpaste and a soft-bristled brush. Floss daily to keep gum tissue healthy around veneers and bonding. Attend 6-monthly checkups so Dr. Brown can monitor your restorations. Avoid staining foods and drinks (coffee, red wine, tea) immediately after whitening. Do not bite hard objects — ice, pens, fingernails, or hard candy. Wear a night guard if you grind your teeth during sleep. With proper care, your cosmetic results can look beautiful for decades."
+    }
+  ],
+  "related": [
+    {"label": "Porcelain Veneers", "path": "/cosmetic-treatments/veneers/"},
+    {"label": "Teeth Whitening", "path": "/teeth-whitening/"},
+    {"label": "Dental Bonding", "path": "/cosmetic-treatments/bonding/"},
+    {"label": "Clear Braces", "path": "/cosmetic-treatments/clear-braces/"}
+  ],
+  "cta": {
+    "title": "Start Your Smile Journey Today",
+    "body": "Tell us what's bothering you — we'll fix it. Book a smile consultation with Dr. Brown to explore which treatments will achieve your ideal smile, with a personalised treatment plan, transparent cost estimates, and a clear timeline. Walk out with a smile you're proud to share."
+  }
+}

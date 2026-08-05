@@ -5,7 +5,7 @@
 set -euo pipefail
 
 SRC="${1:-/Users/varunkumar/Downloads/Patrick}"
-OUT="$(cd "$(dirname "$0")/.." && pwd)/docs/dental-implants/img"
+OUT="$(cd "$(dirname "$0")/.." && pwd)/docs/assets/img"
 mkdir -p "$OUT"
 
 # slug|source|widths|crop (crop: WxH aspect for portrait headshots, "-" = none)
@@ -17,6 +17,9 @@ dental-office-waiting-room-fort-worth|_DSC7942-HDR.jpg|480 800 1200|-
 marshall-h-brown-dds-dental-team-fort-worth|_1021091-Edit.jpg|480 800 1200 1600|-
 dr-patrick-kamgang-dds-fort-worth-dentist|_1020993.jpg|480 800|4:5
 dr-marshall-brown-dds-fort-worth-dentist|_1021062.jpg|480 800|4:5
+dental-office-hallway-fort-worth|_DSC7930.jpg|480 800 1200|-
+modern-dental-operatory-fort-worth|_DSC7924.jpg|480 800 1200|-
+dental-team-members-fort-worth|_1021070.jpg|480 800 1200|-
 EOF
 )
 

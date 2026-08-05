@@ -1,0 +1,213 @@
+{
+  "path": "/general-dentistry/",
+  "template": "hub",
+  "navLabel": "General Dentistry",
+  "metaTitle": "General Dentistry Fort Worth TX | Marshall H. Brown, DDS",
+  "metaDesc": "Comprehensive general dentistry in Fort Worth, TX — crowns, implants, root canals, dentures and more from Dr. Marshall H. Brown. Call (817) 920-0882 today.",
+  "breadcrumbs": [["Home", "/"], ["General Dentistry", ""]],
+  "eyebrow": "Fort Worth General Dentistry",
+  "h1": "General Dentistry in Fort Worth, Texas",
+  "intro": [
+    "From routine preventive care to complex restorative procedures, Dr. Marshall H. Brown, DDS provides comprehensive general dentistry for patients of all ages. Healthy teeth. Healthy life. All under one roof."
+  ],
+  "chips": [
+    "9 Services Under One Roof",
+    "Patients of All Ages Welcome",
+    "Most Insurance Accepted",
+    "Gentle, Anxiety-Free Care"
+  ],
+  "sections": [
+    {
+      "h2": "Why General Dentistry Is the Cornerstone of a Healthy Smile",
+      "body": [
+        "General dentistry is the foundation of your oral health. Whether you need a routine filling, a tooth extracted, or a full restoration after tooth loss, Dr. Brown's general dentistry services address the full spectrum of dental needs — keeping your natural teeth healthy for as long as possible, and replacing them beautifully when necessary.",
+        "Untreated dental problems rarely stay small. A cavity left unfilled becomes a root canal. Gum disease left untreated leads to tooth loss. Missing teeth lead to bone loss and bite problems. That's why Dr. Brown's approach to general dentistry is comprehensive, proactive, and focused on long-term results — not just short-term fixes.",
+        "With over 30 years of experience serving Fort Worth and surrounding communities, our practice provides the full scope of general dental care your family needs — in a warm, welcoming environment where your comfort always comes first."
+      ],
+      "bullets": [
+        "9 distinct general dentistry services under one roof",
+        "Patients of all ages welcomed — from children to seniors",
+        "Most major dental insurance plans accepted",
+        "Gentle, anxiety-free techniques for every procedure"
+      ]
+    },
+    {
+      "h2": "Your General Dentistry Visit, Step by Step",
+      "body": [
+        "We've designed every aspect of your visit to be comfortable, efficient, and completely stress-free."
+      ],
+      "bullets": [
+        "Schedule & Confirm — Call us or book online. Our team confirms your appointment and verifies your insurance details before your visit.",
+        "Comprehensive Exam — Dr. Brown performs a thorough exam including X-rays, gum assessment, and oral cancer screening.",
+        "Personalised Plan — We discuss your diagnosis and create a customised treatment plan with clear options and transparent costs.",
+        "Treatment & Follow-Up — We complete your treatment with care and schedule follow-up visits to ensure lasting, optimal results."
+      ]
+    },
+    {
+      "h2": "Dental Implants",
+      "body": [
+        "Dental implants are the gold standard for permanent tooth replacement. A small titanium post is surgically placed into the jawbone, where it fuses with bone over time to create a stable, long-lasting foundation for a natural-looking crown. Unlike dentures or bridges, implants preserve bone structure and do not require altering adjacent healthy teeth."
+      ],
+      "bullets": [
+        "Looks, feels, and functions exactly like a natural tooth",
+        "Preserves jawbone and prevents facial collapse",
+        "Can last a lifetime with proper care",
+        "No impact on adjacent healthy teeth"
+      ],
+      "servicePath": "/dental-implants/"
+    },
+    {
+      "h2": "Dental Crowns",
+      "body": [
+        "A dental crown is a custom-made cap that covers the entire visible portion of a tooth above the gum line. Crowns protect and restore teeth that are severely decayed, cracked, weakened after a root canal, or have large fillings. Our porcelain crowns are matched to the exact shape, size, and shade of your natural teeth for a seamless, beautiful result."
+      ],
+      "bullets": [
+        "Custom-shaded porcelain matches your natural teeth",
+        "Restores full chewing function and bite strength",
+        "Typically completed in 2 appointments",
+        "Protects a tooth after root canal treatment"
+      ],
+      "servicePath": "/treatments/crowns/"
+    },
+    {
+      "h2": "Dental Bridges",
+      "body": [
+        "A dental bridge literally 'bridges' the gap left by one or more missing teeth. The artificial tooth (pontic) is anchored on either side by crowns cemented onto adjacent natural teeth. Bridges restore your bite, speech, and smile without the need for surgery — a reliable, time-tested solution for tooth replacement."
+      ],
+      "bullets": [
+        "Restores appearance, function, and bite alignment",
+        "Prevents remaining teeth from shifting",
+        "No surgery required — non-invasive procedure",
+        "Custom-crafted porcelain for a natural appearance"
+      ],
+      "servicePath": "/treatments/bridges/"
+    },
+    {
+      "h2": "Dentures",
+      "body": [
+        "Modern dentures have come a long way — today's custom-crafted prosthetics look incredibly natural and fit far more comfortably than older generations. Whether you need a full denture (replacing all teeth on an arch) or a partial denture (filling gaps between remaining teeth), Dr. Brown will design a solution that restores your smile, chewing ability, and confidence."
+      ],
+      "bullets": [
+        "Full and partial dentures available",
+        "Custom-fitted for a natural look and comfortable feel",
+        "Implant-supported options available for extra stability",
+        "Restores your smile and facial structure"
+      ],
+      "servicePath": "/treatments/dentures/"
+    },
+    {
+      "h2": "Non-Surgical Root Canal",
+      "body": [
+        "Root canal therapy has an undeserved reputation for being painful — modern root canal treatment is no more uncomfortable than having a filling. When the pulp inside a tooth becomes infected, a root canal removes the damaged tissue, disinfects the canal, and seals it to prevent re-infection. This saves your natural tooth and eliminates the pain caused by infection."
+      ],
+      "bullets": [
+        "Saves your natural tooth from extraction",
+        "Modern technique — comfortable with effective anesthesia",
+        "Eliminates infection and relieves tooth pain",
+        "Tooth protected with a crown after treatment"
+      ],
+      "servicePath": "/treatments/root-canal/"
+    },
+    {
+      "h2": "Gum Disease Laser Therapy",
+      "body": [
+        "Periodontal (gum) disease affects nearly half of adults over 30 and is the leading cause of adult tooth loss. Left untreated, it can also increase your risk of heart disease, diabetes complications, and stroke. Dr. Brown uses advanced dental laser therapy — a minimally invasive approach that precisely targets diseased tissue while leaving healthy tissue intact."
+      ],
+      "bullets": [
+        "Minimally invasive — no scalpel or sutures needed",
+        "Less discomfort and faster healing than traditional surgery",
+        "Targets diseased tissue with precision accuracy",
+        "Reduces gum pocket depth and bacteria levels"
+      ],
+      "servicePath": "/treatments/gum-disease/"
+    },
+    {
+      "h2": "Tooth Extractions",
+      "body": [
+        "While we always try to preserve your natural teeth, sometimes an extraction is the best option — for teeth that are severely decayed, fractured beyond repair, causing crowding, or infected. Dr. Brown performs all extractions with your comfort as the absolute priority, using effective local anesthesia and a gentle, careful technique."
+      ],
+      "bullets": [
+        "Routine and complex extractions performed in-office",
+        "Effective local anesthesia — minimal discomfort",
+        "Clear post-op care instructions provided",
+        "Replacement options discussed at same visit"
+      ],
+      "servicePath": "/treatments/extractions/"
+    },
+    {
+      "h2": "Fillings & Restorations",
+      "body": [
+        "Tooth decay is the most common dental problem among both children and adults. When caught early, a composite (tooth-colored) filling restores the tooth quickly and effectively. Our fillings are made from durable resin that matches the natural color of your teeth — so your smile looks completely natural, with no dark metal patches."
+      ],
+      "bullets": [
+        "Tooth-colored composite resin — no metal visible",
+        "Bonds directly to tooth — less drilling required",
+        "Old amalgam fillings can be safely replaced",
+        "Typically completed in a single appointment"
+      ],
+      "servicePath": "/treatments/fillings/"
+    },
+    {
+      "h2": "Dental Sealants",
+      "body": [
+        "Dental sealants are thin, protective coatings applied to the chewing surfaces of the back teeth — the areas most prone to cavities. The deep grooves in these teeth are difficult to clean thoroughly, making them vulnerable to decay. Sealants fill these grooves and create a smooth surface that's easy to keep clean, dramatically reducing the risk of cavities."
+      ],
+      "bullets": [
+        "Reduces cavity risk in back teeth by up to 80%",
+        "Quick, painless application — no drilling required",
+        "Recommended for children & cavity-prone adults",
+        "Can last up to 10 years with proper care"
+      ],
+      "servicePath": "/treatments/sealants/"
+    },
+    {
+      "h2": "Don't Wait — Warning Signs You Need to See Dr. Brown",
+      "body": [
+        "Dental problems rarely resolve on their own — they almost always worsen over time. If you're experiencing any of the following, don't delay. Early treatment is almost always simpler, less expensive, and more comfortable than waiting."
+      ],
+      "bullets": [
+        "Tooth Pain or Sensitivity — Persistent pain or sensitivity to hot/cold could indicate decay, a crack, or an abscess requiring prompt treatment.",
+        "Bleeding or Swollen Gums — Gums that bleed when brushing are a classic early warning sign of gum disease — highly treatable when caught early.",
+        "Loose or Missing Teeth — Adult teeth should never feel loose. This may indicate advanced gum disease or bone loss that needs immediate attention.",
+        "Persistent Bad Breath — Chronic bad breath that doesn't improve with brushing can be a sign of gum disease or tooth decay requiring treatment.",
+        "Visible Decay or Dark Spots — Dark spots, holes, or discoloration on your teeth are visible signs of active decay that needs to be treated promptly."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often should I visit the dentist for a checkup?",
+      "a": "Most patients benefit from dental checkups and professional cleanings every six months. However, patients with a history of gum disease, frequent cavities, or other ongoing dental concerns may be advised to visit more frequently — every 3 or 4 months. During your first visit, Dr. Brown will assess your oral health and recommend the ideal recall schedule for your specific needs."
+    },
+    {
+      "q": "What is the difference between a dental crown and a filling?",
+      "a": "A filling repairs a small, localized area of tooth decay — the damaged portion is removed and replaced with composite resin. A dental crown, on the other hand, covers the entire visible tooth above the gum line, providing full protection for teeth that are severely decayed, cracked, broken, or weakened after a root canal. Dr. Brown will examine your tooth and recommend the most appropriate and conservative restoration based on the extent of damage and your long-term dental health."
+    },
+    {
+      "q": "Is a root canal painful?",
+      "a": "Modern root canal therapy is no more uncomfortable than having a filling placed. Dr. Brown uses effective local anesthesia to ensure complete numbness throughout the procedure. Most patients report that the anticipation is far worse than the actual treatment. In fact, most patients feel significant relief after a root canal — because the procedure removes the infected tissue that was causing the pain. Some mild soreness may occur for a day or two after treatment, which is easily managed with over-the-counter pain medication."
+    },
+    {
+      "q": "How do I know if I have gum disease?",
+      "a": "Common warning signs of gum disease include: red, swollen, or tender gums; gums that bleed when you brush or floss; persistent bad breath that doesn't improve with brushing; receding gums — teeth appear longer than usual; loose or shifting teeth; and tooth sensitivity to hot or cold temperatures. Many people have gum disease without realizing it, as early stages are often painless. That's why regular checkups are so important. If you notice any of these signs, call our Fort Worth office at (817) 920-0882 for an evaluation."
+    },
+    {
+      "q": "Are dental implants covered by insurance?",
+      "a": "Dental implant coverage varies significantly between insurance plans. Many plans do not cover the full implant cost, but some may cover portions such as the crown restoration, bone grafting, or surgical placement. Our administrative team will contact your insurance provider before your appointment to verify your exact benefits. We also offer flexible financing options to help make implant treatment accessible."
+    },
+    {
+      "q": "What happens if I don't replace a missing tooth?",
+      "a": "Leaving a gap from a missing tooth causes a cascade of problems that worsen over time. Bone loss: the jawbone begins to resorb (shrink) within 3 months of losing a tooth, as it no longer receives stimulation from a tooth root. Shifting teeth: neighboring teeth drift into the gap, causing misalignment and bite problems. Facial collapse: over time, significant bone loss can cause a 'sunken' facial appearance that ages you prematurely. Difficulty chewing: missing teeth affect your ability to chew properly, which can lead to nutritional deficiencies. The sooner you replace a missing tooth, the better. Dental implants are the best way to prevent all of these consequences — call us at (817) 920-0882 to schedule a consultation."
+    }
+  ],
+  "related": [
+    {"label": "Dental Implants", "path": "/dental-implants/"},
+    {"label": "Dental Crowns", "path": "/treatments/crowns/"},
+    {"label": "Root Canal Treatment", "path": "/treatments/root-canal/"},
+    {"label": "Dentures", "path": "/treatments/dentures/"}
+  ],
+  "cta": {
+    "title": "Don't Wait Until It Hurts — Preventive Care Saves Teeth",
+    "body": "Every service is performed personally by Dr. Brown and his experienced team at 1818 8th Avenue, Fort Worth, TX 76110. Call (817) 920-0882 or request an appointment online — we respond within one business day."
+  }
+}
