@@ -1,0 +1,45 @@
+/* Ohio Endocrinology — Typography tokens
+   Headings: Playfair Display (serif). Body/UI: Inter. */
+
+:root {
+  /* ---- Families ---- */
+  --oe-font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --oe-font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ---- Weights ---- */
+  --oe-fw-light: 300;      /* @kind font */
+  --oe-fw-regular: 400;    /* @kind font */
+  --oe-fw-medium: 500;     /* @kind font */
+  --oe-fw-semibold: 600;   /* @kind font */
+  --oe-fw-bold: 700;       /* @kind font */
+  --oe-fw-extrabold: 800;  /* @kind font */
+
+  /* ---- Static scale (rem) ---- */
+  --oe-fs-xs: 0.75rem;      /* 12px */
+  --oe-fs-sm: 0.875rem;     /* 14px */
+  --oe-fs-base: 1rem;       /* 16px */
+  --oe-fs-md: 1.125rem;     /* 18px */
+  --oe-fs-lg: 1.25rem;      /* 20px */
+  --oe-fs-xl: 1.5rem;       /* 24px */
+  --oe-fs-2xl: 1.875rem;    /* 30px */
+  --oe-fs-3xl: 2.25rem;     /* 36px */
+  --oe-fs-4xl: 3rem;        /* 48px */
+  --oe-fs-5xl: 3.75rem;     /* 60px */
+
+  /* ---- Fluid heading sizes ---- */
+  --oe-fs-h1: clamp(2rem, 5vw, 3.75rem);    /* @kind font */
+  --oe-fs-h2: clamp(1.6rem, 4vw, 3rem);     /* @kind font */
+  --oe-fs-h3: clamp(1.3rem, 3vw, 1.875rem); /* @kind font */
+  --oe-fs-h4: clamp(1.1rem, 2.5vw, 1.5rem); /* @kind font */
+
+  /* ---- Line heights ---- */
+  --oe-lh-tight: 1.2;       /* @kind font */
+  --oe-lh-snug: 1.4;        /* @kind font */
+  --oe-lh-body: 1.7;        /* @kind font */
+  --oe-lh-relaxed: 1.75;    /* @kind font */
+
+  /* ---- Letter spacing ---- */
+  --oe-ls-heading: -0.01em; /* @kind font */
+  --oe-ls-eyebrow: 0.12em;  /* @kind font */
+  --oe-ls-label: 0.05em;    /* @kind font */
+}

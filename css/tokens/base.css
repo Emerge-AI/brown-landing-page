@@ -1,0 +1,63 @@
+/* Ohio Endocrinology — Base reset & element defaults.
+   Element-level styling that consumers get for free. All values reference tokens. */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--oe-header-h) + 20px);
+}
+
+body {
+  font-family: var(--oe-font-body);
+  font-size: var(--oe-fs-base);
+  line-height: var(--oe-lh-body);
+  color: var(--oe-text);
+  background: var(--oe-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--oe-font-display);
+  font-weight: var(--oe-fw-bold);
+  line-height: var(--oe-lh-tight);
+  letter-spacing: var(--oe-ls-heading);
+  color: var(--oe-heading);
+}
+h1 { font-size: var(--oe-fs-h1); }
+h2 { font-size: var(--oe-fs-h2); }
+h3 { font-size: var(--oe-fs-h3); }
+h4 { font-size: var(--oe-fs-h4); }
+
+/* ---- Body copy ---- */
+p { line-height: var(--oe-lh-relaxed); }
+
+strong, b { font-weight: var(--oe-fw-bold); color: var(--oe-navy); }
+
+a {
+  color: var(--oe-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--oe-transition);
+}
+a:hover { color: var(--oe-navy); }
+
+/* ---- Accessibility: focus ---- */
+:focus-visible {
+  outline: 3px solid var(--oe-focus);
+  outline-offset: 3px;
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

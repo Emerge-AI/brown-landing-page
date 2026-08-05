@@ -1,0 +1,14 @@
+# Netlify configuration.
+# The site is plain static output — no dependencies, no framework.
+# `docs/` is the domain root; the page itself lives at docs/dental-implants/
+# so the served URL matches the canonical in the page's <head>.
+#
+# Redirects and headers are emitted by the build into docs/_redirects and
+# docs/_headers, so they apply to CLI and drag-and-drop deploys too.
+
+[build]
+  publish = "docs"
+  command = "node tools/build.mjs"
+
+[build.environment]
+  NODE_VERSION = "20"

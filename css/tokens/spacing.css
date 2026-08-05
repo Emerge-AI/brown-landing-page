@@ -1,0 +1,31 @@
+/* Ohio Endocrinology — Spacing & layout tokens (4px base scale) */
+
+:root {
+  --oe-sp-1: 0.25rem;   /* 4px  */
+  --oe-sp-2: 0.5rem;    /* 8px  */
+  --oe-sp-3: 0.75rem;   /* 12px */
+  --oe-sp-4: 1rem;      /* 16px */
+  --oe-sp-5: 1.25rem;   /* 20px */
+  --oe-sp-6: 1.5rem;    /* 24px */
+  --oe-sp-8: 2rem;      /* 32px */
+  --oe-sp-10: 2.5rem;   /* 40px */
+  --oe-sp-12: 3rem;     /* 48px */
+  --oe-sp-16: 4rem;     /* 64px */
+  --oe-sp-20: 5rem;     /* 80px */
+  --oe-sp-24: 6rem;     /* 96px */
+  --oe-sp-32: 8rem;     /* 128px */
+
+  /* ---- Containers ---- */
+  --oe-container: 1200px;              /* @kind other */
+  --oe-container-wide: 1440px;        /* @kind other */
+  --oe-container-pad: clamp(1rem, 4vw, 2.5rem); /* @kind spacing */
+
+  /* ---- Section rhythm ---- */
+  --oe-section-pad: clamp(3rem, 8vw, 6rem);
+  --oe-section-pad-sm: clamp(2rem, 5vw, 3.5rem);
+  --oe-section-pad-lg: clamp(4rem, 10vw, 8rem);
+
+  /* ---- Header ---- */
+  --oe-header-h: 90px;         /* @kind other */
+  --oe-header-h-mobile: 70px;  /* @kind other */
+}

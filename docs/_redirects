@@ -1,0 +1,8 @@
+# Bare domain → the landing page
+/                                    /dental-implants/                          301
+
+# Secondary domain → canonical domain (path preserved)
+http://marshallhbrown.com/*                https://marshallbrowndds.com/:splat                 301!
+https://marshallhbrown.com/*               https://marshallbrowndds.com/:splat                 301!
+http://www.marshallhbrown.com/*            https://marshallbrowndds.com/:splat                 301!
+https://www.marshallhbrown.com/*           https://marshallbrowndds.com/:splat                 301!

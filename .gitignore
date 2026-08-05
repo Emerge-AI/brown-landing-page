@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Node (no deps today, but keep it safe)
+node_modules/
+
+# Local env / secrets
+.env
+.env.*
+
+# Netlify CLI local state
+.netlify/
+
+# NOTE: docs/ IS committed on purpose.
+# It holds the processed WebP/JPEG renditions, which are generated from the
+# raw photo shoot living outside this repo (~432MB of originals). Netlify
+# cannot regenerate them at build time, so they must be version-controlled.
