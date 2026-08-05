@@ -1012,7 +1012,7 @@ function homeBody(p) {
   const located = find(/located|visit us/i);
 
   const heroHtml = `
-<section class="mhb-hero" id="top" aria-label="Introduction">
+<section class="mhb-hero mhb-hero--home" id="top" aria-label="Introduction">
   <div class="mhb-hero__inner">
     <div>
       <p class="mhb-hero__eyebrow">${esc(p.eyebrow)}</p>
@@ -1025,15 +1025,10 @@ function homeBody(p) {
         <a class="mhb-btn mhb-btn--teal" href="/contact/">${ic('calendar')} Book Appointment</a>
         <a class="mhb-btn mhb-btn--outline-white" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
       </div>
-      <ul class="mhb-hero__trust" role="list">
-        <li class="mhb-hero__trust-item">${ic('star')} <span><strong>${PRACTICE.rating.value}★ Google rating</strong> · ${PRACTICE.rating.count}+ reviews</span></li>
-        <li class="mhb-hero__trust-item">${ic('shield')} <span><strong>Most insurance</strong> accepted</span></li>
-        <li class="mhb-hero__trust-item">${ic('calendar')} <span><strong>Same-week</strong> appointments</span></li>
-      </ul>
     </div>
     <div class="mhb-hero__media mhb-hero__media--team">
       <div class="mhb-hero__img-wrap">
-        ${picture(IMAGES.team, { sizes: '(max-width: 1024px) 90vw, 540px', eager: true })}
+        ${picture(IMAGES.team, { sizes: '(max-width: 1024px) 92vw, 725px', eager: true })}
       </div>
       <div class="mhb-hero__badge">
         <div class="mhb-hero__badge-icon">${ic('star')}</div>
@@ -1291,7 +1286,7 @@ for (const p of loadPages()) {
     body: tpl(p),
     extraHead: isHome ? `<link rel="preload" as="image" type="image/webp"
     imagesrcset="${srcset(IMAGES.team, 'webp')}"
-    imagesizes="(max-width: 1024px) 90vw, 540px" fetchpriority="high">` : '',
+    imagesizes="(max-width: 1024px) 92vw, 725px" fetchpriority="high">` : '',
   });
   built.push({ path: p.path, priority: isHome ? '1.0' : '0.7' });
 }

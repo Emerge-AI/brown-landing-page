@@ -27,7 +27,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..800;1,400..600&family=Playfair+Display:ital,wght@0,600..800;1,600..700&display=swap"></noscript>
   <link rel="preload" as="image" type="image/webp"
     imagesrcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.webp 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.webp 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.webp 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.webp 1600w"
-    imagesizes="(max-width: 1024px) 90vw, 540px" fetchpriority="high">
+    imagesizes="(max-width: 1024px) 92vw, 725px" fetchpriority="high">
   <style>
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 
@@ -1562,6 +1562,18 @@ body { padding-bottom: 52px; }
 @media (max-width: 1024px) { .mhb-grid-4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .mhb-grid-4 { grid-template-columns: 1fr; } }
 main section[id] { scroll-margin-top: 130px; }
+.mhb-hero--home .mhb-hero__inner {
+  max-width: var(--oe-container-wide);
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+}
+.mhb-hero--home .mhb-hero__title { font-size: clamp(2rem, 3.6vw, 3.25rem); }
+.mhb-hero--home .mhb-hero__desc {
+  max-width: 34rem;
+  margin-bottom: 1.75rem;
+}
+.mhb-hero--home .mhb-hero__chips { margin: 0 0 1.75rem; }
+.mhb-hero--home .mhb-hero__actions { margin-bottom: 0; }
 .mhb-hero__media--team .mhb-hero__img-wrap { aspect-ratio: 3 / 2; }
 .mhb-hero__media--team .mhb-hero__badge-2 {
   top: auto;
@@ -1569,6 +1581,7 @@ main section[id] { scroll-margin-top: 130px; }
   bottom: -1rem;
 }
 @media (max-width: 1024px) {
+  .mhb-hero--home .mhb-hero__inner { grid-template-columns: 1fr; }
   .mhb-hero__media--team .mhb-hero__badge-2 { right: 0.5rem; bottom: -0.5rem; }
 }
 
@@ -1720,7 +1733,7 @@ main section[id] { scroll-margin-top: 130px; }
 
 <main id="main">
 
-<section class="mhb-hero" id="top" aria-label="Introduction">
+<section class="mhb-hero mhb-hero--home" id="top" aria-label="Introduction">
   <div class="mhb-hero__inner">
     <div>
       <p class="mhb-hero__eyebrow">Accepting New Patients in Fort Worth, TX</p>
@@ -1736,17 +1749,12 @@ main section[id] { scroll-margin-top: 130px; }
         <a class="mhb-btn mhb-btn--teal" href="/contact/"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> Book Appointment</a>
         <a class="mhb-btn mhb-btn--outline-white" href="tel:+18179200882"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2c.5 0 .9.3 1.1.7l1.7 3.6c.2.5.1 1-.3 1.4L7.6 9.2a12.4 12.4 0 0 0 7.2 7.2l1.5-1.5c.4-.4.9-.5 1.4-.3l3.6 1.7c.4.2.7.6.7 1.1v3.1c0 .8-.7 1.5-1.5 1.4C10.5 21.4 2.6 13.5 2.1 3.5 2 2.7 2.7 2 3.5 2z"/></svg> Call (817) 920-0882</a>
       </div>
-      <ul class="mhb-hero__trust" role="list">
-        <li class="mhb-hero__trust-item"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg> <span><strong>4.7★ Google rating</strong> · 269+ reviews</span></li>
-        <li class="mhb-hero__trust-item"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5zm-1.2 13.4 6-6-1.7-1.7-4.3 4.3-1.9-1.9-1.7 1.7z"/></svg> <span><strong>Most insurance</strong> accepted</span></li>
-        <li class="mhb-hero__trust-item"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> <span><strong>Same-week</strong> appointments</span></li>
-      </ul>
     </div>
     <div class="mhb-hero__media mhb-hero__media--team">
       <div class="mhb-hero__img-wrap">
         <picture>
-  <source type="image/webp" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.webp 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.webp 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.webp 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.webp 1600w" sizes="(max-width: 1024px) 90vw, 540px">
-  <img src="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.jpg 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.jpg 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.jpg 1600w" sizes="(max-width: 1024px) 90vw, 540px"
+  <source type="image/webp" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.webp 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.webp 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.webp 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.webp 1600w" sizes="(max-width: 1024px) 92vw, 725px">
+  <img src="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.jpg 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.jpg 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.jpg 1600w" sizes="(max-width: 1024px) 92vw, 725px"
     width="1600" height="1066" alt="The full dental team at Marshall H. Brown, DDS in Fort Worth, Texas — doctors, hygienists, and front-office staff" fetchpriority="high" decoding="async">
 </picture>
       </div>

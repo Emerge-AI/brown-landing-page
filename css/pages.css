@@ -63,12 +63,30 @@
 /* Anchored sections land below the sticky header */
 main section[id] { scroll-margin-top: 130px; }
 
-/* Home hero group photo.
-   The team shot is 3:2; the default 4:3.2 hero frame would crop ~17% off
-   each side and cut off the people on the ends. Match the photo's own
-   ratio so the whole team stays in frame, and move the experience badge
-   off the top-right corner — Dr. Brown's face is there. Both badges now
-   sit along the bottom edge, over torsos rather than faces. */
+/* ── Home hero ──────────────────────────────────────────────────
+   The team photo is the page's primary visual, so the home hero gives
+   the image column the larger share of the grid and a wider container
+   than the service-page hero. Eleven faces need the extra pixels to
+   read at all. */
+.mhb-hero--home .mhb-hero__inner {
+  max-width: var(--oe-container-wide);
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+}
+/* Long headline ("…Starts Here in Fort Worth, TX") ran to three lines at
+   the shared 4rem cap, pushing the CTAs below the fold. */
+.mhb-hero--home .mhb-hero__title { font-size: clamp(2rem, 3.6vw, 3.25rem); }
+.mhb-hero--home .mhb-hero__desc {
+  max-width: 34rem;
+  margin-bottom: 1.75rem;
+}
+.mhb-hero--home .mhb-hero__chips { margin: 0 0 1.75rem; }
+.mhb-hero--home .mhb-hero__actions { margin-bottom: 0; }
+
+/* The team shot is 3:2; the shared 4:3.2 frame cropped ~17% off each side
+   and cut the people on the ends. Match the photo's own ratio, and keep
+   the experience badge off the top-right corner — Dr. Brown's face is
+   there. Both badges sit along the bottom edge, over torsos not faces. */
 .mhb-hero__media--team .mhb-hero__img-wrap { aspect-ratio: 3 / 2; }
 .mhb-hero__media--team .mhb-hero__badge-2 {
   top: auto;
@@ -76,5 +94,6 @@ main section[id] { scroll-margin-top: 130px; }
   bottom: -1rem;
 }
 @media (max-width: 1024px) {
+  .mhb-hero--home .mhb-hero__inner { grid-template-columns: 1fr; }
   .mhb-hero__media--team .mhb-hero__badge-2 { right: 0.5rem; bottom: -0.5rem; }
 }
