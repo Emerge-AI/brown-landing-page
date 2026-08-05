@@ -2080,9 +2080,14 @@ main section[id] { scroll-margin-top: 130px; }
   // and layout; deferring it keeps that off the critical path.
   if (tickerContent) {
     var start = function () { tickerContent.classList.add('is-running'); };
+    // Hold off ~2.5s after load, then wait for an idle moment. A marquee
+    // that begins a couple of seconds in reads as intentional, and this
+    // keeps its style/layout work clear of the page's settling period.
     var defer = function () {
-      if (window.requestIdleCallback) requestIdleCallback(start, { timeout: 2000 });
-      else setTimeout(start, 800);
+      setTimeout(function () {
+        if (window.requestIdleCallback) requestIdleCallback(start, { timeout: 2000 });
+        else start();
+      }, 2500);
     };
     if (document.readyState === 'complete') defer();
     else window.addEventListener('load', defer);
