@@ -1031,7 +1031,7 @@ function homeBody(p) {
         <li class="mhb-hero__trust-item">${ic('calendar')} <span><strong>Same-week</strong> appointments</span></li>
       </ul>
     </div>
-    <div class="mhb-hero__media">
+    <div class="mhb-hero__media mhb-hero__media--team">
       <div class="mhb-hero__img-wrap">
         ${picture(IMAGES.team, { sizes: '(max-width: 1024px) 90vw, 540px', eager: true })}
       </div>
