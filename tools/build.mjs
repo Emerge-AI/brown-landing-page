@@ -789,7 +789,13 @@ const inlineCss = CSS_FILES
   .replace(/^@import[^\n]*$/gm, '')
   .replace(/\n{2,}/g, '\n');
 
-const FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..800;1,400..600&family=Playfair+Display:ital,wght@0,600..800;1,600..700&display=swap';
+/* Fonts are self-hosted (see css/tokens/fonts.css). Preload only the two
+   faces used above the fold — the italic is for pull quotes further down
+   and is left to load normally. */
+const FONT_PRELOADS = [
+  '/assets/fonts/inter-latin.woff2',
+  '/assets/fonts/playfair-latin.woff2',
+].map((h) => `<link rel="preload" href="${h}" as="font" type="font/woff2" crossorigin>`).join('\n  ');
 
 /* Render one page. pagePath must start and end with "/". Writes
    docs/<pagePath>/index.html unless outFile overrides the destination. */
@@ -822,10 +828,7 @@ function renderPage({
   <meta name="twitter:description" content="${esc(metaDesc)}">
   <meta name="twitter:image" content="${og}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="${FONTS_HREF}" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="${FONTS_HREF}"></noscript>
+  ${FONT_PRELOADS}
   ${extraHead}
   <style>
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
@@ -1363,6 +1366,10 @@ https://www.${SECONDARY}/*           ${SITE.origin}/:splat                 301!
    width, and a photo swap changes the slug. */
 const HEADERS = `${IMG_BASE}/*
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
 
 /*
   X-Content-Type-Options: nosniff
