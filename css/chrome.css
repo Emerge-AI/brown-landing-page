@@ -533,9 +533,16 @@
 .mhb-ticker-content {
   display: inline-flex;
   align-items: center;
-  animation: mhb-ticker-scroll 180s linear infinite;
   padding: 0.875rem 0;
-  will-change: transform;
+}
+/* The strip is ~10,000px wide, so animating it during page load cost ~350ms
+   of style & layout on the main thread. JS adds .is-running once the page
+   has loaded and the main thread is idle — the ticker looks identical to a
+   user, but does no work while the page is still painting. `will-change`
+   is deliberately absent: permanently promoting a layer this wide cost
+   more than it saved. */
+.mhb-ticker-content.is-running {
+  animation: mhb-ticker-scroll 180s linear infinite;
 }
 .mhb-ticker-track:hover .mhb-ticker-content,
 .mhb-ticker-content.is-paused { animation-play-state: paused; }
@@ -628,7 +635,7 @@ body { padding-bottom: 52px; }
 @media (prefers-reduced-motion: reduce) {
   .mhb-header, .mhb-drawer, .mhb-drawer-overlay,
   .mhb-drawer__sub, .mhb-header__dropdown { transition: none; animation: none; }
-  .mhb-ticker-content { animation: none; }
+  .mhb-ticker-content, .mhb-ticker-content.is-running { animation: none; }
   .mhb-ticker-pause { display: none; }
 }
 @media print {

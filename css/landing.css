@@ -521,8 +521,9 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  background: rgba(13, 45, 78, 0.85);
-  backdrop-filter: blur(4px);
+  /* Slightly more opaque instead of a backdrop blur: the filter forced an
+     expensive offscreen composite per chip for a barely visible effect. */
+  background: rgba(13, 45, 78, 0.92);
   color: #fff;
   font-size: 0.78rem;
   font-weight: var(--oe-fw-semibold);

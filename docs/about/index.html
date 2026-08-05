@@ -725,8 +725,8 @@ a:hover { color: var(--oe-navy); }
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  background: rgba(13, 45, 78, 0.85);
-  backdrop-filter: blur(4px);
+  
+  background: rgba(13, 45, 78, 0.92);
   color: #fff;
   font-size: 0.78rem;
   font-weight: var(--oe-fw-semibold);
@@ -1411,9 +1411,10 @@ a:hover { color: var(--oe-navy); }
 .mhb-ticker-content {
   display: inline-flex;
   align-items: center;
-  animation: mhb-ticker-scroll 180s linear infinite;
   padding: 0.875rem 0;
-  will-change: transform;
+}
+.mhb-ticker-content.is-running {
+  animation: mhb-ticker-scroll 180s linear infinite;
 }
 .mhb-ticker-track:hover .mhb-ticker-content,
 .mhb-ticker-content.is-paused { animation-play-state: paused; }
@@ -1502,7 +1503,7 @@ body { padding-bottom: 52px; }
 @media (prefers-reduced-motion: reduce) {
   .mhb-header, .mhb-drawer, .mhb-drawer-overlay,
   .mhb-drawer__sub, .mhb-header__dropdown { transition: none; animation: none; }
-  .mhb-ticker-content { animation: none; }
+  .mhb-ticker-content, .mhb-ticker-content.is-running { animation: none; }
   .mhb-ticker-pause { display: none; }
 }
 @media print {
@@ -2040,6 +2041,18 @@ main section[id] { scroll-margin-top: 130px; }
       pauseBtn.setAttribute('aria-label', paused ? 'Pause announcements' : 'Play announcements');
       tickerContent.classList.toggle('is-paused', !paused);
     });
+  }
+  // Start the ticker only once the page has loaded and the main thread is
+  // idle. Animating a ~10,000px strip during render cost ~350ms of style
+  // and layout; deferring it keeps that off the critical path.
+  if (tickerContent) {
+    var start = function () { tickerContent.classList.add('is-running'); };
+    var defer = function () {
+      if (window.requestIdleCallback) requestIdleCallback(start, { timeout: 2000 });
+      else setTimeout(start, 800);
+    };
+    if (document.readyState === 'complete') defer();
+    else window.addEventListener('load', defer);
   }
 })();
 </script>

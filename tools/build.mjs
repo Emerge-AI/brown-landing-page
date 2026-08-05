@@ -720,6 +720,18 @@ const SCRIPT = `<script>
       tickerContent.classList.toggle('is-paused', !paused);
     });
   }
+  // Start the ticker only once the page has loaded and the main thread is
+  // idle. Animating a ~10,000px strip during render cost ~350ms of style
+  // and layout; deferring it keeps that off the critical path.
+  if (tickerContent) {
+    var start = function () { tickerContent.classList.add('is-running'); };
+    var defer = function () {
+      if (window.requestIdleCallback) requestIdleCallback(start, { timeout: 2000 });
+      else setTimeout(start, 800);
+    };
+    if (document.readyState === 'complete') defer();
+    else window.addEventListener('load', defer);
+  }
 })();
 </script>`;
 
