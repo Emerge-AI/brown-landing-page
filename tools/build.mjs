@@ -770,6 +770,40 @@ const footer = `
   </div>
 </footer>`;
 
+/* ---------- self-hosted fonts ----------
+   Filenames carry a content hash so they can be cached immutably and still
+   change safely. That means the @font-face rules and preload hints are
+   derived from what's actually on disk rather than hard-coded, so the hash,
+   the CSS, and the preloads can never drift apart. Latin subset, further
+   reduced to the ~90 glyphs the site actually uses. */
+const LATIN_RANGE = 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, '
+  + 'U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, '
+  + 'U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD';
+
+const FONT_FACES = [
+  { file: 'inter-latin', family: 'Inter', style: 'normal', weight: '300 800', preload: true },
+  { file: 'playfair-latin', family: 'Playfair Display', style: 'normal', weight: '600 800', preload: true },
+  // Italic is used only by pull quotes below the fold — loaded, never preloaded.
+  { file: 'inter-latin-italic', family: 'Inter', style: 'italic', weight: '400 600', preload: false },
+];
+
+const fontDir = path.join(DOCS, 'assets', 'fonts');
+const fontFiles = fs.existsSync(fontDir) ? fs.readdirSync(fontDir) : [];
+for (const f of FONT_FACES) {
+  const match = fontFiles.find((n) => n.startsWith(f.file + '.') && n.endsWith('.woff2'));
+  if (!match) throw new Error(`Missing font file for "${f.file}" in docs/assets/fonts/`);
+  f.url = `/assets/fonts/${match}`;
+}
+
+const fontCss = FONT_FACES.map((f) =>
+  `@font-face{font-family:'${f.family}';font-style:${f.style};font-weight:${f.weight};`
+  + `font-display:swap;src:url('${f.url}') format('woff2');unicode-range:${LATIN_RANGE};}`
+).join('\n');
+
+const FONT_PRELOADS = FONT_FACES.filter((f) => f.preload)
+  .map((f) => `<link rel="preload" href="${f.url}" as="font" type="font/woff2" crossorigin>`)
+  .join('\n  ');
+
 /* ---------- document shell ---------- */
 const heroPreload = `<link rel="preload" as="image" type="image/webp"
     imagesrcset="${srcset(IMAGES.hero, 'webp')}"
@@ -782,20 +816,13 @@ const CSS_FILES = [
   'tokens/spacing.css', 'tokens/radii-shadows.css', 'tokens/base.css',
   'landing.css', 'chrome.css', 'pages.css',
 ];
-const inlineCss = CSS_FILES
+const inlineCss = fontCss + '\n' + CSS_FILES
   .map((f) => fs.readFileSync(path.join(ROOT, 'css', f), 'utf8'))
   .join('\n')
   .replace(/\/\*[\s\S]*?\*\//g, '')
   .replace(/^@import[^\n]*$/gm, '')
   .replace(/\n{2,}/g, '\n');
 
-/* Fonts are self-hosted (see css/tokens/fonts.css). Preload only the two
-   faces used above the fold — the italic is for pull quotes further down
-   and is left to load normally. */
-const FONT_PRELOADS = [
-  '/assets/fonts/inter-latin.woff2',
-  '/assets/fonts/playfair-latin.woff2',
-].map((h) => `<link rel="preload" href="${h}" as="font" type="font/woff2" crossorigin>`).join('\n  ');
 
 /* Render one page. pagePath must start and end with "/". Writes
    docs/<pagePath>/index.html unless outFile overrides the destination. */
