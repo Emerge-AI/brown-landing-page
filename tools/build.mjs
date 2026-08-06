@@ -11,6 +11,7 @@ import {
   SITE, PRACTICE, DOCTORS, IMAGES, STATS, ANATOMY, TYPES, STEPS,
   COMPARISON, CANDIDATE, FINANCING, REAL_CARE, TESTIMONIALS, FAQS, CTA,
 } from './content.mjs';
+import { OFFICE, bookingBody, bookingScript } from './booking.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DOCS = path.join(ROOT, 'docs');           // deploy root (domain root)
@@ -274,6 +275,7 @@ const NAV = [
     ],
   },
   { label: 'Contact', drawerLabel: 'Contact Us', href: '/contact/', icon: 'mail' },
+  { label: 'Book', drawerLabel: 'Book Appointment', href: '/book/', icon: 'calendar', drawerOnly: true },
 ];
 
 const LOGO_SVG = `<svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="10" fill="#0d2d4e"/><path d="M14 11c-3 0-5.2 2.2-5.2 5.2 0 5.3 2.8 16 5.3 16 1.7 0 1.4-6.2 2.9-6.2s1.2 6.2 2.9 6.2c2.5 0 5.3-10.7 5.3-16C25.2 13.2 23 11 20 11c-1.8 0-2.3 1-3 1s-1.2-1-3-1z" transform="translate(4 -1)" fill="#fff"/></svg>`;
@@ -284,7 +286,7 @@ const addr = `${PRACTICE.address.street}, ${PRACTICE.address.city}, ${PRACTICE.a
 
 const cur = (h, activePath) => (h === activePath ? ' aria-current="page"' : '');
 
-const navDesktop = (activePath) => NAV.map((n, i) => n.items
+const navDesktop = (activePath) => NAV.filter((n) => !n.drawerOnly).map((n, i) => n.items
   ? `<li>
       <button class="mhb-header__nav-dd-btn" type="button" aria-expanded="false" aria-controls="dd-${i}">${esc(n.label)} <svg class="mhb-header__nav-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${'<path d="M6.3 9.3 12 15l5.7-5.7-1.4-1.4L12 12.2 7.7 7.9z"/>'}</svg></button>
       <ul class="mhb-header__dropdown" id="dd-${i}">
@@ -340,7 +342,7 @@ const chromeHeader = (activePath) => `
       </ul>
     </nav>
     <div class="mhb-header__right">
-      <a class="mhb-btn mhb-btn--teal mhb-btn--sm mhb-header__cta" href="#contact" aria-label="Book Appointment">${ic('calendar')} <span class="mhb-header__cta-text">Book Appointment</span></a>
+      <a class="mhb-btn mhb-btn--teal mhb-btn--sm mhb-header__cta" href="/book/" aria-label="Book Appointment">${ic('calendar')} <span class="mhb-header__cta-text">Book Appointment</span></a>
     </div>
   </div>
 </header>
@@ -356,7 +358,7 @@ const chromeHeader = (activePath) => `
     </ul>
   </nav>
   <div class="mhb-drawer__footer">
-    <a class="mhb-btn mhb-btn--teal mhb-header__cta" href="#contact">${ic('calendar')} Book Appointment</a>
+    <a class="mhb-btn mhb-btn--teal mhb-header__cta" href="/book/">${ic('calendar')} Book Appointment</a>
     <a class="mhb-drawer__footer-phone" href="${PRACTICE.phoneHref}">${ic('phone')} ${PRACTICE.phone}</a>
     <p class="mhb-drawer__footer-note">${ic('shield')} HIPAA-compliant · Fort Worth, TX</p>
   </div>
@@ -386,7 +388,7 @@ const hero = `
         <li class="mhb-hero__chip">${ic('check')} Implant-Supported Dentures</li>
       </ul>
       <div class="mhb-hero__actions">
-        <a class="mhb-btn mhb-btn--teal" href="#contact">${ic('calendar')} Free Implant Consultation</a>
+        <a class="mhb-btn mhb-btn--teal" href="/book/">${ic('calendar')} Free Implant Consultation</a>
         <a class="mhb-btn mhb-btn--outline-white" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
       </div>
       <ul class="mhb-hero__trust" role="list">
@@ -615,7 +617,7 @@ const ctaSection = `
     <p>${esc(CTA.body)}</p>
     <div class="mhb-cta__actions">
       <a class="mhb-btn mhb-btn--primary" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
-      <a class="mhb-btn mhb-btn--outline-white" href="mailto:${PRACTICE.email}?subject=Free%20Implant%20Consultation">${ic('calendar')} Email to Book a Visit</a>
+      <a class="mhb-btn mhb-btn--outline-white" href="/book/">${ic('calendar')} Request an Appointment</a>
     </div>
     <div class="mhb-cta__meta">
       <span>${ic('pin')} ${esc(addr)}</span>
@@ -628,7 +630,7 @@ const ctaSection = `
 const TICKER_ITEMS = [
   { icon: 'warning', variant: 'alert', html: `<strong>WARNING:</strong> Bone loss begins within 3 months of tooth extraction` },
   { icon: 'tooth', variant: 'info', html: `<strong>Dental Implants in Fort Worth</strong> — Permanent teeth that look and feel natural`, cta: ['Explore Implants', '/dental-implants/'] },
-  { icon: 'check', variant: 'success', html: `<strong>Accepting New Patients</strong> — Same-week appointments often available`, cta: ['Book Now', '/contact/', 'teal'] },
+  { icon: 'check', variant: 'success', html: `<strong>Accepting New Patients</strong> — Same-week appointments often available`, cta: ['Book Now', '/book/', 'teal'] },
   { icon: 'star', variant: 'gold', html: `<strong>4.7★ on Google</strong> — 269+ verified patient reviews in Fort Worth, TX` },
   { icon: 'shield', variant: 'success', html: `<strong>HIPAA-Compliant Practice</strong> — Your health information is always protected` },
   { icon: 'dollar', variant: 'info', html: `<strong>Financing Options Available</strong> — Make the smile you deserve affordable`, cta: ['See Options', '/patient-info/#financing'] },
@@ -636,7 +638,7 @@ const TICKER_ITEMS = [
   { icon: 'star', variant: 'info', html: `<strong>Zoom® &amp; LaserSmile Teeth Whitening</strong> — Brighten your smile up to 8 shades` },
   { icon: 'award', variant: 'gold', html: `<strong>30+ Years Serving Fort Worth Families</strong> — Dr. Marshall H. Brown, DDS` },
   { icon: 'check', variant: 'success', html: `<strong>Second Opinion Welcome</strong> — Get expert reassurance before any procedure` },
-  { icon: 'heart', variant: 'success', html: `<strong>Complimentary Consultation</strong> — Ask about your treatment options today`, cta: ['Get Started', '/contact/', 'teal'] },
+  { icon: 'heart', variant: 'success', html: `<strong>Complimentary Consultation</strong> — Ask about your treatment options today`, cta: ['Get Started', '/book/', 'teal'] },
   { icon: 'shield', variant: 'info', html: `<strong>Most Dental Insurance Accepted</strong> — We help maximize your benefits` },
   { icon: 'pin', variant: 'info', html: `Conveniently Located: 1818 8th Avenue, Fort Worth, TX 76110` },
   { icon: 'phone', variant: 'gold', html: `Questions? Call us at <a class="mhb-ticker-phone" href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a> — We're here to help` },
@@ -819,7 +821,7 @@ const heroPreload = `<link rel="preload" as="image" type="image/webp"
 const CSS_FILES = [
   'tokens/fonts.css', 'tokens/colors.css', 'tokens/typography.css',
   'tokens/spacing.css', 'tokens/radii-shadows.css', 'tokens/base.css',
-  'landing.css', 'chrome.css', 'pages.css',
+  'landing.css', 'chrome.css', 'pages.css', 'booking.css',
 ];
 const inlineCss = fontCss + '\n' + CSS_FILES
   .map((f) => fs.readFileSync(path.join(ROOT, 'css', f), 'utf8'))
@@ -833,7 +835,7 @@ const inlineCss = fontCss + '\n' + CSS_FILES
    docs/<pagePath>/index.html unless outFile overrides the destination. */
 function renderPage({
   pagePath, metaTitle, metaDesc, ogImage, jsonLdStr = '', breadcrumbs = null,
-  body, extraHead = '', noindex = false, outFile = null,
+  body, extraHead = '', extraScript = '', noindex = false, outFile = null,
 }) {
   const canonical = SITE.origin + pagePath;
   const og = ogImage ?? `${SITE.origin}${IMG_BASE}/${IMAGES.team.slug}-1200.jpg`;
@@ -877,6 +879,7 @@ ${body}
 ${footer}
 ${ticker}
 ${SCRIPT}
+${extraScript}
 </body>
 </html>
 `;
@@ -903,7 +906,7 @@ const CARD_ICONS = ['tooth', 'smile', 'star', 'shield', 'heart', 'award'];
 
 const bookBtns = `
     <div class="mhb-hero__actions" style="margin-bottom:0;">
-      <a class="mhb-btn mhb-btn--teal" href="/contact/">${ic('calendar')} Book Appointment</a>
+      <a class="mhb-btn mhb-btn--teal" href="/book/">${ic('calendar')} Book Appointment</a>
       <a class="mhb-btn mhb-btn--outline-white" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
     </div>`;
 
@@ -987,7 +990,7 @@ const ctaBlock = (p) => `
     <p>${esc(p.cta?.body || 'Call today to schedule your visit — same-week appointments are often available and second opinions are always welcome.')}</p>
     <div class="mhb-cta__actions">
       <a class="mhb-btn mhb-btn--primary" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
-      <a class="mhb-btn mhb-btn--outline-white" href="mailto:${PRACTICE.email}?subject=Appointment%20Request">${ic('calendar')} Email to Book a Visit</a>
+      <a class="mhb-btn mhb-btn--outline-white" href="/book/">${ic('calendar')} Request an Appointment</a>
     </div>
     <div class="mhb-cta__meta">
       <span>${ic('pin')} ${esc(addr)}</span>
@@ -1069,7 +1072,7 @@ function homeBody(p) {
         ${p.chips.map((c) => `<li class="mhb-hero__chip">${ic('check')} ${esc(c)}</li>`).join('\n        ')}
       </ul>` : ''}
       <div class="mhb-hero__actions">
-        <a class="mhb-btn mhb-btn--teal" href="/contact/">${ic('calendar')} Book Appointment</a>
+        <a class="mhb-btn mhb-btn--teal" href="/book/">${ic('calendar')} Book Appointment</a>
         <a class="mhb-btn mhb-btn--outline-white" href="${PRACTICE.phoneHref}">${ic('phone')} Call ${PRACTICE.phone}</a>
       </div>
     </div>
@@ -1338,7 +1341,26 @@ for (const p of loadPages()) {
   built.push({ path: p.path, priority: isHome ? '1.0' : '0.7' });
 }
 
-// 3. Branded 404 (Netlify serves docs/404.html automatically)
+// 3. Booking page — bespoke interactive widget, so it has its own builder
+const bookCrumbs = [['Home', '/'], ['Book an Appointment', '']];
+renderPage({
+  pagePath: '/book/',
+  metaTitle: 'Request an Appointment | Marshall H. Brown, DDS | Fort Worth',
+  metaDesc: `Request a dental appointment with ${PRACTICE.name} in Fort Worth. Pick a day and time online — we confirm every request by phone. Call ${PRACTICE.phone}.`,
+  jsonLdStr: pageJsonLd({
+    path: '/book/',
+    metaTitle: 'Request an Appointment | Marshall H. Brown, DDS | Fort Worth',
+    metaDesc: `Request a dental appointment with ${PRACTICE.name} in Fort Worth, TX.`,
+    breadcrumbs: bookCrumbs,
+    faqs: [],
+  }),
+  breadcrumbs: bookCrumbs,
+  body: bookingBody({ ic, esc, PRACTICE, addr }),
+  extraScript: bookingScript(JSON.stringify(OFFICE)),
+});
+built.push({ path: '/book/', priority: '0.9' });
+
+// 4. Branded 404 (Netlify serves docs/404.html automatically)
 renderPage({
   pagePath: '/404/',
   metaTitle: `Page Not Found | ${PRACTICE.name}`,

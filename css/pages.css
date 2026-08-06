@@ -63,6 +63,10 @@
 /* Anchored sections land below the sticky header */
 main section[id] { scroll-margin-top: 130px; }
 
+/* Rotated chevrons for calendar prev/next (the icon points down by default) */
+.mhb-rot-90 { transform: rotate(90deg); }
+.mhb-rot-270 { transform: rotate(-90deg); }
+
 /* ── Home hero ──────────────────────────────────────────────────
    The team photo is the page's primary visual, so the home hero gives
    the image column the larger share of the grid and a wider container

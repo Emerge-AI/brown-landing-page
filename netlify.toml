@@ -9,6 +9,10 @@
 [build]
   publish = "docs"
   command = "node tools/build.mjs"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Appointment requests post to /api/book, handled by netlify/functions/book.mjs.
+# It needs RESEND_API_KEY set under Site configuration → Environment variables.
