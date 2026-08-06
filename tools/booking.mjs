@@ -7,16 +7,19 @@
 
 export const OFFICE = {
   // 0 = Sunday. Hourly slots; midday break on full days.
-  // Friday (5) is deliberately absent: the practice is "by appointment only"
-  // that day, so there are no standing slots to offer. Publishing fixed Friday
-  // times would promise availability that may not exist — the calendar points
-  // those patients to the phone instead (see friday note in the markup).
   slotsByDay: {
     1: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     2: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     3: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     4: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
   },
+  // Fridays are bookable but have no standing hours, so the patient requests
+  // the day rather than a time and the front desk agrees one on the
+  // confirmation call. Offering fixed Friday times would promise slots that
+  // may not exist.
+  byAppointmentDays: [5],
+  byAppointmentLabel: 'By appointment',
+  byAppointmentValue: 'By appointment — time to be arranged by phone',
   daysAhead: 90,
 };
 
@@ -66,7 +69,7 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
             </div>
             <div class="mhb-cal__grid" id="bk-grid" role="group" aria-label="Choose an appointment date"></div>
             <p class="mhb-cal__legend"><span></span> Available — Mon–Thu, 8am–4pm</p>
-            <p class="mhb-cal__friday">${ic('phone')} <span><strong>Looking for a Friday?</strong> Fridays are by appointment only — call <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a> and we'll arrange one.</span></p>
+            <p class="mhb-cal__friday">${ic('calendar')} <span><strong>Fridays are by appointment.</strong> You can still request one — pick a Friday and we'll agree a time when we call to confirm.</span></p>
           </div>
           <div>
             <p class="mhb-slots__title" id="bk-slots-title">Choose a time</p>
@@ -157,12 +160,17 @@ export function bookingScript(OFFICE_JSON) {
   var minDate = new Date(today); minDate.setDate(minDate.getDate() + 1); // earliest is tomorrow
   var maxDate = new Date(today); maxDate.setDate(maxDate.getDate() + O.daysAhead);
   var view = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
-  var chosenDate = null, chosenTime = null;
+  var chosenDate = null, chosenTime = null, chosenTimeLabel = null;
 
   var pad = function (n) { return (n < 10 ? '0' : '') + n; };
   var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
   var label = function (d) { return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); };
-  var slotsFor = function (d) { return O.slotsByDay[d.getDay()] || []; };
+  // Days with no standing hours: the patient picks the day, we agree the time.
+  var isByAppt = function (d) { return (O.byAppointmentDays || []).indexOf(d.getDay()) !== -1; };
+  var slotsFor = function (d) {
+    if (isByAppt(d)) return [O.byAppointmentLabel];
+    return O.slotsByDay[d.getDay()] || [];
+  };
   var bookable = function (d) { return d >= minDate && d <= maxDate && slotsFor(d).length > 0; };
 
   function goStep(n) {
@@ -195,7 +203,8 @@ export function bookingScript(OFFICE_JSON) {
       var ok = bookable(d);
       if (ok) {
         btn.setAttribute('data-available', 'true');
-        btn.setAttribute('aria-label', label(d) + ' — available');
+        if (isByAppt(d)) btn.setAttribute('data-byappt', 'true');
+        btn.setAttribute('aria-label', label(d) + (isByAppt(d) ? ' — by appointment' : ' — available'));
         btn.setAttribute('aria-pressed', chosenDate && iso(chosenDate) === iso(d) ? 'true' : 'false');
         btn.addEventListener('click', (function (dd) { return function () { pickDate(dd); }; })(d));
       } else {
@@ -209,7 +218,7 @@ export function bookingScript(OFFICE_JSON) {
   }
 
   function pickDate(d) {
-    chosenDate = d; chosenTime = null;
+    chosenDate = d; chosenTime = null; chosenTimeLabel = null;
     renderMonth();
     renderSlots();
   }
@@ -220,17 +229,31 @@ export function bookingScript(OFFICE_JSON) {
       slotsEl.innerHTML = '<p class="mhb-slots__empty">Select a date to see available times.</p>';
       return;
     }
+    var byAppt = isByAppt(chosenDate);
     var list = slotsFor(chosenDate);
     var head = document.getElementById('bk-slots-title');
-    head.textContent = 'Times on ' + MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
+    var dayStr = MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
+    head.textContent = byAppt ? DAYS[chosenDate.getDay()] + ' ' + dayStr : 'Times on ' + dayStr;
+
+    if (byAppt) {
+      var note = document.createElement('p');
+      note.className = 'mhb-slots__note';
+      note.textContent = "We don't hold set hours on " + DAYS[chosenDate.getDay()] +
+        "s. Request the day and we'll agree a time that suits you when we call to confirm.";
+      slotsEl.appendChild(note);
+    }
+
     list.forEach(function (t) {
       var b = document.createElement('button');
       b.type = 'button';
-      b.className = 'mhb-slot';
+      b.className = 'mhb-slot' + (byAppt ? ' mhb-slot--byappt' : '');
       b.textContent = t;
       b.setAttribute('aria-pressed', 'false');
       b.addEventListener('click', function () {
-        chosenTime = t;
+        // What the patient sees vs. what the front desk receives: the email
+        // should be unambiguous that no time was actually chosen.
+        chosenTimeLabel = t;
+        chosenTime = byAppt ? O.byAppointmentValue : t;
         Array.prototype.forEach.call(slotsEl.querySelectorAll('.mhb-slot'), function (o) { o.setAttribute('aria-pressed', 'false'); });
         b.setAttribute('aria-pressed', 'true');
         document.getElementById('bk-recap-date').textContent = label(chosenDate);
@@ -321,7 +344,7 @@ export function bookingScript(OFFICE_JSON) {
     }).then(function (res) {
       if (!res.ok) throw new Error((res.body && res.body.error) || FALLBACK_ERR);
       document.getElementById('bk-done-date').textContent = v.dateLabel;
-      document.getElementById('bk-done-time').textContent = v.time;
+      document.getElementById('bk-done-time').textContent = chosenTimeLabel || v.time;
       goStep(3);
     }).catch(function (err) {
       btn.disabled = false;
