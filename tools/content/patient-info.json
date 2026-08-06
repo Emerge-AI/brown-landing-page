@@ -3,14 +3,28 @@
   "template": "patient-info",
   "navLabel": "Patient Info",
   "metaTitle": "Patient Info Fort Worth TX | Marshall H. Brown, DDS",
-  "metaDesc": "Patient information for Marshall H. Brown, DDS in Fort Worth, TX — first visit details, accepted insurance plans, CareCredit financing and HIPAA privacy.",
-  "breadcrumbs": [["Home", "/"], ["Patient Info", ""]],
+  "metaDesc": "Patient information for Marshall H. Brown, DDS in Fort Worth, TX — first visit details, accepted insurance plans, financing options and HIPAA privacy.",
+  "breadcrumbs": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "Patient Info",
+      ""
+    ]
+  ],
   "eyebrow": "Everything You Need to Know",
   "h1": "Patient Information at Marshall H. Brown, DDS",
   "intro": [
     "Dr. Brown and our team are dedicated to making every patient interaction as simple, transparent, and stress-free as possible — from your first visit through insurance, financing, and beyond."
   ],
-  "chips": ["Most PPO Insurance Accepted", "CareCredit 0% Financing", "Same-Week Appointments", "HIPAA-Compliant Practice"],
+  "chips": [
+    "Most PPO Insurance Accepted",
+    "0% Financing Available",
+    "Same-Week Appointments",
+    "HIPAA-Compliant Practice"
+  ],
   "sections": [
     {
       "h2": "Your First Visit",
@@ -19,6 +33,7 @@
         "Patients under 18 years of age must be accompanied by a parent or guardian for their first consultation appointment. Please also inform us prior to your visit of any medical conditions (diabetes, heart conditions, joint replacements, blood thinners, etc.) or medications that may affect your treatment."
       ],
       "bullets": [
+        "We accept new patients age 10 and older; for younger children we're happy to refer you to a trusted paediatric dentist",
         "Valid photo ID — a government-issued photo ID such as a driver's license or passport",
         "Dental insurance card & forms — bring your insurance card and any completed patient registration forms to speed up processing and help us maximize your benefits",
         "Current medication list — a complete list of all medications, supplements, and vitamins you currently take, including dosages; this is essential for your safety",
@@ -43,7 +58,7 @@
     {
       "h2": "Scheduling an Appointment",
       "body": [
-        "Scheduling is easy — call us, use our online form, or email us directly. We offer flexible appointment times Monday through Friday and often have same-week availability for new patients and urgent concerns. We'll confirm your appointment and verify your insurance before you arrive — no surprises.",
+        "Scheduling is easy — call us, use our online form, or email us directly. We offer flexible appointment times Monday through Thursday, plus Fridays by appointment and often have same-week availability for new patients and urgent concerns. We'll confirm your appointment and verify your insurance before you arrive — no surprises.",
         "For your privacy and security, please do not include any personal health information (PHI), medical details, or treatment questions in email communications. Use our secure online appointment form or call us directly for all health-related inquiries."
       ],
       "bullets": [
@@ -51,7 +66,7 @@
         "Request online: use our online form — confirmed within one business day",
         "Email us: info@marshallhbrown.com — general inquiries only, no PHI by email",
         "Walk in: 1818 8th Avenue, Fort Worth, TX 76110 — subject to same-day availability",
-        "Office hours: Monday–Thursday 8:00 AM – 4:00 PM, Friday 8:00 AM – 12:00 PM, closed Saturday & Sunday"
+        "Office hours: Monday–Thursday 8:00 AM – 4:00 PM; Fridays by appointment only, closed Saturday & Sunday"
       ]
     },
     {
@@ -67,26 +82,26 @@
         "Aetna",
         "MetLife",
         "Humana",
-        "United Concordia",
+        "",
         "BlueCross BlueShield",
         "Guardian",
         "Ameritas",
-        "Anthem",
+        "",
         "Principal",
-        "CareCredit (financing)"
+        "Financing options available"
       ]
     },
     {
       "h2": "Financing Options",
       "body": [
-        "We firmly believe that cost should never be the reason someone avoids necessary dental care. That's why we offer flexible financing through CareCredit — a leading healthcare financing provider that allows you to pay for treatment over time with convenient monthly instalments.",
+        "We firmly believe that cost should never be the reason someone avoids necessary dental care. That's why we offer flexible financing options through a leading healthcare financing partner that allows you to pay for treatment over time with convenient monthly instalments.",
         "We also accept cash, personal check, Visa, Mastercard, Discover, and Amex."
       ],
       "bullets": [
         "0% interest promotional financing options available",
         "Flexible repayment terms from 6 to 60 months",
         "Quick and easy online application process",
-        "No annual fee on the CareCredit credit card",
+        "No annual fee on approved financing plans",
         "Use for any dental treatment — including cosmetic procedures",
         "Our team can assist you with the application in-office"
       ]
@@ -144,7 +159,7 @@
     },
     {
       "q": "Do you accept my dental insurance?",
-      "a": "We accept most major PPO dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, BlueCross BlueShield, Guardian, Ameritas, Anthem, Principal, and many more. We are not currently a Medicaid or HMO provider. The best way to confirm your specific plan is accepted is to call us at (817) 920-0882. Our team can verify your coverage before your appointment at no charge."
+      "a": "We accept most major PPO dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, BlueCross BlueShield, Guardian, Ameritas, Principal, and many more. We are not currently a Medicaid or HMO provider. The best way to confirm your specific plan is accepted is to call us at (817) 920-0882. Our team can verify your coverage before your appointment at no charge."
     },
     {
       "q": "How do I schedule an appointment?",
@@ -152,7 +167,7 @@
     },
     {
       "q": "Do you offer payment plans or financing?",
-      "a": "Yes. We offer flexible financing through CareCredit — a leading healthcare financing provider. CareCredit offers 0% interest promotional periods and extended payment plans ranging from 6 to 60 months. Our team can assist you with the CareCredit application during your visit. We also accept cash, personal checks, Visa, Mastercard, Discover, and American Express."
+      "a": "Yes. We offer flexible financing options — provided through a leading healthcare financing partner. These plans offer 0% interest promotional periods and extended payment plans ranging from 6 to 60 months. Our team can assist you with the financing options application during your visit. We also accept cash, personal checks, Visa, Mastercard, Discover, and American Express."
     },
     {
       "q": "How does the practice protect my health information under HIPAA?",
@@ -164,9 +179,18 @@
     }
   ],
   "related": [
-    {"label": "Cosmetic Dentistry", "path": "/cosmetic-dentistry/"},
-    {"label": "Dental Implants", "path": "/dental-implants/"},
-    {"label": "Teeth Whitening", "path": "/teeth-whitening/"}
+    {
+      "label": "Cosmetic Dentistry",
+      "path": "/cosmetic-dentistry/"
+    },
+    {
+      "label": "Dental Implants",
+      "path": "/dental-implants/"
+    },
+    {
+      "label": "Teeth Whitening",
+      "path": "/teeth-whitening/"
+    }
   ],
   "cta": {
     "title": "Ready to Book or Have a Question?",

@@ -41,7 +41,7 @@
         "Dental Bridges — Fixed bridges that fill the gap left by missing teeth, restoring your bite, speech, and smile with durable, natural-looking restorations.",
         "Non-Surgical Root Canal — Comfortable, anxiety-free root canal therapy that saves your natural tooth and relieves pain with modern techniques and anesthesia.",
         "Dentures — Custom full and partial dentures crafted for comfort and a natural appearance — helping you eat, speak, and smile with confidence.",
-        "Teeth Whitening — Professional Zoom® and LaserSmile in-office whitening — dramatically brighter teeth in under an hour with results that last.",
+        "Teeth Whitening — Professional Boost in-office whitening — dramatically brighter teeth in about an hour, with results that last.",
         "Porcelain Veneers — Ultra-thin porcelain shells that cover imperfections — chips, stains, gaps, and misalignment — for a flawless Hollywood smile.",
         "Clear Braces — Straighten your teeth discreetly with virtually invisible aligners — no metal wires, no brackets, and no impact on your daily life.",
         "Dental Bonding — Quick, affordable cosmetic fix for chips, cracks, and gaps using tooth-colored composite resin — often completed in a single visit.",
@@ -57,8 +57,8 @@
       "bullets": [
         "HIPAA-Compliant & Secure — Your privacy and health information are protected under full HIPAA compliance. We maintain strict data security standards across every patient interaction.",
         "4.7★ Google Rated — Over 269 verified patient reviews reflect our commitment to outstanding care, gentle treatment, and results that consistently exceed expectations.",
-        "Accepting New Patients — We warmly welcome new patients of all ages — from young children to seniors. Most dental insurance plans accepted with same-week appointments often available.",
-        "Convenient Scheduling — Open Monday–Thursday 8am–4pm and Friday 8am–12pm, with a straightforward scheduling process designed to respect your time.",
+        "Accepting New Patients — We warmly welcome new patients age 10 and older — from pre-teens to seniors. Most dental insurance plans accepted with same-week appointments often available.",
+        "Convenient Scheduling — Open Monday–Thursday 8am–4pm, with Fridays by appointment only, with a straightforward scheduling process designed to respect your time.",
         "Flexible Financing — We work with most major insurance plans and offer flexible payment options to help make your dental care affordable — because your smile shouldn't wait.",
         "Full-Scope Expertise — From a simple filling to a complete smile makeover, our team provides over 20 dental services — meaning your whole family can receive all their care in one trusted place."
       ]
@@ -70,7 +70,7 @@
       ],
       "bullets": [
         "Porcelain Veneers — Complete Smile Makeover",
-        "Professional Teeth Whitening — Zoom® Treatment",
+        "Professional Teeth Whitening — Boost Treatment",
         "Dental Implant — Single Tooth Replacement"
       ]
     },
@@ -94,16 +94,16 @@
         "Aetna",
         "MetLife",
         "Humana",
-        "United Concordia",
+        "",
         "BlueCross BlueShield",
-        "CareCredit"
+        "financing options"
       ]
     },
     {
       "h2": "Conveniently Located in Fort Worth, TX",
       "body": [
         "We serve patients from Fort Worth, Arlington, Benbrook, Crowley, Burleson, White Settlement, and all surrounding communities.",
-        "Visit us at 1818 8th Avenue, Fort Worth, TX 76110. Call (817) 920-0882 or email info@marshallhbrown.com. Office hours: Monday–Thursday 8:00 AM – 4:00 PM, Friday 8:00 AM – 12:00 PM, closed Saturday and Sunday."
+        "Visit us at 1818 8th Avenue, Fort Worth, TX 76110. Call (817) 920-0882 or email info@marshallhbrown.com. Office hours: Monday–Thursday 8:00 AM – 4:00 PM; Fridays by appointment only, closed Saturday and Sunday."
       ],
       "bullets": []
     }
@@ -111,11 +111,11 @@
   "faqs": [
     {
       "q": "Is Dr. Brown currently accepting new patients?",
-      "a": "Yes! Marshall H. Brown, DDS & Associates is actively welcoming new patients of all ages. We typically have same-week appointments available. Simply call us at (817) 920-0882 or use our online appointment request form to get started."
+      "a": "Yes! Marshall H. Brown, DDS & Associates is actively welcoming new patients age 10 and older. We typically have same-week appointments available. Simply call us at (817) 920-0882 or use our online appointment request form to get started."
     },
     {
       "q": "What dental insurance plans do you accept?",
-      "a": "We accept most major dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, BlueCross BlueShield, and many more. We also accept CareCredit for flexible financing. Our administrative staff will work directly with your insurance provider to help maximize your benefits and minimize your out-of-pocket costs. Contact us and we'll verify your coverage before your first visit."
+      "a": "We accept most major dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, BlueCross BlueShield, and many more. Financing options are also available for flexible financing. Our administrative staff will work directly with your insurance provider to help maximize your benefits and minimize your out-of-pocket costs. Contact us and we'll verify your coverage before your first visit."
     },
     {
       "q": "What should I bring to my first appointment?",
@@ -127,7 +127,7 @@
     },
     {
       "q": "What are your office hours?",
-      "a": "Our office hours are Monday – Thursday: 8:00 AM – 4:00 PM, Friday: 8:00 AM – 12:00 PM, and we are closed Saturday and Sunday. We are located at 1818 8th Avenue, Fort Worth, TX 76110. Call us at (817) 920-0882 to schedule an appointment."
+      "a": "Our office hours are Monday – Thursday: 8:00 AM – 4:00 PM; Fridays by appointment only, and we are closed Saturday and Sunday. We are located at 1818 8th Avenue, Fort Worth, TX 76110. Call us at (817) 920-0882 to schedule an appointment."
     }
   ],
   "related": [

@@ -51,7 +51,7 @@
       "body": [],
       "bullets": [
         "Monday–Thursday: 8:00 AM – 4:00 PM",
-        "Friday: 8:00 AM – 12:00 PM",
+        "Friday: By appointment only",
         "Saturday–Sunday: Closed"
       ]
     },
@@ -85,7 +85,7 @@
     },
     {
       "q": "Do you accept my dental insurance?",
-      "a": "We accept most major dental insurance plans, including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, and BlueCross BlueShield, plus CareCredit financing. Call us and we'll verify your coverage before your first visit."
+      "a": "We accept most major dental insurance plans, including Delta Dental, Cigna, Aetna, MetLife, Humana, and BlueCross BlueShield, plus flexible financing options. Call us and we'll verify your coverage before your first visit."
     }
   ],
   "related": [
@@ -96,6 +96,6 @@
   ],
   "cta": {
     "title": "Call (817) 920-0882 Today",
-    "body": "Speak with our friendly front office team Monday–Thursday 8am–4pm or Friday 8am–12pm, or request an appointment online any time — we'll respond within one business day."
+    "body": "Speak with our friendly front office team Monday–Thursday 8am–4pm, or on Fridays by appointment, or request an appointment online any time — we'll respond within one business day."
   }
 }

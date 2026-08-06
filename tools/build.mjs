@@ -149,7 +149,10 @@ function jsonLd(canonical = CANONICAL, faqs = FAQS, crumbTrail = null) {
           addressCountry: 'US',
         },
         geo: { '@type': 'GeoCoordinates', latitude: PRACTICE.geo.lat, longitude: PRACTICE.geo.lng },
-        openingHoursSpecification: PRACTICE.hours.map((h) => ({
+        // Only days with set hours. Fridays are by appointment, and schema.org
+        // has no way to say that — publishing 8–12 would put false hours in
+        // Google's results and send patients to a closed door.
+        openingHoursSpecification: PRACTICE.hours.filter((h) => !h.byAppointment).map((h) => ({
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: h.days,
           opens: h.opens,
@@ -176,7 +179,7 @@ function jsonLd(canonical = CANONICAL, faqs = FAQS, crumbTrail = null) {
           description:
             'Surgical placement of a titanium dental implant post and restoration with an abutment and custom porcelain crown to permanently replace missing teeth.',
         },
-        paymentAccepted: 'Cash, Credit Card, CareCredit, Insurance',
+        paymentAccepted: 'Cash, Credit Card, Insurance, Financing',
       },
       ...(faqs?.length ? [{
         '@type': 'FAQPage',
@@ -313,7 +316,7 @@ const chromeHeader = (activePath) => `
   <div class="mhb-topbar__inner">
     <div class="mhb-topbar__left">
       <span class="mhb-topbar__item">${ic('pin')} ${esc(addr)}</span>
-      <span class="mhb-topbar__item">${ic('clock')} Mon–Thu: 8am–4pm&nbsp;|&nbsp;Fri: 8am–12pm</span>
+      <span class="mhb-topbar__item">${ic('clock')} Mon–Thu: 8am–4pm&nbsp;|&nbsp;Fri: by appointment</span>
     </div>
     <div class="mhb-topbar__right">
       <a class="mhb-topbar__phone" href="${PRACTICE.phoneHref}">${ic('phone')} ${PRACTICE.phone}</a>
@@ -635,7 +638,7 @@ const TICKER_ITEMS = [
   { icon: 'shield', variant: 'success', html: `<strong>HIPAA-Compliant Practice</strong> — Your health information is always protected` },
   { icon: 'dollar', variant: 'info', html: `<strong>Financing Options Available</strong> — Make the smile you deserve affordable`, cta: ['See Options', '/patient-info/#financing'] },
   { icon: 'smile', variant: 'gold', html: `<strong>Porcelain Veneers</strong> — Transform your smile in as few as 2 visits`, cta: ['See Results', '/cosmetic-treatments/veneers/'] },
-  { icon: 'star', variant: 'info', html: `<strong>Zoom® &amp; LaserSmile Teeth Whitening</strong> — Brighten your smile up to 8 shades` },
+  { icon: 'star', variant: 'info', html: `<strong>Boost Professional Teeth Whitening</strong> — Brighten your smile up to 8 shades` },
   { icon: 'award', variant: 'gold', html: `<strong>30+ Years Serving Fort Worth Families</strong> — Dr. Marshall H. Brown, DDS` },
   { icon: 'check', variant: 'success', html: `<strong>Second Opinion Welcome</strong> — Get expert reassurance before any procedure` },
   { icon: 'heart', variant: 'success', html: `<strong>Complimentary Consultation</strong> — Ask about your treatment options today`, cta: ['Get Started', '/book/', 'teal'] },
@@ -643,7 +646,7 @@ const TICKER_ITEMS = [
   { icon: 'pin', variant: 'info', html: `Conveniently Located: 1818 8th Avenue, Fort Worth, TX 76110` },
   { icon: 'phone', variant: 'gold', html: `Questions? Call us at <a class="mhb-ticker-phone" href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a> — We're here to help` },
   { icon: 'smile', variant: 'success', html: `<strong>Full-Scope General &amp; Cosmetic Dentistry</strong> — One team for all your dental needs` },
-  { icon: 'clock', variant: 'info', html: `<strong>Flexible Scheduling</strong> — Mon–Thu 8am–4pm | Fri 8am–12pm` },
+  { icon: 'clock', variant: 'info', html: `<strong>Flexible Scheduling</strong> — Mon–Thu 8am–4pm | Fridays by appointment` },
 ];
 const tickerItemsHtml = TICKER_ITEMS.map((t) => `<span class="mhb-ticker-item mhb-ticker--${t.variant}">${ic(t.icon)} <span>${t.html}</span>${t.cta ? ` <a class="mhb-ticker-cta${t.cta[2] ? ` mhb-ticker-cta--${t.cta[2]}` : ''}" href="${t.cta[1]}">${esc(t.cta[0])}</a>` : ''}</span>`).join('');
 
@@ -1104,7 +1107,7 @@ function homeBody(p) {
     ['Dental Implants', '/dental-implants/', 'Permanent tooth replacement that looks and feels natural.'],
     ['Dental Crowns', '/treatments/crowns/', 'Natural-looking restorations for damaged or weakened teeth.'],
     ['Root Canal', '/treatments/root-canal/', 'Comfortable, anxiety-free treatment that saves your tooth.'],
-    ['Teeth Whitening', '/teeth-whitening/', 'Zoom!® and LaserSmile whitening up to 8 shades brighter.'],
+    ['Teeth Whitening', '/teeth-whitening/', 'Boost professional whitening, up to 8 shades brighter.'],
     ['Porcelain Veneers', '/cosmetic-treatments/veneers/', 'Transform your smile in as few as two visits.'],
     ['Clear Braces', '/cosmetic-treatments/clear-braces/', 'Straighter teeth without metal brackets or wires.'],
   ];

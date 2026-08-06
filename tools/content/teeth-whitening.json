@@ -3,14 +3,32 @@
   "template": "treatment",
   "navLabel": "Teeth Whitening",
   "metaTitle": "Teeth Whitening Fort Worth TX | Marshall H. Brown, DDS",
-  "metaDesc": "Professional teeth whitening in Fort Worth, TX. Zoom!® and LaserSmile in-office whitening — up to 8 shades whiter in one visit. Take-home trays available.",
-  "breadcrumbs": [["Home", "/"], ["Cosmetic Dentistry", "/cosmetic-dentistry/"], ["Teeth Whitening", ""]],
+  "metaDesc": "Professional teeth whitening in Fort Worth, TX. Boost in-office whitening — up to 8 shades whiter in a single visit. Custom take-home trays also available.",
+  "breadcrumbs": [
+    [
+      "Home",
+      "/"
+    ],
+    [
+      "Cosmetic Dentistry",
+      "/cosmetic-dentistry/"
+    ],
+    [
+      "Teeth Whitening",
+      ""
+    ]
+  ],
   "eyebrow": "Fort Worth Professional Teeth Whitening",
   "h1": "Brighter Smile. Up to 8 Shades Whiter. One Appointment.",
   "intro": [
     "Professional teeth whitening at Marshall H. Brown, DDS & Associates delivers dramatically brighter results in a single visit — safely, comfortably, and under expert dental supervision. No strips, no guesswork, no waiting weeks for results."
   ],
-  "chips": ["Zoom!® In-Office Whitening", "LaserSmile Whitening", "Take-Home Custom Trays", "Safe & Enamel-Friendly"],
+  "chips": [
+    "Boost In-Office Whitening",
+    "Take-Home Custom Trays",
+    "Up to 8 Shades Whiter",
+    "Safe & Enamel-Friendly"
+  ],
   "sections": [
     {
       "h2": "Professional Whitening vs. Store-Bought Strips",
@@ -26,29 +44,18 @@
       ]
     },
     {
-      "h2": "Zoom!® Whitening — In-Office, LED Activated",
+      "h2": "Boost Whitening — In-Office, Professional Strength",
       "body": [
-        "Zoom!® is one of the most trusted professional whitening systems in dentistry. A specially formulated hydrogen peroxide gel is applied to your teeth and activated by a proprietary LED whitening light — delivering outstanding results in approximately 45–60 minutes. You leave our Fort Worth office with a dramatically brighter smile the very same day."
+        "Boost is a professional-strength, in-office whitening system that lifts stains far beyond what any over-the-counter product can reach. A carefully formulated whitening gel is applied directly to your teeth under Dr. Brown's supervision and left to work in short, controlled sessions — delivering dramatic results in roughly 45–60 minutes. You leave our Fort Worth office with a noticeably brighter smile the very same day.",
+        "Because the treatment is chemically activated rather than light-dependent, it whitens evenly across the whole tooth surface and is effective on the deeper, more stubborn discolouration that builds up from coffee, tea, red wine, tobacco, and simple ageing."
       ],
       "bullets": [
-        "45–60 minutes in-office",
+        "45–60 minutes in a single office visit",
         "Up to 8 shades whiter",
-        "LED light activation for faster results",
-        "Includes take-home touch-up kit",
-        "Results last 1–3 years"
-      ]
-    },
-    {
-      "h2": "LaserSmile Whitening — In-Office, Laser Activated",
-      "body": [
-        "LaserSmile uses a precisely targeted dental laser to activate the whitening gel applied to your teeth. The laser energy penetrates deep into enamel for comprehensive whitening that reaches stains light alone cannot. Particularly effective for stubborn or deep-set staining including tobacco and severe discoloration."
-      ],
-      "bullets": [
-        "Approximately 60 minutes in-office",
-        "Up to 8 shades whiter",
-        "Deep laser activation for stubborn stains",
-        "Ideal for more severe discoloration",
-        "Results last 1–3 years"
+        "Even, predictable whitening across every tooth",
+        "Effective on deep-set and stubborn staining",
+        "Includes a take-home touch-up kit",
+        "Results typically last 1–3 years with good maintenance"
       ]
     },
     {
@@ -73,7 +80,7 @@
       "bullets": [
         "Coffee & tea stains — surface stains from tannins respond very well to professional whitening (excellent results)",
         "Red wine staining — deep pigment staining that builds over time; professional whitening significantly reduces it (excellent results)",
-        "Tobacco staining — deep, stubborn yellow/brown stains; whitening helps significantly and LaserSmile may be recommended (very good results)",
+        "Tobacco staining — deep, stubborn yellow/brown stains that respond very well to professional in-office whitening",
         "Age-related darkening — teeth naturally darken as enamel thins; whitening reverses much of this effect (excellent results)",
         "Tetracycline staining — dark grey or brown banding from antibiotic exposure; whitening may help but veneers are often a better solution",
         "Fluorosis — white spots or brown marks from excessive fluoride during development; whitening can help surface staining, but a consultation is needed"
@@ -87,7 +94,7 @@
       "bullets": [
         "Pre-treatment check — Dr. Brown examines your teeth and gums to confirm you're a good candidate; a cleaning first is recommended for maximum whitening penetration",
         "Gum protection — a protective barrier gel is carefully applied to your gum tissue to shield it from the whitening agent",
-        "Whitening treatment — professional gel is applied and the Zoom!® LED light or LaserSmile laser is activated in 3–4 sessions of 15 minutes each",
+        "Whitening treatment — professional Boost gel is applied and left to work in 3–4 controlled sessions of about 15 minutes each",
         "Reveal your smile — gel is rinsed away; most patients achieve 4–8 shades whiter, and you receive aftercare instructions and a touch-up kit"
       ]
     },
@@ -110,19 +117,19 @@
   "faqs": [
     {
       "q": "How much whiter will my teeth get?",
-      "a": "Most patients achieve 4–8 shades whiter teeth with a single in-office Zoom!® or LaserSmile treatment. Results vary based on the nature, depth, and severity of staining. Yellow stains from coffee, tea, wine, and aging respond particularly well. During your consultation, Dr. Brown will assess your current shade and give you a realistic expectation of what is achievable for your specific teeth."
+      "a": "Most patients achieve 4–8 shades whiter teeth with a single in-office Boost treatment. Results vary with the nature, depth, and severity of the staining. Yellow stains from coffee, tea, wine, and ageing respond particularly well. During your consultation, Dr. Brown will assess your current shade and give you a realistic expectation of what is achievable for your teeth."
     },
     {
       "q": "How long do professional whitening results last?",
       "a": "Professional whitening results typically last 1–3 years depending on your dietary habits, oral hygiene routine, and lifestyle factors such as smoking. Patients who consume less coffee, tea, and red wine, and who maintain good daily brushing and flossing habits, tend to enjoy longer-lasting results. Touch-up whitening treatments — either in-office or with take-home trays — can be done every 12–18 months to keep your smile at peak brightness."
     },
     {
-      "q": "What is the difference between Zoom!® and LaserSmile whitening?",
-      "a": "Both Zoom!® and LaserSmile are professional in-office whitening systems that produce excellent results — up to 8 shades whiter. The key difference is the activation method. Zoom!® uses a specially designed LED whitening light to activate the whitening gel — it is gentle, widely used, and extremely effective for most types of staining. LaserSmile uses a targeted dental laser for activation — the laser energy penetrates more deeply into enamel, making it particularly effective for stubborn or deeply set staining such as tobacco stains or severe discoloration. Dr. Brown will recommend the most appropriate system based on your individual staining type, tooth sensitivity, and desired outcome."
+      "q": "Should I choose in-office Boost whitening or take-home trays?",
+      "a": "It depends on your timeline and how much control you want. In-office Boost is the fastest route — one appointment, maximum strength, and you see the result before you leave. Custom take-home trays work more gradually over one to two weeks, at a lower concentration, which some patients with sensitive teeth prefer. Many people do both: an in-office Boost treatment for the initial change, then trays to maintain it. Dr. Brown will recommend the right approach after looking at your staining and sensitivity."
     },
     {
       "q": "Is teeth whitening safe for my enamel?",
-      "a": "Yes. Professional teeth whitening performed under dental supervision is clinically proven to be safe and does not damage tooth enamel when used as directed. The professional whitening agents used in Zoom!® and LaserSmile are carefully formulated to be effective while protecting tooth structure. Some patients experience mild, temporary tooth or gum sensitivity for 24–48 hours after treatment — this is a normal, transient response and resolves on its own. Over-the-counter whitening products used excessively without supervision can cause enamel erosion, which is why professional, dentist-administered whitening is always the safer and more effective choice."
+      "a": "Yes. Professional teeth whitening performed under dental supervision is clinically proven to be safe and does not damage enamel when used as directed. The professional-strength agents used in Boost are formulated to be effective while protecting tooth structure. Some patients notice mild, temporary tooth or gum sensitivity for 24–48 hours afterwards — a normal response that resolves on its own. Over-the-counter products used excessively without supervision can cause enamel erosion, which is why dentist-administered whitening is both the safer and the more effective choice."
     },
     {
       "q": "Who is a good candidate for teeth whitening?",
@@ -134,10 +141,22 @@
     }
   ],
   "related": [
-    {"label": "Porcelain Veneers", "path": "/cosmetic-treatments/veneers/"},
-    {"label": "Dental Bonding", "path": "/cosmetic-treatments/bonding/"},
-    {"label": "Clear Braces", "path": "/cosmetic-treatments/clear-braces/"},
-    {"label": "Cosmetic Dentistry", "path": "/cosmetic-dentistry/"}
+    {
+      "label": "Porcelain Veneers",
+      "path": "/cosmetic-treatments/veneers/"
+    },
+    {
+      "label": "Dental Bonding",
+      "path": "/cosmetic-treatments/bonding/"
+    },
+    {
+      "label": "Clear Braces",
+      "path": "/cosmetic-treatments/clear-braces/"
+    },
+    {
+      "label": "Cosmetic Dentistry",
+      "path": "/cosmetic-dentistry/"
+    }
   ],
   "cta": {
     "title": "Ready for a Brighter, More Confident Smile?",

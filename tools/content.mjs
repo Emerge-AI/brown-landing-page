@@ -31,7 +31,10 @@ export const PRACTICE = {
   geo: { lat: 32.7146, lng: -97.3452 },
   hours: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '08:00', closes: '16:00', label: 'Mon–Thu 8:00am–4:00pm' },
-    { days: ['Friday'], opens: '08:00', closes: '12:00', label: 'Fri 8:00am–12:00pm' },
+    // Fridays have no set hours — appointment only. byAppointment keeps this
+    // out of the JSON-LD openingHoursSpecification, which has no way to
+    // express "by appointment" and would otherwise publish false hours.
+    { days: ['Friday'], label: 'Fri by appointment only', byAppointment: true },
   ],
   rating: { value: 4.7, count: 269 },
   founded: '1990',
@@ -214,14 +217,14 @@ export const FINANCING = {
   intro:
     'Every smile is different, so implant costs depend on how many implants you need, whether bone grafting is required, and your insurance coverage. What never changes: you receive a transparent, itemized estimate up front — before any treatment begins.',
   points: [
-    'CareCredit accepted, with low and 0% interest financing available',
+    'Financing options available, including low and 0% interest plans',
     'Flexible monthly payment plans to fit your budget',
     'Most major dental insurance plans accepted — we verify your benefits before treatment',
     'Transparent, itemized cost estimates at your free consultation',
   ],
   outro:
     'While implants cost more up front than bridges or dentures, they typically cost less over a lifetime — no replacements, no relines, no adhesives. It is the last tooth-replacement decision most patients ever make.',
-  insurers: ['CareCredit', 'Delta Dental', 'Cigna', 'MetLife', 'Aetna', 'Guardian'],
+  insurers: ['Delta Dental', 'Cigna', 'MetLife', 'Aetna', 'Guardian', 'Financing Available'],
 };
 
 export const REAL_CARE = {

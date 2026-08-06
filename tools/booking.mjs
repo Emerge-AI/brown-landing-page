@@ -7,12 +7,15 @@
 
 export const OFFICE = {
   // 0 = Sunday. Hourly slots; midday break on full days.
+  // Friday (5) is deliberately absent: the practice is "by appointment only"
+  // that day, so there are no standing slots to offer. Publishing fixed Friday
+  // times would promise availability that may not exist — the calendar points
+  // those patients to the phone instead (see friday note in the markup).
   slotsByDay: {
     1: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     2: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     3: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
     4: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
-    5: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM'],
   },
   daysAhead: 90,
 };
@@ -62,7 +65,8 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
               <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
             </div>
             <div class="mhb-cal__grid" id="bk-grid" role="group" aria-label="Choose an appointment date"></div>
-            <p class="mhb-cal__legend"><span></span> Available — we're open Mon–Thu 8am–4pm, Fri 8am–12pm</p>
+            <p class="mhb-cal__legend"><span></span> Available — Mon–Thu, 8am–4pm</p>
+            <p class="mhb-cal__friday">${ic('phone')} <span><strong>Looking for a Friday?</strong> Fridays are by appointment only — call <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a> and we'll arrange one.</span></p>
           </div>
           <div>
             <p class="mhb-slots__title" id="bk-slots-title">Choose a time</p>
