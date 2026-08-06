@@ -1,7 +1,13 @@
 /* ============================================================
    BOOKING WIDGET — /book/
    Two-step request flow: pick a date + time, then enter details.
-   Submits to Netlify Forms; no backend.
+   Posts to the /api/book Netlify function, which emails the practice.
+
+   Class names here are prefixed mhb-book / mhb-bk / mhb-cal / mhb-slot
+   deliberately: this stylesheet is inlined after landing.css on EVERY
+   page, so any bare name it shares with a component elsewhere silently
+   overrides it site-wide. A generic `.mhb-steps` here once broke the
+   implant process grid on another page.
    ============================================================ */
 
 .mhb-book { padding: clamp(2rem, 5vw, 3.5rem) 0 var(--oe-section-pad); background: var(--oe-surface-offwhite); }
@@ -50,7 +56,7 @@
 .mhb-book__notice strong { color: var(--oe-navy); }
 
 /* ── Stepper ────────────────────────────────────────────────── */
-.mhb-steps {
+.mhb-bk-steps {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +66,7 @@
   margin: 0 0 var(--oe-sp-6);
   flex-wrap: wrap;
 }
-.mhb-steps li {
+.mhb-bk-steps li {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -68,15 +74,15 @@
   font-weight: var(--oe-fw-semibold);
   color: var(--oe-text-muted);
 }
-.mhb-steps li::after {
+.mhb-bk-steps li::after {
   content: '';
   width: 28px;
   height: 1px;
   background: var(--oe-border-dark);
   margin: 0 0.35rem;
 }
-.mhb-steps li:last-child::after { display: none; }
-.mhb-steps b {
+.mhb-bk-steps li:last-child::after { display: none; }
+.mhb-bk-steps b {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -88,9 +94,9 @@
   font-size: 0.72rem;
   font-weight: var(--oe-fw-bold);
 }
-.mhb-steps li[aria-current='step'] { color: var(--oe-navy); }
-.mhb-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
-.mhb-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
+.mhb-bk-steps li[aria-current='step'] { color: var(--oe-navy); }
+.mhb-bk-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
+.mhb-bk-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
 
 /* ── Card ───────────────────────────────────────────────────── */
 .mhb-book__card {
@@ -303,4 +309,4 @@
 
 /* Fallback for no-JS: show a plain note and keep all fields visible */
 .no-js .mhb-book__panel[hidden] { display: block; }
-.no-js .mhb-book__back, .no-js .mhb-steps, .no-js .mhb-book__pick { display: none; }
+.no-js .mhb-book__back, .no-js .mhb-bk-steps, .no-js .mhb-book__pick { display: none; }

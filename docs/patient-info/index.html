@@ -1628,7 +1628,7 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-book__notice .mhb-ic { color: var(--oe-warning); font-size: 1.15rem; margin-top: 2px; }
 .mhb-book__notice p { margin: 0; font-size: 0.875rem; line-height: 1.65; color: var(--oe-text); }
 .mhb-book__notice strong { color: var(--oe-navy); }
-.mhb-steps {
+.mhb-bk-steps {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1638,7 +1638,7 @@ main section[id] { scroll-margin-top: 130px; }
   margin: 0 0 var(--oe-sp-6);
   flex-wrap: wrap;
 }
-.mhb-steps li {
+.mhb-bk-steps li {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1646,15 +1646,15 @@ main section[id] { scroll-margin-top: 130px; }
   font-weight: var(--oe-fw-semibold);
   color: var(--oe-text-muted);
 }
-.mhb-steps li::after {
+.mhb-bk-steps li::after {
   content: '';
   width: 28px;
   height: 1px;
   background: var(--oe-border-dark);
   margin: 0 0.35rem;
 }
-.mhb-steps li:last-child::after { display: none; }
-.mhb-steps b {
+.mhb-bk-steps li:last-child::after { display: none; }
+.mhb-bk-steps b {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1666,9 +1666,9 @@ main section[id] { scroll-margin-top: 130px; }
   font-size: 0.72rem;
   font-weight: var(--oe-fw-bold);
 }
-.mhb-steps li[aria-current='step'] { color: var(--oe-navy); }
-.mhb-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
-.mhb-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
+.mhb-bk-steps li[aria-current='step'] { color: var(--oe-navy); }
+.mhb-bk-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
+.mhb-bk-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
 .mhb-book__card {
   background: #fff;
   border: 1px solid var(--oe-border);
@@ -1863,7 +1863,7 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-book__done p { max-width: 460px; margin: 0 auto var(--oe-sp-4); color: var(--oe-text-muted); line-height: var(--oe-lh-body); }
 .mhb-book__done .mhb-recap { display: inline-flex; margin-top: var(--oe-sp-2); }
 .no-js .mhb-book__panel[hidden] { display: block; }
-.no-js .mhb-book__back, .no-js .mhb-steps, .no-js .mhb-book__pick { display: none; }
+.no-js .mhb-book__back, .no-js .mhb-bk-steps, .no-js .mhb-book__pick { display: none; }
 
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://marshallbrowndds.com/patient-info/","url":"https://marshallbrowndds.com/patient-info/","name":"Patient Info Fort Worth TX | Marshall H. Brown, DDS","description":"Patient information for Marshall H. Brown, DDS in Fort Worth, TX — first visit details, accepted insurance plans, CareCredit financing and HIPAA privacy.","isPartOf":{"@type":"WebSite","name":"Marshall H. Brown, DDS","url":"https://marshallbrowndds.com/"},"about":{"@id":"https://marshallbrowndds.com/#dentist"}},{"@type":"BreadcrumbList","@id":"https://marshallbrowndds.com/patient-info/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://marshallbrowndds.com/"},{"@type":"ListItem","position":2,"name":"Patient Info","item":"https://marshallbrowndds.com/patient-info/"}]},{"@type":"FAQPage","@id":"https://marshallbrowndds.com/patient-info/#faq","mainEntity":[{"@type":"Question","name":"What should I bring to my first appointment?","acceptedAnswer":{"@type":"Answer","text":"For your first visit please bring: a valid photo ID, your dental insurance card and completed forms, a current list of all medications and supplements, and any recent dental X-rays from your previous dentist (taken within 6 months). Patients under 18 must be accompanied by a parent or guardian."}},{"@type":"Question","name":"Do you accept my dental insurance?","acceptedAnswer":{"@type":"Answer","text":"We accept most major PPO dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, BlueCross BlueShield, Guardian, Ameritas, Anthem, Principal, and many more. We are not currently a Medicaid or HMO provider. The best way to confirm your specific plan is accepted is to call us at (817) 920-0882. Our team can verify your coverage before your appointment at no charge."}},{"@type":"Question","name":"How do I schedule an appointment?","acceptedAnswer":{"@type":"Answer","text":"You can schedule an appointment in three ways. Call us at (817) 920-0882 — this is the fastest option and we often have same-week availability. Request online using our online appointment request form — we confirm within one business day. Or email info@marshallhbrown.com — for general inquiries only (please do not send PHI by email)."}},{"@type":"Question","name":"Do you offer payment plans or financing?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer flexible financing through CareCredit — a leading healthcare financing provider. CareCredit offers 0% interest promotional periods and extended payment plans ranging from 6 to 60 months. Our team can assist you with the CareCredit application during your visit. We also accept cash, personal checks, Visa, Mastercard, Discover, and American Express."}},{"@type":"Question","name":"How does the practice protect my health information under HIPAA?","acceptedAnswer":{"@type":"Answer","text":"Marshall H. Brown, DDS & Associates is fully HIPAA compliant. We protect your health information through encrypted electronic health records and communication systems, strict staff training in HIPAA privacy and security requirements, access controls limiting who can view your records to those involved in your care, written authorization required before sharing your information with any third party, and secure disposal of all paper and electronic records containing PHI."}},{"@type":"Question","name":"What is your cancellation policy?","acceptedAnswer":{"@type":"Answer","text":"We kindly ask for a minimum of 24 hours notice if you need to cancel or reschedule your appointment. This allows us to offer your appointment time to another patient in need of care. Repeated last-minute cancellations or no-shows without notice may result in a cancellation fee. If you have an emergency or unforeseen circumstance, please call us as soon as possible at (817) 920-0882 and we will do our best to accommodate you."}}]}]}</script>

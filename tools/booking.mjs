@@ -43,7 +43,7 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
       <p><strong>This is a request, not a confirmed booking.</strong> A member of our team will call or text you shortly to confirm your spot. Please don't include medical details or Social Security numbers — for anything sensitive, call us at <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a>.</p>
     </div>
 
-    <ol class="mhb-steps" id="bk-steps">
+    <ol class="mhb-bk-steps" id="bk-steps">
       <li aria-current="step" data-step="1"><b>1</b> Date &amp; time</li>
       <li data-step="2"><b>2</b> Your details</li>
     </ol>

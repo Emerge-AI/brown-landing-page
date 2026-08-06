@@ -1630,7 +1630,7 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-book__notice .mhb-ic { color: var(--oe-warning); font-size: 1.15rem; margin-top: 2px; }
 .mhb-book__notice p { margin: 0; font-size: 0.875rem; line-height: 1.65; color: var(--oe-text); }
 .mhb-book__notice strong { color: var(--oe-navy); }
-.mhb-steps {
+.mhb-bk-steps {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1640,7 +1640,7 @@ main section[id] { scroll-margin-top: 130px; }
   margin: 0 0 var(--oe-sp-6);
   flex-wrap: wrap;
 }
-.mhb-steps li {
+.mhb-bk-steps li {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1648,15 +1648,15 @@ main section[id] { scroll-margin-top: 130px; }
   font-weight: var(--oe-fw-semibold);
   color: var(--oe-text-muted);
 }
-.mhb-steps li::after {
+.mhb-bk-steps li::after {
   content: '';
   width: 28px;
   height: 1px;
   background: var(--oe-border-dark);
   margin: 0 0.35rem;
 }
-.mhb-steps li:last-child::after { display: none; }
-.mhb-steps b {
+.mhb-bk-steps li:last-child::after { display: none; }
+.mhb-bk-steps b {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -1668,9 +1668,9 @@ main section[id] { scroll-margin-top: 130px; }
   font-size: 0.72rem;
   font-weight: var(--oe-fw-bold);
 }
-.mhb-steps li[aria-current='step'] { color: var(--oe-navy); }
-.mhb-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
-.mhb-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
+.mhb-bk-steps li[aria-current='step'] { color: var(--oe-navy); }
+.mhb-bk-steps li[aria-current='step'] b { background: var(--oe-teal); color: #fff; }
+.mhb-bk-steps li[data-done='true'] b { background: var(--oe-teal-dark); color: #fff; }
 .mhb-book__card {
   background: #fff;
   border: 1px solid var(--oe-border);
@@ -1865,7 +1865,7 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-book__done p { max-width: 460px; margin: 0 auto var(--oe-sp-4); color: var(--oe-text-muted); line-height: var(--oe-lh-body); }
 .mhb-book__done .mhb-recap { display: inline-flex; margin-top: var(--oe-sp-2); }
 .no-js .mhb-book__panel[hidden] { display: block; }
-.no-js .mhb-book__back, .no-js .mhb-steps, .no-js .mhb-book__pick { display: none; }
+.no-js .mhb-book__back, .no-js .mhb-bk-steps, .no-js .mhb-book__pick { display: none; }
 
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dentist","@id":"https://marshallbrowndds.com/#dentist","name":"Marshall H. Brown, DDS","legalName":"Marshall H. Brown, DDS — Family & Implant Dentistry","url":"https://marshallbrowndds.com/","image":"https://marshallbrowndds.com/assets/img/dental-implant-exam-fort-worth-dentist-1200.jpg","telephone":"+18179200882","faxNumber":"+18179200709","email":"info@marshallhbrown.com","priceRange":"$$","foundingDate":"1990","address":{"@type":"PostalAddress","streetAddress":"1818 8th Avenue","addressLocality":"Fort Worth","addressRegion":"TX","postalCode":"76110","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":32.7146,"longitude":-97.3452},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday"],"opens":"08:00","closes":"12:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":4.7,"reviewCount":269,"bestRating":5},"areaServed":[{"@type":"City","name":"Fort Worth"},{"@type":"City","name":"Arlington"},{"@type":"City","name":"Burleson"}],"employee":[{"@type":"Person","name":"Marshall H. Brown, DDS","jobTitle":"Dentist","image":"https://marshallbrowndds.com/assets/img/dr-marshall-brown-dds-fort-worth-dentist-800.jpg","worksFor":{"@id":"https://marshallbrowndds.com/#dentist"}},{"@type":"Person","name":"Patrick Kamgang, DDS","jobTitle":"Dentist","image":"https://marshallbrowndds.com/assets/img/dr-patrick-kamgang-dds-fort-worth-dentist-800.jpg","worksFor":{"@id":"https://marshallbrowndds.com/#dentist"}}],"availableService":{"@type":"MedicalProcedure","name":"Dental Implant Placement","procedureType":"https://schema.org/SurgicalProcedure","description":"Surgical placement of a titanium dental implant post and restoration with an abutment and custom porcelain crown to permanently replace missing teeth."},"paymentAccepted":"Cash, Credit Card, CareCredit, Insurance"},{"@type":"FAQPage","@id":"https://marshallbrowndds.com/#faq","mainEntity":[{"@type":"Question","name":"Is Dr. Brown currently accepting new patients?","acceptedAnswer":{"@type":"Answer","text":"Yes! Marshall H. Brown, DDS & Associates is actively welcoming new patients of all ages. We typically have same-week appointments available. Simply call us at (817) 920-0882 or use our online appointment request form to get started."}},{"@type":"Question","name":"What dental insurance plans do you accept?","acceptedAnswer":{"@type":"Answer","text":"We accept most major dental insurance plans including Delta Dental, Cigna, Aetna, MetLife, Humana, United Concordia, BlueCross BlueShield, and many more. We also accept CareCredit for flexible financing. Our administrative staff will work directly with your insurance provider to help maximize your benefits and minimize your out-of-pocket costs. Contact us and we'll verify your coverage before your first visit."}},{"@type":"Question","name":"What should I bring to my first appointment?","acceptedAnswer":{"@type":"Answer","text":"For your first visit, please bring a valid photo ID, your dental insurance card and completed forms (if applicable), a list of any medications you are currently taking, and any recent X-rays from your previous dentist (taken within 6 months). A parent or guardian must accompany patients under 18 years old. If you have a complex medical history, please let us know when scheduling so we can allow adequate time for your consultation."}},{"@type":"Question","name":"Do you offer dental implants in Fort Worth?","acceptedAnswer":{"@type":"Answer","text":"Yes, dental implants are one of our most requested services. Dr. Brown has extensive experience placing and restoring dental implants for patients throughout Fort Worth and the surrounding areas. Dental implants are the gold standard for permanent tooth replacement — they look, feel, and function exactly like natural teeth. During your consultation, Dr. Brown will assess your bone density and overall oral health to determine if implants are right for you."}},{"@type":"Question","name":"What are your office hours?","acceptedAnswer":{"@type":"Answer","text":"Our office hours are Monday – Thursday: 8:00 AM – 4:00 PM, Friday: 8:00 AM – 12:00 PM, and we are closed Saturday and Sunday. We are located at 1818 8th Avenue, Fort Worth, TX 76110. Call us at (817) 920-0882 to schedule an appointment."}}]}]}</script>
