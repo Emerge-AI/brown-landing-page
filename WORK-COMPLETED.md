@@ -81,7 +81,21 @@ Getting Performance from 93 to 100 took three measured fixes, each isolated by A
 2. **First paint waited 2.9s on fonts.** The metric-matched fallback faces had no `font-display`, so they inherited the default block behaviour and held text invisible; the webfonts also cost two third-party connections. Fonts are now self-hosted.
 3. **Font payload was 137KB.** Subset to the ~90 glyphs the site actually renders: 80KB total, and the two preloaded faces went from 88KB to 46KB. Filenames carry a content hash so immutable caching stays safe.
 
-## 7. Domain, hosting & deployment
+## 7. Online appointment booking
+
+`/book/` — a two-step request flow modelled on a modern scheduling widget, styled in the practice's navy/teal:
+
+- **Calendar** driven by real office hours (Mon–Thu 8–4, Fri 8–12). Weekends, past dates, and anything beyond 90 days can't be selected, so the form can never offer a slot the practice isn't open for.
+- **Time slots** regenerate per weekday — Friday correctly shows the shorter 8am–12pm schedule.
+- **Details form**: first name, last name, phone, email, free-text notes, and a contact-consent checkbox, with inline validation.
+- **Explicit expectation-setting**: the page states plainly that a request is *not* a confirmed booking and asks patients to keep medical details out of the free-text field.
+- Every "Book Appointment" CTA sitewide now routes here.
+
+**Delivery:** submissions post to a Netlify function (`/api/book`) that emails the front desk through Resend. This avoids Netlify Forms, which is free only to 100 submissions/month before jumping to ~$19/month. Functions (~125k invocations) plus Resend (3,000 emails/month) covers far more volume at **$0**, and owning the endpoint keeps the email provider swappable.
+
+Includes a honeypot spam trap, server-side validation, and error handling that never surfaces a raw exception — a failed send tells the patient to call instead. Lighthouse on `/book/`: Performance 98, Accessibility 100, Best Practices 100, SEO 100.
+
+## 8. Domain, hosting & deployment
 
 - **Canonical domain decision:** `marshallbrowndds.com` set as primary. DNS inspection revealed it was registered 2026-07-22 (2 weeks old, no SEO history, no email), while `marshallhbrown.com` is Cloudflare-managed, serves the existing PBHS site, and carries live EmailArray email. Documented as a deliberate rebrand.
 - **GitHub:** repo created under Emerge-AI, made public after a secret scan confirmed no credentials (only staff photos, which the public site serves anyway)
@@ -94,7 +108,7 @@ Getting Performance from 93 to 100 took three measured fixes, each isolated by A
 
 All 21 pages return 200 · valid certificate · www redirects · 404 works · images, sitemap, robots serve correctly · structured data present · every internal link resolves.
 
-## 8. Documentation
+## 9. Documentation
 
 - `README.md` — architecture, build/preview commands, how to add a page
 - `DNS-INSTRUCTIONS.md` — registrar instructions, corrected after live DNS inspection
@@ -117,7 +131,7 @@ b516a36  Add package.json scripts and document the git-based deploy flow
 2. **Google Business Profile** — update the website field to `marshallbrowndds.com`. Highest-impact remaining task for local search.
 3. **`marshallhbrown.com` migration** — still serves the old PBHS site and the practice's email. Repointing it will activate the prepared 301s and transfer its search authority. Its DNS is at **Cloudflare, not GoDaddy**. Email (MX) is independent and unaffected.
 4. **Verify practice details** — geo coordinates in `PRACTICE.geo` are approximate; Dr. Kamgang's bio wording was inferred from the photo shoot.
-5. **Contact form** — CTAs currently use `tel:`/`mailto:`. Netlify Forms can be added without a backend.
+5. **Booking email key** — set `RESEND_API_KEY` in Netlify environment variables to activate delivery; until then the form tells patients to call.
 6. **Before/after photos** — slot is ready in `build.mjs` if the practice supplies real clinical images.
 
 ## Making changes

@@ -20,6 +20,22 @@ docs/                    Build output = the domain root. Deploy this directory.
 
 Content pages are data: edit (or add) a JSON file in `tools/content/` — schema: `path`, `template` (`treatment` | `hub` | `home` | `about` | `contact` | `patient-info` | `privacy`), `metaTitle`, `metaDesc`, `breadcrumbs`, `eyebrow`, `h1`, `intro[]`, `chips[]`, `sections[{h2, body[], bullets[]}]`, `faqs[]`, `related[]`, `cta{}` — then `npm run build`. New pages are picked up automatically, including in the sitemap. The implants landing page is the one hand-crafted body (in `build.mjs`).
 
+## Appointment booking
+
+`/book/` is a two-step request flow: a calendar constrained to real office hours, then a details form. It posts JSON to `/api/book` (`netlify/functions/book.mjs`), which emails the front desk via Resend.
+
+**Required env var** (Netlify → Site configuration → Environment variables):
+
+| Variable | Purpose |
+|---|---|
+| `RESEND_API_KEY` | **Required.** From resend.com. Without it the form returns a "please call us" message. |
+| `BOOKING_TO` | Optional. Recipient; defaults to `sylviacastaneda1@gmail.com`. |
+| `BOOKING_FROM` | Optional. Verified sender, e.g. `Appointments <appointments@marshallbrowndds.com>`. |
+
+Availability lives in `OFFICE.slotsByDay` in `tools/booking.mjs` — keys are weekday numbers (0 = Sunday). Change the slots there and the calendar follows automatically; weekends, past dates, and anything past `daysAhead` are never selectable.
+
+Cost note: this deliberately avoids Netlify Forms, which is free only to 100 submissions/month and then jumps to ~$19/month. Netlify Functions (~125k invocations/month) plus Resend (3,000 emails/month) covers far more volume at $0, and because the site posts to our own endpoint the email provider can be swapped without touching the front end.
+
 ## Domains
 
 `marshallbrowndds.com` is **primary/canonical**. `marshallhbrown.com` is the secondary and 301-redirects to it (rule already in `docs/_redirects`) so the two don't split search authority. The practice email stays `info@marshallhbrown.com` — email and website domains don't need to match.
