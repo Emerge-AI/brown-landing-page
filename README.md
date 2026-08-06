@@ -49,9 +49,11 @@ Environment variables (Netlify → Site configuration → Environment variables)
 
 | Variable | Purpose |
 |---|---|
-| `RESEND_API_KEY` | **Required.** From resend.com. Without it the form tells patients to call instead. |
-| `BOOKING_TO` | Optional. Recipient; defaults to `sylviacastaneda1@gmail.com`. |
-| `BOOKING_FROM` | Optional. Verified sender, e.g. `Appointments <appointments@marshallbrowndds.com>`. |
+| `RESEND_API_KEY` | **Set.** From resend.com. Without it the form tells patients to call instead. |
+| `BOOKING_FROM` | **Set** to `Appointments <appointments@marshallbrowndds.com>`. Must be a Resend-verified domain — the shared `onboarding@resend.dev` sender can only mail your own account address. |
+| `BOOKING_TO` | Unset, so it falls back to `sylviacastaneda1@gmail.com`. |
+
+`marshallbrowndds.com` is verified in Resend via DKIM (`resend._domainkey`) plus SPF and a bounce MX on the `send` subdomain. Note the existing root `_dmarc` record is `p=quarantine`, so authentication has to pass or mail goes to spam — don't remove those three records.
 
 Availability lives in `OFFICE.slotsByDay` in `tools/booking.mjs` — keys are weekday numbers (0 = Sunday). Change the slots and the calendar follows; weekends, past dates, and anything beyond `daysAhead` are never selectable.
 
@@ -85,7 +87,6 @@ Per-page title, meta description, canonical, Open Graph and Twitter cards. JSON-
 
 ## Open items
 
-1. **Set `RESEND_API_KEY`** to activate booking emails.
-2. **Google Business Profile** — point the website field at `marshallbrowndds.com`. Highest-impact remaining task for local search.
-3. **Verify practice details** — `PRACTICE.geo` coordinates are approximate; Dr. Kamgang's bio wording was inferred from the photo shoot.
-4. **Before/after photos** — none exist, so the gallery was deliberately omitted rather than faked. A commented slot is ready in `build.mjs`.
+1. **Google Business Profile** — point the website field at `marshallbrowndds.com`. Highest-impact remaining task for local search.
+2. **Verify practice details** — `PRACTICE.geo` coordinates are approximate; Dr. Kamgang's bio wording was inferred from the photo shoot.
+3. **Before/after photos** — none exist, so the gallery was deliberately omitted rather than faked. A commented slot is ready in `build.mjs`.

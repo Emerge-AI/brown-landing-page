@@ -131,7 +131,7 @@ b516a36  Add package.json scripts and document the git-based deploy flow
 2. **Google Business Profile** — update the website field to `marshallbrowndds.com`. Highest-impact remaining task for local search.
 3. **`marshallhbrown.com` migration** — still serves the old PBHS site and the practice's email. Repointing it will activate the prepared 301s and transfer its search authority. Its DNS is at **Cloudflare, not GoDaddy**. Email (MX) is independent and unaffected.
 4. **Verify practice details** — geo coordinates in `PRACTICE.geo` are approximate; Dr. Kamgang's bio wording was inferred from the photo shoot.
-5. **Booking email key** — set `RESEND_API_KEY` in Netlify environment variables to activate delivery; until then the form tells patients to call.
+5. **Booking email — live and verified.** `marshallbrowndds.com` is DKIM/SPF-verified in Resend, and requests deliver to sylviacastaneda1@gmail.com from `appointments@marshallbrowndds.com`. Confirmed end-to-end through both the API and the live browser form.
 6. **Before/after photos** — slot is ready in `build.mjs` if the practice supplies real clinical images.
 
 ## Making changes
