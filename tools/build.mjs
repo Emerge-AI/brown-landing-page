@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   SITE, PRACTICE, DOCTORS, IMAGES, STATS, ANATOMY, TYPES, STEPS,
-  COMPARISON, CANDIDATE, FINANCING, REAL_CARE, TESTIMONIALS, FAQS, CTA,
+  COMPARISON, CANDIDATE, FINANCING, REAL_CARE, TESTIMONIALS, FAQS, CTA, CASES, CASES_INTRO,
 } from './content.mjs';
 import { OFFICE, bookingBody, bookingScript } from './booking.mjs';
 
@@ -40,6 +40,29 @@ function picture(img, { sizes, eager = false, className = '' } = {}) {
   <img src="${IMG_BASE}/${img.slug}-${mid}.jpg" srcset="${srcset(img, 'jpg')}" sizes="${sizes}"
     width="${img.w}" height="${img.h}" alt="${esc(img.alt)}" ${load}>
 </picture>`;
+}
+
+/* ---------- before/after case gallery ---------- */
+/* Two-image cards: before | after, level, with a caption. Shared by the
+   implants landing page and the home page. */
+const CASE_SIZES = '(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px';
+function casesGallery({ heading = true } = {}) {
+  const head = heading ? `
+    <div class="mhb-section-head mhb-cases__head">
+      <p class="mhb-eyebrow">${esc(CASES_INTRO.eyebrow)}</p>
+      <h3>${esc(CASES_INTRO.title)}</h3>
+      <p class="mhb-section-sub">${esc(CASES_INTRO.sub)}</p>
+    </div>` : '';
+  return `${head}
+    <div class="mhb-cases">
+      ${CASES.map((c) => `<figure class="mhb-case">
+        <div class="mhb-case__pair">
+          <div class="mhb-case__shot">${picture(IMAGES[c.before], { sizes: CASE_SIZES })}<span class="mhb-case__tag mhb-case__tag--before">Before</span></div>
+          <div class="mhb-case__shot">${picture(IMAGES[c.after], { sizes: CASE_SIZES })}<span class="mhb-case__tag mhb-case__tag--after">After</span></div>
+        </div>
+        <figcaption><strong>${esc(c.title)}</strong>${esc(c.detail)}</figcaption>
+      </figure>`).join('\n      ')}
+    </div>`;
 }
 
 /* ---------- inline SVG icons (no icon-font dependency) ---------- */
@@ -585,14 +608,7 @@ const realCareSection = `
         <figcaption><strong>${esc(t.name)}</strong>${esc(t.detail)}</figcaption>
       </figure>`).join('\n      ')}
     </div>
-    <!-- Before/after case gallery: intentionally omitted until real clinical
-         photos are supplied by the practice. Add a .mhb-gallery grid of
-         picture() cards here when they arrive. -->
-    <div class="mhb-gallery">
-      <div class="mhb-photo-card">${picture(IMAGES.team, { sizes: '(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px' })}<span class="mhb-photo-card__chip">The whole team, ready for you</span></div>
-      <div class="mhb-photo-card">${picture(IMAGES.imaging, { sizes: '(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px' })}<span class="mhb-photo-card__chip">3D imaging for precise planning</span></div>
-      <div class="mhb-photo-card">${picture(IMAGES.waiting, { sizes: '(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px' })}<span class="mhb-photo-card__chip">Comfort from the moment you arrive</span></div>
-    </div>
+    ${casesGallery()}
   </div>
 </section>`;
 
@@ -1175,11 +1191,7 @@ function homeBody(p) {
         <figcaption><strong>${esc(t.name)}</strong>${esc(t.detail)}</figcaption>
       </figure>`).join('\n      ')}
     </div>
-    <div class="mhb-gallery">
-      <div class="mhb-photo-card">${picture(IMAGES.hallway, { sizes: '(max-width: 768px) 92vw, 380px' })}<span class="mhb-photo-card__chip">A warm Texas welcome</span></div>
-      <div class="mhb-photo-card">${picture(IMAGES.consult, { sizes: '(max-width: 768px) 92vw, 380px' })}<span class="mhb-photo-card__chip">Care explained clearly</span></div>
-      <div class="mhb-photo-card">${picture(IMAGES.waiting, { sizes: '(max-width: 768px) 92vw, 380px' })}<span class="mhb-photo-card__chip">Comfort from the start</span></div>
-    </div>
+    ${casesGallery()}
   </div>
 </section>`;
 

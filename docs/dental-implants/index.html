@@ -789,6 +789,36 @@ a:hover { color: var(--oe-navy); }
 .mhb-quote figcaption { font-size: 0.82rem; color: var(--oe-text-muted); }
 .mhb-quote figcaption strong { color: var(--oe-navy); display: block; font-style: normal; }
 .mhb-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: var(--oe-sp-8); }
+.mhb-cases__head { margin-top: var(--oe-sp-12); margin-bottom: var(--oe-sp-8); }
+.mhb-cases__head h3 { font-family: var(--oe-font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--oe-navy); margin: 0 0 0.75rem; line-height: 1.2; }
+.mhb-cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.mhb-case {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--oe-border);
+  border-radius: var(--oe-radius-xl);
+  box-shadow: var(--oe-shadow-card);
+  overflow: hidden;
+}
+.mhb-case__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--oe-border); }
+.mhb-case__shot { position: relative; background: #fff; }
+.mhb-case__shot img, .mhb-case__shot picture { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.mhb-case__tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: var(--oe-fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: var(--oe-radius-pill);
+  padding: 0.3rem 0.7rem;
+}
+.mhb-case__tag--before { background: rgba(13, 45, 78, 0.9); }
+.mhb-case__tag--after { background: var(--oe-teal); }
+.mhb-case figcaption { padding: 1rem 1.25rem 1.15rem; font-size: 0.85rem; color: var(--oe-text-muted); line-height: 1.55; }
+.mhb-case figcaption strong { display: block; color: var(--oe-navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
 .mhb-faq { max-width: 800px; margin: 0 auto; display: grid; gap: 0.9rem; }
 .mhb-faq details {
   background: #fff;
@@ -893,6 +923,7 @@ a:hover { color: var(--oe-navy); }
   .mhb-steps { grid-template-columns: 1fr; }
   .mhb-testimonials-grid { grid-template-columns: 1fr; }
   .mhb-gallery { grid-template-columns: 1fr; }
+  .mhb-cases { grid-template-columns: 1fr; }
   .mhb-stats { grid-template-columns: 1fr; gap: var(--oe-sp-2); }
   .mhb-stat + .mhb-stat { border-left: 0; border-top: 1px solid var(--oe-border); }
   .mhb-doctor { grid-template-columns: 1fr; }
@@ -2366,7 +2397,7 @@ main section[id] { scroll-margin-top: 130px; }
     <div class="mhb-section-head">
       <p class="mhb-eyebrow">Real Patients, Real Care</p>
       <h2>What Our Implant Patients Say</h2>
-      <p class="mhb-section-sub">Rated 4.7 stars on Google across 269+ verified reviews — and every photo on this page is our real team and our real Fort Worth office.</p>
+      <p class="mhb-section-sub">Rated 4.7 stars on Google across 269+ verified reviews — and every photo on this page is our real team, our real Fort Worth office, and our real patients’ results.</p>
     </div>
     <div class="mhb-testimonials-grid">
       <figure class="mhb-quote">
@@ -2385,25 +2416,43 @@ main section[id] { scroll-margin-top: 130px; }
         <figcaption><strong>Barbara T.</strong>Burleson, TX · Implant-supported denture</figcaption>
       </figure>
     </div>
-    <!-- Before/after case gallery: intentionally omitted until real clinical
-         photos are supplied by the practice. Add a .mhb-gallery grid of
-         picture() cards here when they arrive. -->
-    <div class="mhb-gallery">
-      <div class="mhb-photo-card"><picture>
-  <source type="image/webp" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.webp 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.webp 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.webp 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.webp 1600w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px">
-  <img src="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg" srcset="/assets/img/marshall-h-brown-dds-dental-team-fort-worth-480.jpg 480w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-800.jpg 800w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.jpg 1200w, /assets/img/marshall-h-brown-dds-dental-team-fort-worth-1600.jpg 1600w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px"
-    width="1600" height="1066" alt="The full dental team at Marshall H. Brown, DDS in Fort Worth, Texas — doctors, hygienists, and front-office staff" loading="lazy" decoding="async">
-</picture><span class="mhb-photo-card__chip">The whole team, ready for you</span></div>
-      <div class="mhb-photo-card"><picture>
-  <source type="image/webp" srcset="/assets/img/dental-implant-3d-imaging-fort-worth-480.webp 480w, /assets/img/dental-implant-3d-imaging-fort-worth-800.webp 800w, /assets/img/dental-implant-3d-imaging-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px">
-  <img src="/assets/img/dental-implant-3d-imaging-fort-worth-800.jpg" srcset="/assets/img/dental-implant-3d-imaging-fort-worth-480.jpg 480w, /assets/img/dental-implant-3d-imaging-fort-worth-800.jpg 800w, /assets/img/dental-implant-3d-imaging-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px"
-    width="1200" height="800" alt="3D cone-beam imaging scanner used for dental implant planning at Marshall H. Brown, DDS in Fort Worth" loading="lazy" decoding="async">
-</picture><span class="mhb-photo-card__chip">3D imaging for precise planning</span></div>
-      <div class="mhb-photo-card"><picture>
-  <source type="image/webp" srcset="/assets/img/dental-office-waiting-room-fort-worth-480.webp 480w, /assets/img/dental-office-waiting-room-fort-worth-800.webp 800w, /assets/img/dental-office-waiting-room-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px">
-  <img src="/assets/img/dental-office-waiting-room-fort-worth-800.jpg" srcset="/assets/img/dental-office-waiting-room-fort-worth-480.jpg 480w, /assets/img/dental-office-waiting-room-fort-worth-800.jpg 800w, /assets/img/dental-office-waiting-room-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 92vw, (max-width: 1024px) 45vw, 380px"
-    width="1200" height="800" alt="Warm, comfortable waiting room at the Marshall H. Brown, DDS dental office in Fort Worth" loading="lazy" decoding="async">
-</picture><span class="mhb-photo-card__chip">Comfort from the moment you arrive</span></div>
+    
+    <div class="mhb-section-head mhb-cases__head">
+      <p class="mhb-eyebrow">Before &amp; After</p>
+      <h3>Real Results From Our Fort Worth Patients</h3>
+      <p class="mhb-section-sub">Actual patients of Marshall H. Brown, DDS. Photos are unretouched and shared with permission; individual results vary.</p>
+    </div>
+    <div class="mhb-cases">
+      <figure class="mhb-case">
+        <div class="mhb-case__pair">
+          <div class="mhb-case__shot"><picture>
+  <source type="image/webp" srcset="/assets/img/dental-implants-before-missing-front-teeth-fort-worth-480.webp 480w, /assets/img/dental-implants-before-missing-front-teeth-fort-worth-800.webp 800w, /assets/img/dental-implants-before-missing-front-teeth-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px">
+  <img src="/assets/img/dental-implants-before-missing-front-teeth-fort-worth-800.jpg" srcset="/assets/img/dental-implants-before-missing-front-teeth-fort-worth-480.jpg 480w, /assets/img/dental-implants-before-missing-front-teeth-fort-worth-800.jpg 800w, /assets/img/dental-implants-before-missing-front-teeth-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px"
+    width="1200" height="800" alt="Before: patient with missing upper front teeth and a single worn crown, prior to treatment at Marshall H. Brown, DDS in Fort Worth" loading="lazy" decoding="async">
+</picture><span class="mhb-case__tag mhb-case__tag--before">Before</span></div>
+          <div class="mhb-case__shot"><picture>
+  <source type="image/webp" srcset="/assets/img/dental-implants-after-restored-smile-fort-worth-480.webp 480w, /assets/img/dental-implants-after-restored-smile-fort-worth-800.webp 800w, /assets/img/dental-implants-after-restored-smile-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px">
+  <img src="/assets/img/dental-implants-after-restored-smile-fort-worth-800.jpg" srcset="/assets/img/dental-implants-after-restored-smile-fort-worth-480.jpg 480w, /assets/img/dental-implants-after-restored-smile-fort-worth-800.jpg 800w, /assets/img/dental-implants-after-restored-smile-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px"
+    width="1200" height="800" alt="After: the same patient with a full row of natural-looking upper front teeth restored by Marshall H. Brown, DDS in Fort Worth" loading="lazy" decoding="async">
+</picture><span class="mhb-case__tag mhb-case__tag--after">After</span></div>
+        </div>
+        <figcaption><strong>Missing front teeth restored</strong>Upper front teeth rebuilt with natural-looking, permanent restorations</figcaption>
+      </figure>
+      <figure class="mhb-case">
+        <div class="mhb-case__pair">
+          <div class="mhb-case__shot"><picture>
+  <source type="image/webp" srcset="/assets/img/smile-makeover-before-fort-worth-480.webp 480w, /assets/img/smile-makeover-before-fort-worth-800.webp 800w, /assets/img/smile-makeover-before-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px">
+  <img src="/assets/img/smile-makeover-before-fort-worth-800.jpg" srcset="/assets/img/smile-makeover-before-fort-worth-480.jpg 480w, /assets/img/smile-makeover-before-fort-worth-800.jpg 800w, /assets/img/smile-makeover-before-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px"
+    width="1200" height="800" alt="Before: patient with gaps, chipped edges, and discolored front teeth, prior to a smile makeover in Fort Worth" loading="lazy" decoding="async">
+</picture><span class="mhb-case__tag mhb-case__tag--before">Before</span></div>
+          <div class="mhb-case__shot"><picture>
+  <source type="image/webp" srcset="/assets/img/smile-makeover-after-fort-worth-480.webp 480w, /assets/img/smile-makeover-after-fort-worth-800.webp 800w, /assets/img/smile-makeover-after-fort-worth-1200.webp 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px">
+  <img src="/assets/img/smile-makeover-after-fort-worth-800.jpg" srcset="/assets/img/smile-makeover-after-fort-worth-480.jpg 480w, /assets/img/smile-makeover-after-fort-worth-800.jpg 800w, /assets/img/smile-makeover-after-fort-worth-1200.jpg 1200w" sizes="(max-width: 768px) 46vw, (max-width: 1024px) 23vw, 280px"
+    width="1200" height="800" alt="After: the same patient smiling with even, bright upper front teeth following a smile makeover at Marshall H. Brown, DDS" loading="lazy" decoding="async">
+</picture><span class="mhb-case__tag mhb-case__tag--after">After</span></div>
+        </div>
+        <figcaption><strong>Complete smile makeover</strong>Gaps, chips, and discoloration corrected for an even, bright smile</figcaption>
+      </figure>
     </div>
   </div>
 </section>

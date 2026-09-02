@@ -33,6 +33,8 @@ Images only need regenerating when the photo selection changes:
 npm run images     # needs: brew install imagemagick webp
 ```
 
+Before/after clinical photos live in `~/Downloads/Patrick/before-after/` and render as `.mhb-case` cards on the home and dental-implants pages (`CASES` in `tools/content.mjs`). To re-encode just those, `ONLY='before|after|makeover' npm run images`.
+
 ## Adding or editing a page
 
 Content pages are data. Edit or add a JSON file in `tools/content/`:

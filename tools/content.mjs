@@ -119,6 +119,30 @@ export const IMAGES = {
     w: 1200, h: 799,
     alt: 'Dental team members at Marshall H. Brown, DDS in Fort Worth, Texas',
   },
+  case1Before: {
+    slug: 'dental-implants-before-missing-front-teeth-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'Before: patient with missing upper front teeth and a single worn crown, prior to treatment at Marshall H. Brown, DDS in Fort Worth',
+  },
+  case1After: {
+    slug: 'dental-implants-after-restored-smile-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'After: the same patient with a full row of natural-looking upper front teeth restored by Marshall H. Brown, DDS in Fort Worth',
+  },
+  case2Before: {
+    slug: 'smile-makeover-before-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'Before: patient with gaps, chipped edges, and discolored front teeth, prior to a smile makeover in Fort Worth',
+  },
+  case2After: {
+    slug: 'smile-makeover-after-fort-worth',
+    widths: [480, 800, 1200],
+    w: 1200, h: 800,
+    alt: 'After: the same patient smiling with even, bright upper front teeth following a smile makeover at Marshall H. Brown, DDS',
+  },
 };
 
 export const STATS = [
@@ -230,8 +254,32 @@ export const FINANCING = {
 export const REAL_CARE = {
   eyebrow: 'Real Patients, Real Care',
   title: 'What Our Implant Patients Say',
-  sub: 'Rated 4.7 stars on Google across 269+ verified reviews — and every photo on this page is our real team and our real Fort Worth office.',
+  sub: 'Rated 4.7 stars on Google across 269+ verified reviews — and every photo on this page is our real team, our real Fort Worth office, and our real patients’ results.',
 };
+
+/* Before/after cases. Photos supplied by the practice; each pair shares one
+   aspect ratio so the two images sit level. Keep captions descriptive, not
+   diagnostic — the practice signs off on the treatment wording. */
+export const CASES_INTRO = {
+  eyebrow: 'Before & After',
+  title: 'Real Results From Our Fort Worth Patients',
+  sub: 'Actual patients of Marshall H. Brown, DDS. Photos are unretouched and shared with permission; individual results vary.',
+};
+
+export const CASES = [
+  {
+    before: 'case1Before',
+    after: 'case1After',
+    title: 'Missing front teeth restored',
+    detail: 'Upper front teeth rebuilt with natural-looking, permanent restorations',
+  },
+  {
+    before: 'case2Before',
+    after: 'case2After',
+    title: 'Complete smile makeover',
+    detail: 'Gaps, chips, and discoloration corrected for an even, bright smile',
+  },
+];
 
 export const TESTIMONIALS = [
   {

@@ -787,6 +787,36 @@ a:hover { color: var(--oe-navy); }
 .mhb-quote figcaption { font-size: 0.82rem; color: var(--oe-text-muted); }
 .mhb-quote figcaption strong { color: var(--oe-navy); display: block; font-style: normal; }
 .mhb-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: var(--oe-sp-8); }
+.mhb-cases__head { margin-top: var(--oe-sp-12); margin-bottom: var(--oe-sp-8); }
+.mhb-cases__head h3 { font-family: var(--oe-font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--oe-navy); margin: 0 0 0.75rem; line-height: 1.2; }
+.mhb-cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.mhb-case {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--oe-border);
+  border-radius: var(--oe-radius-xl);
+  box-shadow: var(--oe-shadow-card);
+  overflow: hidden;
+}
+.mhb-case__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: var(--oe-border); }
+.mhb-case__shot { position: relative; background: #fff; }
+.mhb-case__shot img, .mhb-case__shot picture { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; }
+.mhb-case__tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.68rem;
+  font-weight: var(--oe-fw-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: var(--oe-radius-pill);
+  padding: 0.3rem 0.7rem;
+}
+.mhb-case__tag--before { background: rgba(13, 45, 78, 0.9); }
+.mhb-case__tag--after { background: var(--oe-teal); }
+.mhb-case figcaption { padding: 1rem 1.25rem 1.15rem; font-size: 0.85rem; color: var(--oe-text-muted); line-height: 1.55; }
+.mhb-case figcaption strong { display: block; color: var(--oe-navy); font-size: 0.95rem; margin-bottom: 0.15rem; }
 .mhb-faq { max-width: 800px; margin: 0 auto; display: grid; gap: 0.9rem; }
 .mhb-faq details {
   background: #fff;
@@ -891,6 +921,7 @@ a:hover { color: var(--oe-navy); }
   .mhb-steps { grid-template-columns: 1fr; }
   .mhb-testimonials-grid { grid-template-columns: 1fr; }
   .mhb-gallery { grid-template-columns: 1fr; }
+  .mhb-cases { grid-template-columns: 1fr; }
   .mhb-stats { grid-template-columns: 1fr; gap: var(--oe-sp-2); }
   .mhb-stat + .mhb-stat { border-left: 0; border-top: 1px solid var(--oe-border); }
   .mhb-doctor { grid-template-columns: 1fr; }
