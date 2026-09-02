@@ -69,7 +69,7 @@ This deliberately avoids Netlify Forms, which is free only to 100 submissions/mo
 
 ## Analytics
 
-Google Analytics 4, property **marshallbrowndds.com** in the **Marshall H. Brown, DDS** account (measurement ID in `SITE.ga4`, `tools/content.mjs`). Reports: https://analytics.google.com/ → Reports. Beyond page views it records `phone_call` (any tel: link tap) and `generate_lead` (booking form submitted successfully); mark `generate_lead` as a key event in Admin → Events to see it as a conversion.
+Google Analytics 4, property **marshallbrowndds.com** in the **Marshall H. Brown, DDS** account (measurement ID in `SITE.ga4`, `tools/content.mjs`). Reports: https://analytics.google.com/ → Reports. Beyond page views it records `phone_call` (any tel: link tap) and `generate_lead` (booking form submitted successfully); both are registered as key events (conversions) in Admin → Events.
 
 ## Performance
 
