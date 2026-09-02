@@ -65,6 +65,22 @@ function casesGallery({ heading = true } = {}) {
     </div>`;
 }
 
+/* ---------- Google Analytics 4 ---------- */
+/* Page views plus two events the practice cares about: phone-number taps
+   (phone_call) and completed booking requests (generate_lead, fired from
+   booking.mjs). The loader is async so it never blocks first paint. */
+const GA_TAG = SITE.ga4 ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${SITE.ga4}');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (a) gtag('event', 'phone_call', { link_url: a.getAttribute('href') });
+    });
+  </script>` : '';
+
 /* ---------- inline SVG icons (no icon-font dependency) ---------- */
 const IC = {
   star: '<path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/>',
@@ -869,6 +885,7 @@ function renderPage({
   ${noindex ? '<meta name="robots" content="noindex">' : ''}
   <meta name="theme-color" content="#0d2d4e">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  ${GA_TAG}
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="${esc(PRACTICE.name)}">

@@ -67,6 +67,10 @@ This deliberately avoids Netlify Forms, which is free only to 100 submissions/mo
 
 `marshallhbrown.com` still serves the practice's previous site (PBHS) and their live email, and its DNS is managed at **Cloudflare, not GoDaddy**. It is not part of this deployment. When the practice is ready to retire the old site, pointing that domain at Netlify activates the 301s already written into `docs/_redirects`, transferring its search authority. Email (MX) is independent and unaffected either way.
 
+## Analytics
+
+Google Analytics 4, property **marshallbrowndds.com** in the **Marshall H. Brown, DDS** account (measurement ID in `SITE.ga4`, `tools/content.mjs`). Reports: https://analytics.google.com/ → Reports. Beyond page views it records `phone_call` (any tel: link tap) and `generate_lead` (booking form submitted successfully); mark `generate_lead` as a key event in Admin → Events to see it as a conversion.
+
 ## Performance
 
 Lighthouse against production — measure there, not locally, since the local dev server sends uncompressed HTML and reads ~15 points low:

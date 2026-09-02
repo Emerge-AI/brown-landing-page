@@ -9,6 +9,17 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#0d2d4e">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE5CQVSB4H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CE5CQVSB4H');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (a) gtag('event', 'phone_call', { link_url: a.getAttribute('href') });
+    });
+  </script>
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Marshall H. Brown, DDS">

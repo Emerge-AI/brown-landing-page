@@ -345,6 +345,8 @@ export function bookingScript(OFFICE_JSON) {
       if (!res.ok) throw new Error((res.body && res.body.error) || FALLBACK_ERR);
       document.getElementById('bk-done-date').textContent = v.dateLabel;
       document.getElementById('bk-done-time').textContent = chosenTimeLabel || v.time;
+      // GA4 conversion — the one number the practice actually cares about.
+      if (window.gtag) gtag('event', 'generate_lead', { method: 'booking_form' });
       goStep(3);
     }).catch(function (err) {
       btn.disabled = false;

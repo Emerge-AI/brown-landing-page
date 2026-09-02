@@ -6,6 +6,9 @@ export const SITE = {
   // Primary/canonical domain. marshallhbrown.com is the secondary and must
   // 301-redirect here, so the two domains don't split search authority.
   origin: 'https://marshallbrowndds.com',
+  // GA4 measurement ID (property "marshallbrowndds.com" under the
+  // "Marshall H. Brown, DDS" Analytics account). Empty string disables the tag.
+  ga4: 'G-CE5CQVSB4H',
   path: '/dental-implants/',
   metaTitle:
     'Dental Implants Fort Worth TX | Permanent Tooth Replacement | Marshall H. Brown, DDS',
