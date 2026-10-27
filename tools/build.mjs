@@ -1378,7 +1378,7 @@ const bookCrumbs = [['Home', '/'], ['Book an Appointment', '']];
 renderPage({
   pagePath: '/book/',
   metaTitle: 'Request an Appointment | Marshall H. Brown, DDS | Fort Worth',
-  metaDesc: `Request a dental appointment with ${PRACTICE.name} in Fort Worth. Pick a day and time online — we confirm every request by phone. Call ${PRACTICE.phone}.`,
+  metaDesc: `Request a dental appointment with ${PRACTICE.name} in Fort Worth. Pick a day and morning or afternoon online — we confirm every request by phone. Call ${PRACTICE.phone}.`,
   jsonLdStr: pageJsonLd({
     path: '/book/',
     metaTitle: 'Request an Appointment | Marshall H. Brown, DDS | Fort Worth',

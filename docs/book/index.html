@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Request an Appointment | Marshall H. Brown, DDS | Fort Worth</title>
-  <meta name="description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and time online — we confirm every request by phone. Call (817) 920-0882.">
+  <meta name="description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and morning or afternoon online — we confirm every request by phone. Call (817) 920-0882.">
   <link rel="canonical" href="https://marshallbrowndds.com/book/">
   
   <meta name="theme-color" content="#0d2d4e">
@@ -24,12 +24,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Marshall H. Brown, DDS">
   <meta property="og:title" content="Request an Appointment | Marshall H. Brown, DDS | Fort Worth">
-  <meta property="og:description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and time online — we confirm every request by phone. Call (817) 920-0882.">
+  <meta property="og:description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and morning or afternoon online — we confirm every request by phone. Call (817) 920-0882.">
   <meta property="og:url" content="https://marshallbrowndds.com/book/">
   <meta property="og:image" content="https://marshallbrowndds.com/assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Request an Appointment | Marshall H. Brown, DDS | Fort Worth">
-  <meta name="twitter:description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and time online — we confirm every request by phone. Call (817) 920-0882.">
+  <meta name="twitter:description" content="Request a dental appointment with Marshall H. Brown, DDS in Fort Worth. Pick a day and morning or afternoon online — we confirm every request by phone. Call (817) 920-0882.">
   <meta name="twitter:image" content="https://marshallbrowndds.com/assets/img/marshall-h-brown-dds-dental-team-fort-worth-1200.jpg">
 
   <link rel="preload" href="/assets/fonts/inter-latin.43f4c3d0.woff2" as="font" type="font/woff2" crossorigin>
@@ -1824,9 +1824,9 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-cal__friday strong { color: var(--oe-navy); }
 .mhb-slots__title { font-size: 0.8rem; font-weight: var(--oe-fw-bold); color: var(--oe-navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
 .mhb-slots { display: grid; gap: 0.5rem; max-height: 340px; overflow-y: auto; padding-right: 2px; }
-@media (max-width: 760px) { .mhb-slots { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); max-height: none; } }
+@media (max-width: 760px) { .mhb-slots { grid-template-columns: 1fr 1fr; max-height: none; } }
 .mhb-slot {
-  padding: 0.7rem 0.9rem;
+  padding: 0.85rem 0.9rem;
   border: 1px solid var(--oe-border-dark);
   border-radius: var(--oe-radius);
   background: #fff;
@@ -1840,6 +1840,10 @@ main section[id] { scroll-margin-top: 130px; }
 }
 .mhb-slot:hover { border-color: var(--oe-teal); background: rgba(0, 180, 166, 0.07); }
 .mhb-slot[aria-pressed='true'] { background: var(--oe-teal); border-color: var(--oe-teal); color: #fff; }
+.mhb-slot__label { display: block; font-size: 1rem; }
+.mhb-slot__hint { display: block; margin-top: 2px; font-size: 0.75rem; font-weight: var(--oe-fw-regular); color: var(--oe-text-muted); }
+.mhb-slot[aria-pressed='true'] .mhb-slot__hint { color: rgba(255, 255, 255, 0.9); }
+.mhb-slots__empty, .mhb-slots__note { grid-column: 1 / -1; }
 .mhb-slots__empty { font-size: 0.85rem; color: var(--oe-text-muted); line-height: 1.6; padding: 0.5rem 0; }
 .mhb-slots__note { font-size: 0.78rem; color: var(--oe-text-muted); line-height: 1.55; margin: 0 0 0.65rem; }
 .mhb-slot--byappt {
@@ -1897,6 +1901,15 @@ main section[id] { scroll-margin-top: 130px; }
 }
 .mhb-recap .mhb-ic { color: var(--oe-teal-dark); }
 .mhb-recap span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.mhb-recap .mhb-recap__status {
+  padding: 0.1rem 0.6rem;
+  background: var(--oe-warning-bg);
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  border-radius: var(--oe-radius-pill);
+  font-size: 0.75rem;
+  font-weight: var(--oe-fw-bold);
+  color: #92400e;
+}
 .mhb-book__submit { margin-top: var(--oe-sp-6); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .mhb-book__submit .mhb-btn { min-width: 200px; justify-content: center; }
 .mhb-book__submit-note { font-size: 0.78rem; color: var(--oe-text-muted); }
@@ -2093,16 +2106,16 @@ main section[id] { scroll-margin-top: 130px; }
     </div>
     <div class="mhb-section-head">
       <h1 style="font-family:var(--oe-font-display);font-size:clamp(1.9rem,4vw,3rem);font-weight:800;color:var(--oe-navy);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem;">Request Your Appointment</h1>
-      <p class="mhb-section-sub">Pick a day and time that suits you and we'll take care of the rest. Same-week appointments are often available.</p>
+      <p class="mhb-section-sub">Pick a day, then tell us whether a morning or afternoon suits you. We'll call or text to set an exact time. Same-week appointments are often available.</p>
     </div>
 
     <div class="mhb-book__notice">
       <svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 23 21H1zM11 9v5h2V9zm0 7v2h2v-2z"/></svg>
-      <p><strong>This is a request, not a confirmed booking.</strong> A member of our team will call or text you shortly to confirm your spot. Please don't include medical details or Social Security numbers — for anything sensitive, call us at <a href="tel:+18179200882">(817) 920-0882</a>.</p>
+      <p><strong>This is a request, not a confirmed appointment.</strong> Sending this form does not book you in. A member of our team will call or text you to agree an exact time, and your appointment is only confirmed once you've spoken with us. Please don't include medical details or Social Security numbers — for anything sensitive, call us at <a href="tel:+18179200882">(817) 920-0882</a>.</p>
     </div>
 
     <ol class="mhb-bk-steps" id="bk-steps">
-      <li aria-current="step" data-step="1"><b>1</b> Date &amp; time</li>
+      <li aria-current="step" data-step="1"><b>1</b> Day &amp; AM/PM</li>
       <li data-step="2"><b>2</b> Your details</li>
     </ol>
 
@@ -2124,9 +2137,9 @@ main section[id] { scroll-margin-top: 130px; }
             <p class="mhb-cal__friday"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> <span><strong>Fridays are by appointment.</strong> You can still request one — pick a Friday and we'll agree a time when we call to confirm.</span></p>
           </div>
           <div>
-            <p class="mhb-slots__title" id="bk-slots-title">Choose a time</p>
+            <p class="mhb-slots__title" id="bk-slots-title">Morning or afternoon?</p>
             <div class="mhb-slots" id="bk-slots" role="group" aria-labelledby="bk-slots-title">
-              <p class="mhb-slots__empty">Select a date to see available times.</p>
+              <p class="mhb-slots__empty">Select a date, then choose morning (AM) or afternoon (PM).</p>
             </div>
           </div>
         </div>
@@ -2135,16 +2148,17 @@ main section[id] { scroll-margin-top: 130px; }
       <!-- Step 2 -->
       <div class="mhb-book__panel" id="bk-panel-2" hidden>
         <div class="mhb-book__panel-head">
-          <button class="mhb-book__back" type="button" id="bk-back" aria-label="Back to date and time"><svg class="mhb-ic mhb-rot-90" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.3 9.3 12 15l5.7-5.7-1.4-1.4L12 12.2 7.7 7.9z"/></svg></button>
+          <button class="mhb-book__back" type="button" id="bk-back" aria-label="Back to day and morning or afternoon"><svg class="mhb-ic mhb-rot-90" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.3 9.3 12 15l5.7-5.7-1.4-1.4L12 12.2 7.7 7.9z"/></svg></button>
           <div>
             <h2>Enter your details</h2>
-            <p>We'll use these to confirm your appointment.</p>
+            <p>We'll use these to call or text you and agree an exact time.</p>
           </div>
         </div>
 
         <div class="mhb-recap" id="bk-recap">
           <span><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> <em id="bk-recap-date" style="font-style:normal;"></em></span>
           <span><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.4l4 2.4-1 1.7-5-3V7z"/></svg> <em id="bk-recap-time" style="font-style:normal;"></em></span>
+          <span class="mhb-recap__status">Request only — not confirmed</span>
         </div>
 
         <form id="bk-form" novalidate>
@@ -2188,11 +2202,11 @@ main section[id] { scroll-margin-top: 130px; }
 
           <div class="mhb-consent">
             <input type="checkbox" id="bk-consent" name="consent">
-            <label for="bk-consent">I agree to be contacted by Marshall H. Brown, DDS about this appointment request using the details above.</label>
+            <label for="bk-consent">I understand this is a request, not a confirmed appointment, and I agree to be contacted by Marshall H. Brown, DDS using the details above to set a time.</label>
           </div>
 
           <div class="mhb-book__submit">
-            <button class="mhb-btn mhb-btn--teal" type="submit" id="bk-submit"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> Request Appointment</button>
+            <button class="mhb-btn mhb-btn--teal" type="submit" id="bk-submit"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> Send Appointment Request</button>
             <span class="mhb-book__submit-note">Or call <a href="tel:+18179200882">(817) 920-0882</a></span>
           </div>
           <p class="mhb-form-error" id="bk-form-error" role="alert"></p>
@@ -2202,13 +2216,14 @@ main section[id] { scroll-margin-top: 130px; }
       <!-- Success -->
       <div class="mhb-book__panel mhb-book__done" id="bk-panel-3" hidden>
         <div class="mhb-book__done-icon"><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.4-4-4 1.7-1.7 2.3 2.3 5.7-5.7 1.7 1.7z"/></svg></div>
-        <h2>Request received</h2>
-        <p>Thank you — we've sent your request to our front desk. Someone will call or text you shortly to confirm. Nothing is booked until we speak with you.</p>
+        <h2>Request sent — not confirmed yet</h2>
+        <p>Thank you. Your request has gone to our front desk, but <strong>your appointment is not booked yet.</strong> We'll call or text you to agree an exact time. It's only confirmed once you've spoken with us.</p>
         <div class="mhb-recap">
           <span><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3zm13 8H4v10h16zm-9 3v4H6v-4z"/></svg> <em id="bk-done-date" style="font-style:normal;"></em></span>
           <span><svg class="mhb-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5v5.4l4 2.4-1 1.7-5-3V7z"/></svg> <em id="bk-done-time" style="font-style:normal;"></em></span>
+          <span class="mhb-recap__status">Awaiting our call</span>
         </div>
-        <p style="margin-top:1.5rem;font-size:0.875rem;">Need it sooner? Call <a href="tel:+18179200882"><strong>(817) 920-0882</strong></a> — we're at 1818 8th Avenue, Fort Worth, TX 76110.</p>
+        <p style="margin-top:1.5rem;font-size:0.875rem;">Haven't heard from us by the next business day, or need it sooner? Call <a href="tel:+18179200882"><strong>(817) 920-0882</strong></a> — we're at 1818 8th Avenue, Fort Worth, TX 76110.</p>
       </div>
     </div>
   </div>
@@ -2343,7 +2358,7 @@ main section[id] { scroll-margin-top: 130px; }
 </script>
 <script>
 (function () {
-  var O = {"slotsByDay":{"1":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","1:00 PM","2:00 PM","3:00 PM"],"2":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","1:00 PM","2:00 PM","3:00 PM"],"3":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","1:00 PM","2:00 PM","3:00 PM"],"4":["8:00 AM","9:00 AM","10:00 AM","11:00 AM","1:00 PM","2:00 PM","3:00 PM"]},"byAppointmentDays":[5],"byAppointmentLabel":"By appointment","byAppointmentValue":"By appointment — time to be arranged by phone","daysAhead":90};
+  var O = {"openDays":[1,2,3,4],"periods":[{"label":"AM","hint":"Morning, 8am–noon","value":"Morning (AM)"},{"label":"PM","hint":"Afternoon, 1–4pm","value":"Afternoon (PM)"}],"byAppointmentDays":[5],"byAppointmentLabel":"By appointment","byAppointmentValue":"By appointment — time to be arranged by phone","daysAhead":90};
   var grid = document.getElementById('bk-grid');
   if (!grid) return;
   var monthEl = document.getElementById('bk-month');
@@ -2369,9 +2384,11 @@ main section[id] { scroll-margin-top: 130px; }
   var label = function (d) { return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); };
   // Days with no standing hours: the patient picks the day, we agree the time.
   var isByAppt = function (d) { return (O.byAppointmentDays || []).indexOf(d.getDay()) !== -1; };
+  // Each option: label (button), hint (line under it), value (sent to the
+  // front desk) and recap (shown back to the patient; defaults to value).
   var slotsFor = function (d) {
-    if (isByAppt(d)) return [O.byAppointmentLabel];
-    return O.slotsByDay[d.getDay()] || [];
+    if (isByAppt(d)) return [{ label: O.byAppointmentLabel, value: O.byAppointmentValue, recap: O.byAppointmentLabel }];
+    return O.openDays.indexOf(d.getDay()) !== -1 ? O.periods : [];
   };
   var bookable = function (d) { return d >= minDate && d <= maxDate && slotsFor(d).length > 0; };
 
@@ -2428,38 +2445,46 @@ main section[id] { scroll-margin-top: 130px; }
   function renderSlots() {
     slotsEl.innerHTML = '';
     if (!chosenDate) {
-      slotsEl.innerHTML = '<p class="mhb-slots__empty">Select a date to see available times.</p>';
+      slotsEl.innerHTML = '<p class="mhb-slots__empty">Select a date, then choose morning (AM) or afternoon (PM).</p>';
       return;
     }
     var byAppt = isByAppt(chosenDate);
     var list = slotsFor(chosenDate);
     var head = document.getElementById('bk-slots-title');
-    var dayStr = MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
-    head.textContent = byAppt ? DAYS[chosenDate.getDay()] + ' ' + dayStr : 'Times on ' + dayStr;
+    head.textContent = DAYS[chosenDate.getDay()] + ' ' + MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
 
-    if (byAppt) {
-      var note = document.createElement('p');
-      note.className = 'mhb-slots__note';
-      note.textContent = "We don't hold set hours on " + DAYS[chosenDate.getDay()] +
-        "s. Request the day and we'll agree a time that suits you when we call to confirm.";
-      slotsEl.appendChild(note);
-    }
+    var note = document.createElement('p');
+    note.className = 'mhb-slots__note';
+    note.textContent = byAppt
+      ? "We don't hold set hours on " + DAYS[chosenDate.getDay()] +
+        "s. Request the day and we'll agree a time that suits you when we call to confirm."
+      : "Which part of the day suits you best? This is a preference, not a booked time. We'll call or text to agree the exact time.";
+    slotsEl.appendChild(note);
 
-    list.forEach(function (t) {
+    list.forEach(function (o) {
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'mhb-slot' + (byAppt ? ' mhb-slot--byappt' : '');
-      b.textContent = t;
       b.setAttribute('aria-pressed', 'false');
+      var main = document.createElement('span');
+      main.className = 'mhb-slot__label';
+      main.textContent = o.label;
+      b.appendChild(main);
+      if (o.hint) {
+        var sub = document.createElement('span');
+        sub.className = 'mhb-slot__hint';
+        sub.textContent = o.hint;
+        b.appendChild(sub);
+      }
       b.addEventListener('click', function () {
         // What the patient sees vs. what the front desk receives: the email
         // should be unambiguous that no time was actually chosen.
-        chosenTimeLabel = t;
-        chosenTime = byAppt ? O.byAppointmentValue : t;
-        Array.prototype.forEach.call(slotsEl.querySelectorAll('.mhb-slot'), function (o) { o.setAttribute('aria-pressed', 'false'); });
+        chosenTimeLabel = o.recap || o.value;
+        chosenTime = o.value;
+        Array.prototype.forEach.call(slotsEl.querySelectorAll('.mhb-slot'), function (x) { x.setAttribute('aria-pressed', 'false'); });
         b.setAttribute('aria-pressed', 'true');
         document.getElementById('bk-recap-date').textContent = label(chosenDate);
-        document.getElementById('bk-recap-time').textContent = t;
+        document.getElementById('bk-recap-time').textContent = chosenTimeLabel;
         setTimeout(function () { goStep(2); }, 160);
       });
       slotsEl.appendChild(b);
@@ -2515,7 +2540,7 @@ main section[id] { scroll-margin-top: 130px; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email)) { setInvalid('email', 'Please enter a valid email address.'); bad = bad || 'email'; }
     if (v.phone && v.phone.replace(/\D/g, '').length < 10) { setInvalid('phone', 'Please enter a 10-digit phone number.'); bad = bad || 'phone'; }
     if (!form.elements.consent.checked) {
-      errBox.textContent = 'Please tick the box so we know it\'s okay to contact you.';
+      errBox.textContent = "Please tick the box to confirm you understand this is only a request and that it's okay for us to contact you.";
       errBox.classList.add('is-shown');
       return;
     }

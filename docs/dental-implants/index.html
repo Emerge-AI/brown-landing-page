@@ -1826,9 +1826,9 @@ main section[id] { scroll-margin-top: 130px; }
 .mhb-cal__friday strong { color: var(--oe-navy); }
 .mhb-slots__title { font-size: 0.8rem; font-weight: var(--oe-fw-bold); color: var(--oe-navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
 .mhb-slots { display: grid; gap: 0.5rem; max-height: 340px; overflow-y: auto; padding-right: 2px; }
-@media (max-width: 760px) { .mhb-slots { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); max-height: none; } }
+@media (max-width: 760px) { .mhb-slots { grid-template-columns: 1fr 1fr; max-height: none; } }
 .mhb-slot {
-  padding: 0.7rem 0.9rem;
+  padding: 0.85rem 0.9rem;
   border: 1px solid var(--oe-border-dark);
   border-radius: var(--oe-radius);
   background: #fff;
@@ -1842,6 +1842,10 @@ main section[id] { scroll-margin-top: 130px; }
 }
 .mhb-slot:hover { border-color: var(--oe-teal); background: rgba(0, 180, 166, 0.07); }
 .mhb-slot[aria-pressed='true'] { background: var(--oe-teal); border-color: var(--oe-teal); color: #fff; }
+.mhb-slot__label { display: block; font-size: 1rem; }
+.mhb-slot__hint { display: block; margin-top: 2px; font-size: 0.75rem; font-weight: var(--oe-fw-regular); color: var(--oe-text-muted); }
+.mhb-slot[aria-pressed='true'] .mhb-slot__hint { color: rgba(255, 255, 255, 0.9); }
+.mhb-slots__empty, .mhb-slots__note { grid-column: 1 / -1; }
 .mhb-slots__empty { font-size: 0.85rem; color: var(--oe-text-muted); line-height: 1.6; padding: 0.5rem 0; }
 .mhb-slots__note { font-size: 0.78rem; color: var(--oe-text-muted); line-height: 1.55; margin: 0 0 0.65rem; }
 .mhb-slot--byappt {
@@ -1899,6 +1903,15 @@ main section[id] { scroll-margin-top: 130px; }
 }
 .mhb-recap .mhb-ic { color: var(--oe-teal-dark); }
 .mhb-recap span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.mhb-recap .mhb-recap__status {
+  padding: 0.1rem 0.6rem;
+  background: var(--oe-warning-bg);
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  border-radius: var(--oe-radius-pill);
+  font-size: 0.75rem;
+  font-weight: var(--oe-fw-bold);
+  color: #92400e;
+}
 .mhb-book__submit { margin-top: var(--oe-sp-6); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .mhb-book__submit .mhb-btn { min-width: 200px; justify-content: center; }
 .mhb-book__submit-note { font-size: 0.78rem; color: var(--oe-text-muted); }

@@ -1,18 +1,20 @@
 /* Booking widget for /book/.
-   Two steps: choose a date + time, then enter details. Posts JSON to the
-   /api/book Netlify function, which emails the practice.
+   Two steps: choose a date + morning or afternoon, then enter details. Posts
+   JSON to the /api/book Netlify function, which emails the practice.
 
-   Office hours drive availability, so the calendar can never offer a slot
+   Office hours drive availability, so the calendar can never offer a day
    the practice isn't open for. */
 
 export const OFFICE = {
-  // 0 = Sunday. Hourly slots; midday break on full days.
-  slotsByDay: {
-    1: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
-    2: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
-    3: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
-    4: ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'],
-  },
+  // 0 = Sunday. Patients pick half a day, never a clock time: a specific time
+  // read as a booked slot, and patients were confused when the front desk
+  // then offered something else. The exact time is set on the confirmation
+  // call. `value` is what the front-desk email receives.
+  openDays: [1, 2, 3, 4],
+  periods: [
+    { label: 'AM', hint: 'Morning, 8am–noon', value: 'Morning (AM)' },
+    { label: 'PM', hint: 'Afternoon, 1–4pm', value: 'Afternoon (PM)' },
+  ],
   // Fridays are bookable but have no standing hours, so the patient requests
   // the day rather than a time and the front desk agrees one on the
   // confirmation call. Offering fixed Friday times would promise slots that
@@ -41,16 +43,16 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
     </div>
     <div class="mhb-section-head">
       <h1 style="font-family:var(--oe-font-display);font-size:clamp(1.9rem,4vw,3rem);font-weight:800;color:var(--oe-navy);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem;">Request Your Appointment</h1>
-      <p class="mhb-section-sub">Pick a day and time that suits you and we'll take care of the rest. Same-week appointments are often available.</p>
+      <p class="mhb-section-sub">Pick a day, then tell us whether a morning or afternoon suits you. We'll call or text to set an exact time. Same-week appointments are often available.</p>
     </div>
 
     <div class="mhb-book__notice">
       ${ic('warning')}
-      <p><strong>This is a request, not a confirmed booking.</strong> A member of our team will call or text you shortly to confirm your spot. Please don't include medical details or Social Security numbers — for anything sensitive, call us at <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a>.</p>
+      <p><strong>This is a request, not a confirmed appointment.</strong> Sending this form does not book you in. A member of our team will call or text you to agree an exact time, and your appointment is only confirmed once you've spoken with us. Please don't include medical details or Social Security numbers — for anything sensitive, call us at <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a>.</p>
     </div>
 
     <ol class="mhb-bk-steps" id="bk-steps">
-      <li aria-current="step" data-step="1"><b>1</b> Date &amp; time</li>
+      <li aria-current="step" data-step="1"><b>1</b> Day &amp; AM/PM</li>
       <li data-step="2"><b>2</b> Your details</li>
     </ol>
 
@@ -72,9 +74,9 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
             <p class="mhb-cal__friday">${ic('calendar')} <span><strong>Fridays are by appointment.</strong> You can still request one — pick a Friday and we'll agree a time when we call to confirm.</span></p>
           </div>
           <div>
-            <p class="mhb-slots__title" id="bk-slots-title">Choose a time</p>
+            <p class="mhb-slots__title" id="bk-slots-title">Morning or afternoon?</p>
             <div class="mhb-slots" id="bk-slots" role="group" aria-labelledby="bk-slots-title">
-              <p class="mhb-slots__empty">Select a date to see available times.</p>
+              <p class="mhb-slots__empty">Select a date, then choose morning (AM) or afternoon (PM).</p>
             </div>
           </div>
         </div>
@@ -83,16 +85,17 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
       <!-- Step 2 -->
       <div class="mhb-book__panel" id="bk-panel-2" hidden>
         <div class="mhb-book__panel-head">
-          <button class="mhb-book__back" type="button" id="bk-back" aria-label="Back to date and time">${ic('chevron', 'mhb-rot-90')}</button>
+          <button class="mhb-book__back" type="button" id="bk-back" aria-label="Back to day and morning or afternoon">${ic('chevron', 'mhb-rot-90')}</button>
           <div>
             <h2>Enter your details</h2>
-            <p>We'll use these to confirm your appointment.</p>
+            <p>We'll use these to call or text you and agree an exact time.</p>
           </div>
         </div>
 
         <div class="mhb-recap" id="bk-recap">
           <span>${ic('calendar')} <em id="bk-recap-date" style="font-style:normal;"></em></span>
           <span>${ic('clock')} <em id="bk-recap-time" style="font-style:normal;"></em></span>
+          <span class="mhb-recap__status">Request only — not confirmed</span>
         </div>
 
         <form id="bk-form" novalidate>
@@ -111,11 +114,11 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
 
           <div class="mhb-consent">
             <input type="checkbox" id="bk-consent" name="consent">
-            <label for="bk-consent">I agree to be contacted by ${esc(PRACTICE.name)} about this appointment request using the details above.</label>
+            <label for="bk-consent">I understand this is a request, not a confirmed appointment, and I agree to be contacted by ${esc(PRACTICE.name)} using the details above to set a time.</label>
           </div>
 
           <div class="mhb-book__submit">
-            <button class="mhb-btn mhb-btn--teal" type="submit" id="bk-submit">${ic('calendar')} Request Appointment</button>
+            <button class="mhb-btn mhb-btn--teal" type="submit" id="bk-submit">${ic('calendar')} Send Appointment Request</button>
             <span class="mhb-book__submit-note">Or call <a href="${PRACTICE.phoneHref}">${PRACTICE.phone}</a></span>
           </div>
           <p class="mhb-form-error" id="bk-form-error" role="alert"></p>
@@ -125,13 +128,14 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
       <!-- Success -->
       <div class="mhb-book__panel mhb-book__done" id="bk-panel-3" hidden>
         <div class="mhb-book__done-icon">${ic('check')}</div>
-        <h2>Request received</h2>
-        <p>Thank you — we've sent your request to our front desk. Someone will call or text you shortly to confirm. Nothing is booked until we speak with you.</p>
+        <h2>Request sent — not confirmed yet</h2>
+        <p>Thank you. Your request has gone to our front desk, but <strong>your appointment is not booked yet.</strong> We'll call or text you to agree an exact time. It's only confirmed once you've spoken with us.</p>
         <div class="mhb-recap">
           <span>${ic('calendar')} <em id="bk-done-date" style="font-style:normal;"></em></span>
           <span>${ic('clock')} <em id="bk-done-time" style="font-style:normal;"></em></span>
+          <span class="mhb-recap__status">Awaiting our call</span>
         </div>
-        <p style="margin-top:1.5rem;font-size:0.875rem;">Need it sooner? Call <a href="${PRACTICE.phoneHref}"><strong>${PRACTICE.phone}</strong></a> — we're at ${esc(addr)}.</p>
+        <p style="margin-top:1.5rem;font-size:0.875rem;">Haven't heard from us by the next business day, or need it sooner? Call <a href="${PRACTICE.phoneHref}"><strong>${PRACTICE.phone}</strong></a> — we're at ${esc(addr)}.</p>
       </div>
     </div>
   </div>
@@ -167,9 +171,11 @@ export function bookingScript(OFFICE_JSON) {
   var label = function (d) { return DAYS[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear(); };
   // Days with no standing hours: the patient picks the day, we agree the time.
   var isByAppt = function (d) { return (O.byAppointmentDays || []).indexOf(d.getDay()) !== -1; };
+  // Each option: label (button), hint (line under it), value (sent to the
+  // front desk) and recap (shown back to the patient; defaults to value).
   var slotsFor = function (d) {
-    if (isByAppt(d)) return [O.byAppointmentLabel];
-    return O.slotsByDay[d.getDay()] || [];
+    if (isByAppt(d)) return [{ label: O.byAppointmentLabel, value: O.byAppointmentValue, recap: O.byAppointmentLabel }];
+    return O.openDays.indexOf(d.getDay()) !== -1 ? O.periods : [];
   };
   var bookable = function (d) { return d >= minDate && d <= maxDate && slotsFor(d).length > 0; };
 
@@ -226,38 +232,46 @@ export function bookingScript(OFFICE_JSON) {
   function renderSlots() {
     slotsEl.innerHTML = '';
     if (!chosenDate) {
-      slotsEl.innerHTML = '<p class="mhb-slots__empty">Select a date to see available times.</p>';
+      slotsEl.innerHTML = '<p class="mhb-slots__empty">Select a date, then choose morning (AM) or afternoon (PM).</p>';
       return;
     }
     var byAppt = isByAppt(chosenDate);
     var list = slotsFor(chosenDate);
     var head = document.getElementById('bk-slots-title');
-    var dayStr = MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
-    head.textContent = byAppt ? DAYS[chosenDate.getDay()] + ' ' + dayStr : 'Times on ' + dayStr;
+    head.textContent = DAYS[chosenDate.getDay()] + ' ' + MONTHS[chosenDate.getMonth()] + ' ' + chosenDate.getDate();
 
-    if (byAppt) {
-      var note = document.createElement('p');
-      note.className = 'mhb-slots__note';
-      note.textContent = "We don't hold set hours on " + DAYS[chosenDate.getDay()] +
-        "s. Request the day and we'll agree a time that suits you when we call to confirm.";
-      slotsEl.appendChild(note);
-    }
+    var note = document.createElement('p');
+    note.className = 'mhb-slots__note';
+    note.textContent = byAppt
+      ? "We don't hold set hours on " + DAYS[chosenDate.getDay()] +
+        "s. Request the day and we'll agree a time that suits you when we call to confirm."
+      : "Which part of the day suits you best? This is a preference, not a booked time. We'll call or text to agree the exact time.";
+    slotsEl.appendChild(note);
 
-    list.forEach(function (t) {
+    list.forEach(function (o) {
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'mhb-slot' + (byAppt ? ' mhb-slot--byappt' : '');
-      b.textContent = t;
       b.setAttribute('aria-pressed', 'false');
+      var main = document.createElement('span');
+      main.className = 'mhb-slot__label';
+      main.textContent = o.label;
+      b.appendChild(main);
+      if (o.hint) {
+        var sub = document.createElement('span');
+        sub.className = 'mhb-slot__hint';
+        sub.textContent = o.hint;
+        b.appendChild(sub);
+      }
       b.addEventListener('click', function () {
         // What the patient sees vs. what the front desk receives: the email
         // should be unambiguous that no time was actually chosen.
-        chosenTimeLabel = t;
-        chosenTime = byAppt ? O.byAppointmentValue : t;
-        Array.prototype.forEach.call(slotsEl.querySelectorAll('.mhb-slot'), function (o) { o.setAttribute('aria-pressed', 'false'); });
+        chosenTimeLabel = o.recap || o.value;
+        chosenTime = o.value;
+        Array.prototype.forEach.call(slotsEl.querySelectorAll('.mhb-slot'), function (x) { x.setAttribute('aria-pressed', 'false'); });
         b.setAttribute('aria-pressed', 'true');
         document.getElementById('bk-recap-date').textContent = label(chosenDate);
-        document.getElementById('bk-recap-time').textContent = t;
+        document.getElementById('bk-recap-time').textContent = chosenTimeLabel;
         setTimeout(function () { goStep(2); }, 160);
       });
       slotsEl.appendChild(b);
@@ -313,7 +327,7 @@ export function bookingScript(OFFICE_JSON) {
     if (!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(v.email)) { setInvalid('email', 'Please enter a valid email address.'); bad = bad || 'email'; }
     if (v.phone && v.phone.replace(/\\D/g, '').length < 10) { setInvalid('phone', 'Please enter a 10-digit phone number.'); bad = bad || 'phone'; }
     if (!form.elements.consent.checked) {
-      errBox.textContent = 'Please tick the box so we know it\\'s okay to contact you.';
+      errBox.textContent = "Please tick the box to confirm you understand this is only a request and that it's okay for us to contact you.";
       errBox.classList.add('is-shown');
       return;
     }

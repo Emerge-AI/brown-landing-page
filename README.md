@@ -57,7 +57,7 @@ Environment variables (Netlify → Site configuration → Environment variables)
 
 `marshallbrowndds.com` is verified in Resend via DKIM (`resend._domainkey`) plus SPF and a bounce MX on the `send` subdomain. Note the existing root `_dmarc` record is `p=quarantine`, so authentication has to pass or mail goes to spam — don't remove those three records.
 
-Availability lives in `OFFICE.slotsByDay` in `tools/booking.mjs` — keys are weekday numbers (0 = Sunday). Change the slots and the calendar follows; weekends, past dates, and anything beyond `daysAhead` are never selectable.
+Availability lives in `OFFICE` in `tools/booking.mjs`. Patients choose a day and then morning (AM) or afternoon (PM), never a clock time; the front desk sets the exact time on the confirmation call. `openDays` are weekday numbers (0 = Sunday) that offer `periods`; `byAppointmentDays` (Friday) offer a single "By appointment" choice instead. Weekends, past dates, and anything beyond `daysAhead` are never selectable.
 
 This deliberately avoids Netlify Forms, which is free only to 100 submissions/month and then jumps to about $19/month. Functions (~125k invocations/month) plus Resend (3,000 emails/month) covers far more volume at $0, and because the site posts to our own endpoint the email provider stays swappable.
 

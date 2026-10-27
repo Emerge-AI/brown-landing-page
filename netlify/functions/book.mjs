@@ -53,7 +53,7 @@ export default async (req) => {
   if (!last) missing.push('last name');
   if (!phone) missing.push('phone');
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) missing.push('a valid email');
-  if (!date || !time) missing.push('an appointment date and time');
+  if (!date || !time) missing.push('an appointment date and morning or afternoon');
   if (missing.length) return json(400, { error: `Please provide ${missing.join(', ')}.` });
 
   if (!process.env.RESEND_API_KEY) {
@@ -65,7 +65,7 @@ export default async (req) => {
 
   const rows = [
     ['Requested date', dateLabel],
-    ['Requested time', time],
+    ['Preferred time of day', time],
     ['Name', `${first} ${last}`],
     ['Phone', phone],
     ['Email', email],
@@ -84,7 +84,8 @@ export default async (req) => {
   </table>
   <p style="margin:20px 0 0;font-size:13px;color:#64748b">
     Reply to this email to reach ${esc(first)} directly, or call ${esc(phone)}.
-    This is a <strong>request</strong> — the appointment is not confirmed until someone contacts the patient.
+    This is a <strong>request</strong>: the patient did not pick an exact time, and was told the
+    appointment is not confirmed until someone contacts them to set one.
   </p>
 </div>`.trim();
 
@@ -101,7 +102,7 @@ export default async (req) => {
         from: FROM,
         to: [TO],
         reply_to: email,
-        subject: `Appointment request — ${first} ${last}, ${dateLabel} at ${time}`,
+        subject: `Appointment request — ${first} ${last}, ${dateLabel}, ${time}`,
         html,
         text,
       }),
