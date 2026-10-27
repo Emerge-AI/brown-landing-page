@@ -135,7 +135,7 @@ export function bookingBody({ ic, esc, PRACTICE, addr }) {
           <span>${ic('clock')} <em id="bk-done-time" style="font-style:normal;"></em></span>
           <span class="mhb-recap__status">Awaiting our call</span>
         </div>
-        <p style="margin-top:1.5rem;font-size:0.875rem;">Haven't heard from us by the next business day, or need it sooner? Call <a href="${PRACTICE.phoneHref}"><strong>${PRACTICE.phone}</strong></a> — we're at ${esc(addr)}.</p>
+        <p style="margin-top:1.5rem;font-size:0.875rem;">Need it sooner? Call <a href="${PRACTICE.phoneHref}"><strong>${PRACTICE.phone}</strong></a> — we're at ${esc(addr)}.</p>
       </div>
     </div>
   </div>
